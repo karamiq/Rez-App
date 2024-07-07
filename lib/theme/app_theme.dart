@@ -7,6 +7,7 @@ import 'extra_colors.dart';
 class AppTheme {
   ThemeData _build(Brightness brightness) {
     final themeData = ThemeData(
+      scaffoldBackgroundColor: const Color(0xFF030211),
       useMaterial3: true,
       brightness: brightness,
       extensions: [buildExtraColors()],
@@ -33,20 +34,20 @@ class AppTheme {
 
   ThemeData buildDarkTheme() {
     currentBrightness.value = Brightness.dark;
-   return  _build(Brightness.dark);
+    return _build(Brightness.dark);
   }
 
   ThemeData buildLightTheme() {
     currentBrightness.value = Brightness.light;
-   return _build(Brightness.light);
+    return _build(Brightness.light);
   }
 
   InputDecorationTheme _buildInputDecorationTheme(Brightness brightness) {
     final colorScheme = _buildColorScheme(brightness);
 
-    OutlineInputBorder buildBorder(Color color, {double width = 1}) {
+    OutlineInputBorder buildBorder(Color color, {double width = 0}) {
       return OutlineInputBorder(
-        borderRadius: borderRadius,
+        borderRadius: BorderRadius.circular(500),
         borderSide: BorderSide(color: color, width: width),
       );
     }
@@ -59,14 +60,14 @@ class AppTheme {
       border: buildBorder(colorScheme.outline.withOpacity(0.5)),
       errorBorder: buildBorder(colorScheme.error),
       enabledBorder: buildBorder(colorScheme.outline.withOpacity(0.5)),
-      focusedBorder: buildBorder(colorScheme.primary),
+      focusedBorder: buildBorder(colorScheme.primary, width: 2),
       focusedErrorBorder: buildBorder(colorScheme.error, width: 2),
       disabledBorder: buildBorder(colorScheme.outline.withOpacity(0.5)),
     );
   }
 
   TextTheme _buildTextTheme(TextTheme textTheme) {
-    return GoogleFonts.ibmPlexSansArabicTextTheme(textTheme);
+    return GoogleFonts.poppinsTextTheme(textTheme);
   }
 
   ExtraColors buildExtraColors() {
@@ -79,7 +80,8 @@ class AppTheme {
 
   ColorScheme _buildColorScheme(Brightness brightness) {
     final colorScheme = ColorScheme.fromSeed(
-      seedColor: const Color.fromARGB(255, 17, 61, 128),
+      //seedColor: const Color.fromARGB(255, 17, 61, 128),
+      seedColor: const Color(0xFF5D2775),
       brightness: brightness,
     );
 
@@ -115,7 +117,7 @@ class AppTheme {
   TextButtonThemeData _buildTextButtonTheme(Brightness brightness) {
     return TextButtonThemeData(
       style: TextButton.styleFrom(
-        padding:padding,
+        padding: padding,
         shape: RoundedRectangleBorder(
           borderRadius: borderRadius,
         ),

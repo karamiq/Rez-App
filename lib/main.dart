@@ -12,7 +12,7 @@ Future<void> main() async {
 
   final sharedPreferences = await SharedPreferences.getInstance();
 
-  timeago.setLocaleMessages('ar', timeago.ArMessages()); // Add french messages
+  timeago.setLocaleMessages('en', timeago.ArMessages()); // Add french messages
 
   runApp(
     ProviderScope(

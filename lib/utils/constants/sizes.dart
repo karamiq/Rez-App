@@ -10,6 +10,21 @@ class IconSize {
   static const double extraLarge = 48.0;
 }
 
+class CustomFontsTheme {
+  static const bigWeight = FontWeight.w700;
+  static const mediumBigWeight = FontWeight.w600;
+  static const mediumWeight = FontWeight.w500;
+  static const normalWeight = FontWeight.w400;
+
+  static const double veryBigSize = 32;
+  static const double bigSize = 24;
+  static const double mediumBigSize = 20;
+  static const double mediumSize = 16;
+  static const double normalSize = 14;
+  static const double smallSize = 12;
+  static const double verySmallSize = 10;
+}
+
 class BorderSize {
   const BorderSize._();
 

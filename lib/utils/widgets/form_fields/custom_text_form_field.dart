@@ -28,8 +28,6 @@ class CustomTextFormField extends StatelessWidget {
   final int? maxLines, maxLength;
   final bool obscureText;
   final TextInputType? keyboardType;
-  
-  
 
   @override
   Widget build(BuildContext context) {

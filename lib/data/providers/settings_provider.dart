@@ -40,14 +40,13 @@ class Settings extends _$Settings with ObjectPreferenceProvider {
   @override
   AppSettings build() => firstBuild(const AppSettings());
 
-
   Future<void> toggleThemeMode(BuildContext context) =>
       update((state) => state.copyWith(
           themeMode: ThemeX.getOppositeThemeMode(state.themeMode, context)));
 
   Future<void> setLocale(Locale? locale) =>
       update((state) => state.copyWith(localeCode: locale?.languageCode));
-  
+
   Future<void> toggleLocale() => update((state) => state.copyWith(
       localeCode: state.locale?.languageCode == "en" ? "ar" : "en"));
 }

@@ -17,11 +17,10 @@ class App extends ConsumerStatefulWidget {
 }
 
 class _AppState extends ConsumerState<App> {
-
   // @override
   // void initState() {
   //   super.initState();
-    
+
   //   initializeFirebaseMessaging();
   //   FirebaseMessaging.onMessage.listen((RemoteMessage message) async {
   //     debugPrint("remote message received: ${message.messageId}");
@@ -49,21 +48,21 @@ class _AppState extends ConsumerState<App> {
   Widget build(BuildContext context) {
     final theme = AppTheme();
     final settings = ref.watch(settingsProvider);
-
     return MaterialApp.router(
       title: appName,
       debugShowCheckedModeBanner: false,
       routerConfig: router,
       scaffoldMessengerKey: Utils.messengerKey,
       // Locale
-      locale: settings.locale,
+      //locale: settings.locale,
+      locale: Locale('en'), // i karam changed it to be just english
       onGenerateTitle: (context) => context.l10n.appName,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       // Theme
       themeMode: settings.themeMode,
       darkTheme: theme.buildDarkTheme(),
-      theme: theme.buildLightTheme(),
+      theme: theme.buildDarkTheme(),
       builder: (context, child) => ResponsiveBreakpoints.builder(
         child: child!,
         breakpoints: [
