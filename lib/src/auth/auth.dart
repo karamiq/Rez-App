@@ -4,6 +4,7 @@ import 'package:app/src/auth/components/otp.dart';
 import 'package:flutter/material.dart';
 import '../../utils/components/buttons/gardient_border_button.dart';
 import '../../utils/components/custom_scaffold.dart';
+import 'sign_in.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
@@ -41,64 +42,23 @@ class _AuthPageState extends State<AuthPage> {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      appBar: AppBar(
-        title: Text(pageIndex == 1 ? 'Choose seats' : ''),
-        backgroundColor: Colors.transparent,
-      ),
-      body: Padding(
-        padding: Insets.mediumAll,
-        child: PageView(
-          controller: _pageController,
-          physics: const NeverScrollableScrollPhysics(),
-          children: [
-            buildFirstPage(),
-            const OtpPage(),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget buildFirstPage() {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        return SingleChildScrollView(
-          child: ConstrainedBox(
-            constraints: BoxConstraints(
-              minHeight: constraints.maxHeight,
-            ),
-            child: IntrinsicHeight(
-              child: Column(
-                children: [
-                  const Gap(Insets.extraLarge * 3),
-                  SvgPicture.asset(Assets.assetsSvgWave),
-                  const Spacer(),
-                  Padding(
-                    padding: Insets.mediumAll,
-                    child: Form(
-                      key: _formKey,
-                      child: Column(
-                        children: [
-                          CustomTextFormField(
-                            keyboardType: TextInputType.phone,
-                            validator: validator,
-                            prefixIcon: const Icon(Icons.phone_outlined),
-                            hintText: 'Phone number',
-                            controller: phoneNumberController,
-                          ),
-                          const Gap(Insets.extraLarge),
-                          GradientBorderButton(onPressed: next, text: 'Next'),
-                          const Gap(Insets.extraLarge),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+      body: PageView(
+        padEnds: true,
+        controller: _pageController,
+        physics: const NeverScrollableScrollPhysics(),
+        children: [
+          SignInPage(
+            phoneNumberController: phoneNumberController,
+            formKey: _formKey,
+            validator: validator,
+            onNext: next,
           ),
-        );
-      },
+          OtpPage(
+            phoneNumber: phoneNumberController,
+            pageController: _pageController,
+          ),
+        ],
+      ),
     );
   }
 }

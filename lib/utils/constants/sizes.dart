@@ -10,7 +10,7 @@ class IconSize {
   static const double extraLarge = 48.0;
 }
 
-class CustomFontsTheme {
+class FontsTheme {
   static const bigWeight = FontWeight.w700;
   static const mediumBigWeight = FontWeight.w600;
   static const mediumWeight = FontWeight.w500;
@@ -23,6 +23,22 @@ class CustomFontsTheme {
   static const double normalSize = 14;
   static const double smallSize = 12;
   static const double verySmallSize = 10;
+}
+
+class ColorsTheme {
+  static const secondary = Color(0xFF1E1B34);
+  static const backGround = Color(0xFF020316);
+  static const border = Color(0xFF5D2775);
+  static const lightBorder = Color(0xFF8A87FF);
+
+  static LinearGradient? linearGradient = const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        lightBorder,
+        Color(0xFF1828BD),
+        Color(0xFFE85EFF),
+      ]);
 }
 
 class BorderSize {

@@ -107,5 +107,6 @@ flutter:
     - assets/images/
    # - assets/fonts/
     - assets/icons/
+    - assets/gifs/
    # - assets/lottie/
    # - assets/videos/

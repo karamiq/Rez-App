@@ -38,11 +38,14 @@ class CustomTextFormField extends StatelessWidget {
         hintText: hintText,
         labelText: labelText ?? hintText,
         hintStyle: context.textTheme.bodyLarge?.copyWith(
-          color: context.colorScheme.outline,
+          color: const Color(0xFF787878),
           fontSize: 16,
           fontWeight: FontWeight.w400,
         ),
-        prefixIcon: prefixIcon,
+        prefixIcon: Padding(
+          padding: const EdgeInsets.all(10),
+          child: prefixIcon,
+        ),
         suffixIcon: suffixIcon,
       ),
       validator: validator,

@@ -9,10 +9,8 @@ class CustomScaffold extends StatelessWidget {
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.crossAxisAlignment = CrossAxisAlignment.start,
     this.padding,
-    this.appBar,
   });
 
-  final AppBar? appBar;
   final EdgeInsetsGeometry? padding;
   final Widget body;
   final MainAxisAlignment mainAxisAlignment;
@@ -22,34 +20,30 @@ class CustomScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: appBar ??
-          AppBar(
-            backgroundColor: Colors.transparent,
-          ),
       body: Stack(
         alignment: Alignment.center,
         children: [
           Positioned(
-            top: MediaQuery.of(context).size.height / 4,
+            top: MediaQuery.of(context).size.height / 3,
             right: -40,
             child: Container(
               height: 250,
               width: 250,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color(0xFF30102E),
+                color: Color(0xFF311030),
               ),
             ),
           ),
           Positioned(
-            top: 20 + (appBar != null ? MediaQuery.of(context).padding.top : 0),
+            top: MediaQuery.of(context).size.height / 10,
             left: -20,
             child: Container(
               height: 250,
               width: 250,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color(0xFF0B1443),
+                color: Color(0xFF0b1443),
               ),
             ),
           ),

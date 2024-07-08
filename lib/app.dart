@@ -55,7 +55,7 @@ class _AppState extends ConsumerState<App> {
       scaffoldMessengerKey: Utils.messengerKey,
       // Locale
       //locale: settings.locale,
-      locale: Locale('en'), // i karam changed it to be just english
+      locale: const Locale('en'), // i karam changed it to be just english
       onGenerateTitle: (context) => context.l10n.appName,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
