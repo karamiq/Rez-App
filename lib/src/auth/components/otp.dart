@@ -117,7 +117,7 @@ class OtpPage extends StatelessWidget {
                   height: 60,
                   decoration: BoxDecoration(
                     borderRadius: BorderSize.smallRadius,
-                    color: ColorsTheme.secondary,
+                    color: ColorsTheme.onBackground,
                   ),
                 ),
               ),

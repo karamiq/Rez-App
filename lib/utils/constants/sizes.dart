@@ -26,18 +26,20 @@ class FontsTheme {
 }
 
 class ColorsTheme {
-  static const secondary = Color(0xFF1E1B34);
+  static const onBackground = Color(0xFF1E1B34);
   static const backGround = Color(0xFF020316);
   static const border = Color(0xFF5D2775);
   static const lightBorder = Color(0xFF8A87FF);
+  static const primary = Color(0xFFE85EFF);
+  static const secondary = Color(0xFF6E1B93);
 
-  static LinearGradient? linearGradient = const LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
+  static LinearGradient linearGradient = const LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
       colors: [
         lightBorder,
-        Color(0xFF1828BD),
         Color(0xFFE85EFF),
+        Color(0xFF6E1B93),
       ]);
 }
 
