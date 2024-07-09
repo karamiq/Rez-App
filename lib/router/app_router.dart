@@ -1,11 +1,14 @@
-import 'package:app/src/intro/first.dart';
-import 'package:app/src/tabs/tabs.dart';
+import 'package:app/src/home/party_detailes/party_detailes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../src/auth/auth.dart';
+import '../src/calender/calender.dart';
+import '../src/intro/first.dart';
 import '../src/intro/second.dart';
+import '../src/tabs/tabs.dart';
+import 'routing_animation.dart';
 
 final Provider<GoRouter> routerProvider = Provider((ref) => router);
 
@@ -15,10 +18,12 @@ final GlobalKey<NavigatorState> _shellNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'shell');
 
 final router = GoRouter(
+  initialLocation: '/',
+  navigatorKey: _rootNavigatorKey,
   routes: [
     GoRoute(
       path: RoutesDocument.home,
-      builder: (context, state) => const FirstIntroPage(),
+      builder: (context, state) => const TabsPage(),
     ),
     GoRoute(
       path: RoutesDocument.intro1,
@@ -30,7 +35,20 @@ final router = GoRouter(
     ),
     GoRoute(
       path: RoutesDocument.tabs,
+      name: RoutesDocument.tabs,
       builder: (context, state) => const TabsPage(),
+    ),
+    GoRoute(
+      path: RoutesDocument.calender,
+      name: RoutesDocument.calender,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const CalenderPage()),
+    ),
+    GoRoute(
+      path: RoutesDocument.partyDetailes,
+      name: RoutesDocument.partyDetailes,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const PartyDetailesPage()),
     ),
   ],
 );
@@ -39,14 +57,15 @@ class RoutesDocument {
   const RoutesDocument._();
   static const String home = '/';
   static const String login = '/login';
-  static const intro1 = '/intro1';
-  static const intro2 = '/intro2';
-  static const tabs = '/tabs';
-
-  // // Product
-  // static String productDetails(String id) => 'product-details/$id';
+  static const String intro1 = '/intro1';
+  static const String intro2 = '/intro2';
+  static const String tabs = '/tabs';
+  static const String calender = '/calender';
+  static const partyDetailes = '/partyDetailes';
 }
 
-  // final encodedItemId = getEncodedComponent(item.id);
-  // context.push(
-  //     "${RoutesDocument.pharmacyHome}/${RoutesDocument.productDetails(encodedItemId)}");
+// Example usage:
+// final route = FadeTransitionPage(child: MyWidget());
+
+// Inside your code where you want to navigate:
+// context.push(route);

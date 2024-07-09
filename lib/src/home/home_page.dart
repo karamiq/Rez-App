@@ -1,6 +1,9 @@
 import 'package:app/common_lib.dart';
+import 'package:app/src/home/components/party_card.dart';
+import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,8 +14,24 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
+  final searchController = TextEditingController();
   late TabController _tabController;
-
+  final List<Map<String, String>> partyData = [
+    {
+      'imageUrl':
+          'https://media.istockphoto.com/id/501387734/photo/dancing-friends.jpg?s=1024x1024&w=is&k=20&c=qneEFMVnKvFkagvbMmZqYU1rLRweq9889MXbu6f8mO4=',
+      'title': 'Brightlight Music Festival',
+      'genre': 'Indie Rock',
+      'ticketInfo': '€40 - €90',
+    },
+    {
+      'imageUrl':
+          'https://media.istockphoto.com/id/501387734/photo/dancing-friends.jpg?s=1024x1024&w=is&k=20&c=qneEFMVnKvFkagvbMmZqYU1rLRweq9889MXbu6f8mO4=',
+      'title': 'Summer Beach Party',
+      'genre': 'Pop',
+      'ticketInfo': '€20 - €60',
+    }
+  ];
   @override
   void initState() {
     super.initState();
@@ -31,11 +50,49 @@ class _HomePageState extends State<HomePage>
       padding: Insets.mediumAll,
       body: Column(
         children: [
-          const Row(
+          Row(
             children: [
-              Expanded(child: Icon(Icons.abc)),
-              Expanded(flex: 11, child: TextField()),
-              Expanded(child: Icon(Icons.abc)),
+              Expanded(
+                flex: 3,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    Assets.assetsSvgNotification,
+                  ),
+                ),
+              ),
+              Expanded(
+                  flex: 20,
+                  child: Container(
+                    height: 45,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: Insets.small),
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderSize.extraLargeRadius,
+                        color: Color.fromARGB(30, 214, 125, 255)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SvgPicture.asset(Assets.assetsSvgSearchNormal),
+                        const Gap(4),
+                        const Text(
+                          'Search',
+                          style: TextStyle(
+                              color: Color(0xFF472456),
+                              fontSize: FontsTheme.mediumSize),
+                        )
+                      ],
+                    ),
+                  )),
+              Expanded(
+                flex: 3,
+                child: IconButton(
+                  onPressed: () => context.goNamed(RoutesDocument.calender),
+                  icon: GradientSvg(
+                    svgAsset: Assets.assetsSvgCalendarOutlined,
+                  ),
+                ),
+              ),
             ],
           ),
           const SizedBox(
@@ -46,85 +103,50 @@ class _HomePageState extends State<HomePage>
             indicatorColor: ColorsTheme.primary,
             controller: _tabController,
             tabs: const [
-              Tab(text: 'Tab 1'),
-              Tab(text: 'Tab 2'),
-              Tab(text: 'Tab 3'),
-              Tab(text: 'Tab 4'),
-              Tab(text: 'Tab 5'),
+              Tab(text: 'All'),
+              Tab(text: 'Jazz'),
+              Tab(text: 'Music'),
+              Tab(text: 'Concert'),
+              Tab(text: 'Other'),
             ],
           ),
           Expanded(
             child: TabBarView(
               controller: _tabController,
               children: [
-                ListView.separated(
-                    padding: const EdgeInsets.only(top: Insets.medium),
-                    itemBuilder: (context, index) => Container(
-                          height: 200,
-                          width: double.infinity,
-                          decoration: const BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderSize.smallRadius),
-                          child: Container(
-                            decoration: BoxDecoration(
-                                gradient: LinearGradient(colors: [
-                              Colors.black.withOpacity(.9),
-                              Colors.black.withOpacity(.9)
-                            ])),
-                            child: Stack(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderSize.smallRadius,
-                                  child: Image.network(
-                                      fit: BoxFit.cover,
-                                      height: double.infinity,
-                                      width: double.infinity,
-                                      'https://www.shutterstock.com/shutterstock/photos/310965713/display_1500/stock-photo-the-rocky-shore-or-beach-andaman-sea-thailand-310965713.jpg'),
-                                ),
-                                Align(
-                                  alignment: Alignment.topRight,
-                                  child: IconButton(
-                                    icon: const Icon(Icons.dangerous),
-                                    onPressed: () {},
-                                  ),
-                                ),
-                                const Align(
-                                  alignment: Alignment.bottomLeft,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Text(
-                                        'Brightlight Music Festival',
-                                        style: TextStyle(
-                                            fontSize: FontsTheme.mediumBigSize),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Icon(Icons.music_note),
-                                          Text('Indie Rock')
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                    separatorBuilder: (context, index) =>
-                        const Gap(Insets.small),
-                    itemCount: 6),
-                const Center(child: Text('Content for Tab 2')),
-                const Center(child: Text('Content for Tab 3')),
-                const Center(child: Text('Content for Tab 4')),
-                const Center(child: Text('Content for Tab 5')),
+                AllTab(partyData: partyData),
+                AllTab(partyData: partyData),
+                AllTab(partyData: partyData),
+                AllTab(partyData: partyData),
+                AllTab(partyData: partyData),
               ],
             ),
           ),
         ],
       ),
     );
+  }
+}
+
+class AllTab extends StatelessWidget {
+  const AllTab({
+    super.key,
+    required this.partyData,
+  });
+
+  final List<Map<String, String>> partyData;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+        padding: const EdgeInsets.only(top: Insets.medium),
+        itemBuilder: (context, index) => PartyCard(
+              imageUrl: partyData[index]['imageUrl']!,
+              title: partyData[index]['title']!,
+              genre: partyData[index]['genre']!,
+              ticketInfo: partyData[index]['ticketInfo']!,
+            ),
+        separatorBuilder: (context, index) => const Gap(Insets.medium),
+        itemCount: partyData.length);
   }
 }

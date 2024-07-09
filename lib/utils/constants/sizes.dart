@@ -17,6 +17,7 @@ class FontsTheme {
   static const normalWeight = FontWeight.w400;
 
   static const double veryBigSize = 32;
+  static const double mediumVeryBigSize = 28;
   static const double bigSize = 24;
   static const double mediumBigSize = 20;
   static const double mediumSize = 16;

@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pinput/pinput.dart';
 import '../../../router/routing_animation.dart';
 import '../../../utils/components/buttons/gardient_border_button.dart';
+import '../../../utils/components/custom_app_bar.dart';
 
 class OtpPage extends StatelessWidget {
   const OtpPage(
@@ -29,7 +30,7 @@ class OtpPage extends StatelessWidget {
 
     void next() {
       if (formKey.currentState!.validate()) {
-        Navigator.push(context, FadeTransitionPage(child: FirstIntroPage()));
+        context.goNamed(RoutesDocument.tabs);
         // context.go(RoutesDocument.intro);
       }
     }
@@ -39,30 +40,13 @@ class OtpPage extends StatelessWidget {
         padding: Insets.mediumAll,
         child: Column(
           children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GradientBackButton(
-                  icon: Assets.assetsSvgArrowLeft,
-                  onPressed: () => pageController.previousPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut,
-                  ),
-                ),
-                Text(
-                  'Choose seats',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: FontsTheme.mediumBigSize,
-                    fontWeight: FontsTheme.mediumBigWeight,
-                    fontFamily: GoogleFonts.poppins().fontFamily,
-                  ),
-                ),
-                Container(),
-                Container(),
-              ],
-            ),
+            CustomAppBar(
+                onLeftIconPressed: () => pageController.previousPage(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeInOut,
+                    ),
+                title: 'Choose seats',
+                showCalender: false),
             const Spacer(),
             Text(
               '+964 ${phoneNumber.text.substring(1)}',
@@ -157,57 +141,6 @@ class OtpPage extends StatelessWidget {
             GradientBorderButton(onPressed: next, text: 'Next'),
             const Gap(Insets.extraLarge),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class GradientBackButton extends StatelessWidget {
-  final String icon;
-  final double backGroundOpacity;
-  final VoidCallback? onPressed;
-
-  const GradientBackButton({
-    Key? key,
-    this.onPressed,
-    required this.icon,
-    this.backGroundOpacity = 1,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 40,
-      width: 40,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
-        gradient: LinearGradient(
-          begin: Alignment.centerLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color(0xFF09FBD3),
-            Color(0xFF09FBD3),
-            Colors.transparent,
-          ],
-        ),
-      ),
-      child: Center(
-        child: Container(
-          height: 36,
-          width: 36,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: const Color(0xFF51566d).withOpacity(backGroundOpacity),
-          ),
-          child: IconButton(
-            icon: SvgPicture.asset(
-              icon,
-              height: 15,
-            ),
-            color: Colors.white,
-            onPressed: onPressed ?? () => Navigator.of(context).pop(),
-          ),
         ),
       ),
     );

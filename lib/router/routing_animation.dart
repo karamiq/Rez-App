@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
-class FadeTransitionPage<T> extends PageRouteBuilder<T> {
-  final Widget child;
-  final Duration duration; // Optional: Customize transition duration
+import '../common_lib.dart';
 
-  FadeTransitionPage(
-      {required this.child, this.duration = const Duration(milliseconds: 300)})
-      : super(
-          pageBuilder: (context, animation, secondaryAnimation) => child,
-          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-              FadeTransition(
-            opacity: animation,
-            child: child,
-          ),
-        );
+CustomTransitionPage<void> CustomTransition(GoRouterState state, Widget page) {
+  return CustomTransitionPage<void>(
+    key: state.pageKey,
+    restorationId: state.pageKey.value,
+    child: page,
+    transitionsBuilder: (
+      BuildContext context,
+      Animation<double> animation,
+      Animation<double> secondaryAnimation,
+      Widget child,
+    ) =>
+        FadeTransition(
+      opacity: animation,
+      child: page,
+    ),
+  );
 }

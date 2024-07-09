@@ -59,8 +59,6 @@ class CustomBottomAppBar extends StatelessWidget {
     return BottomNavigationBarItem(
       activeIcon: GradientSvg(
         svgAsset: icon,
-        size: 24,
-        gradient: ColorsTheme.linearGradient,
       ),
       icon: SvgPicture.asset(
         icon,
@@ -75,55 +73,22 @@ class CustomBottomAppBar extends StatelessWidget {
 
 class GradientSvg extends StatelessWidget {
   final String svgAsset;
-  final double size;
-  final Gradient gradient;
 
   GradientSvg({
     super.key,
     required this.svgAsset,
-    required this.size,
-    required this.gradient,
   });
 
   @override
   Widget build(BuildContext context) {
     return ShaderMask(
       blendMode: BlendMode.srcIn,
-      shaderCallback: (bounds) => gradient.createShader(
+      shaderCallback: (bounds) => ColorsTheme.linearGradient.createShader(
         Rect.fromLTWH(0, 0, bounds.width, bounds.height),
       ),
       child: SvgPicture.asset(
         svgAsset,
-        width: size,
-        height: size,
         fit: BoxFit.contain,
-      ),
-    );
-  }
-}
-
-class GradientText extends StatelessWidget {
-  final String text;
-  final TextStyle style;
-  final Gradient gradient;
-
-  const GradientText({
-    super.key,
-    required this.text,
-    required this.style,
-    required this.gradient,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ShaderMask(
-      blendMode: BlendMode.srcIn,
-      shaderCallback: (bounds) => gradient.createShader(
-        Rect.fromLTWH(0, 0, bounds.width, bounds.height),
-      ),
-      child: Text(
-        text,
-        style: style,
       ),
     );
   }

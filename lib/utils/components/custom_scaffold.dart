@@ -20,46 +20,48 @@ class CustomScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Stack(
-        alignment: Alignment.center,
-        children: [
-          Positioned(
-            top: MediaQuery.of(context).size.height / 3,
-            right: -40,
-            child: Container(
-              height: 250,
-              width: 250,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Color(0xFF311030),
-              ),
-            ),
-          ),
-          Positioned(
-            top: MediaQuery.of(context).size.height / 10,
-            left: -20,
-            child: Container(
-              height: 250,
-              width: 250,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Color(0xFF0b1443),
-              ),
-            ),
-          ),
-          Positioned.fill(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 70.0, sigmaY: 70.0),
+      body: SafeArea(
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Positioned(
+              top: MediaQuery.of(context).size.height / 4,
+              right: -40,
               child: Container(
-                color: Colors.transparent,
+                height: 250,
+                width: 250,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF311030),
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: padding ?? EdgeInsets.zero,
-            child: body,
-          ),
-        ],
+            Positioned(
+              top: MediaQuery.of(context).size.height / 20,
+              left: -20,
+              child: Container(
+                height: 250,
+                width: 250,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF0b1443),
+                ),
+              ),
+            ),
+            Positioned.fill(
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 70.0, sigmaY: 70.0),
+                child: Container(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+            Padding(
+              padding: padding ?? EdgeInsets.zero,
+              child: body,
+            ),
+          ],
+        ),
       ),
     );
   }

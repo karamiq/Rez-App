@@ -37,9 +37,11 @@ class _SecondIntroPageState extends State<SecondIntroPage>
   Future<void> _startAnimation() async {
     while (mounted) {
       await _controller.forward();
-      await Future.delayed(Duration(milliseconds: 300));
-      await _controller.reverse();
-      await Future.delayed(Duration(milliseconds: 300));
+      await Future.delayed(const Duration(milliseconds: 300));
+      if (mounted) {
+        await _controller.reverse();
+        await Future.delayed(const Duration(milliseconds: 300));
+      }
     }
   }
 
@@ -68,7 +70,12 @@ class _SecondIntroPageState extends State<SecondIntroPage>
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    //SvgPicture.asset(Assets.assetsSvgMusicColumn,height: 200,),
+                    AnimatedUpDownWidget(
+                      child: SvgPicture.asset(
+                        Assets.assetsSvgMusicColumn,
+                        height: 200,
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -103,6 +110,68 @@ class _SecondIntroPageState extends State<SecondIntroPage>
           ),
         ),
       ),
+    );
+  }
+}
+
+class AnimatedUpDownWidget extends StatefulWidget {
+  final Widget child;
+  final double start;
+  final double end;
+  final Duration duration;
+
+  const AnimatedUpDownWidget({
+    required this.child,
+    this.start = 0.0,
+    this.end = 100.0,
+    this.duration = const Duration(seconds: 1),
+  });
+
+  @override
+  _AnimatedUpDownWidgetState createState() => _AnimatedUpDownWidgetState();
+}
+
+class _AnimatedUpDownWidgetState extends State<AnimatedUpDownWidget>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: widget.duration,
+    )..repeat(reverse: true);
+
+    _animation = Tween<double>(begin: widget.start, end: widget.end).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(
+          0.5,
+          1.0,
+          curve: Curves.easeInOut,
+        ),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _animation,
+      builder: (context, child) {
+        return Transform.translate(
+          offset: Offset(0.0, _animation.value),
+          child: widget.child,
+        );
+      },
     );
   }
 }
