@@ -19,7 +19,6 @@ class CustomBottomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       elevation: 0,
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       currentIndex: selectedPageIndex,
       onTap: selectedPage,
       selectedLabelStyle: TextStyle(
@@ -57,8 +56,8 @@ class CustomBottomAppBar extends StatelessWidget {
     required BuildContext context,
   }) {
     return BottomNavigationBarItem(
-      activeIcon: GradientSvg(
-        svgAsset: icon,
+      activeIcon: GradientIcon(
+        icon: icon,
       ),
       icon: SvgPicture.asset(
         icon,
@@ -71,23 +70,35 @@ class CustomBottomAppBar extends StatelessWidget {
   }
 }
 
-class GradientSvg extends StatelessWidget {
-  final String svgAsset;
+class GradientIcon extends StatelessWidget {
+  final dynamic icon;
 
-  GradientSvg({
+  const GradientIcon({
     super.key,
-    required this.svgAsset,
+    required this.icon,
   });
 
   @override
   Widget build(BuildContext context) {
+    if (icon is IconData) {
+      return ShaderMask(
+        blendMode: BlendMode.srcIn,
+        shaderCallback: (bounds) => ColorsTheme.linearGradient.createShader(
+          Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+        ),
+        child: Icon(
+          size: IconSize.large,
+          icon,
+        ),
+      );
+    }
     return ShaderMask(
       blendMode: BlendMode.srcIn,
       shaderCallback: (bounds) => ColorsTheme.linearGradient.createShader(
         Rect.fromLTWH(0, 0, bounds.width, bounds.height),
       ),
       child: SvgPicture.asset(
-        svgAsset,
+        icon,
         fit: BoxFit.contain,
       ),
     );

@@ -33,14 +33,20 @@ class ColorsTheme {
   static const lightBorder = Color(0xFF8A87FF);
   static const primary = Color(0xFFE85EFF);
   static const secondary = Color(0xFF6E1B93);
+  static const primaryContainer = Color(0xFF14161F);
+  static const divider = Color(0xFF1D1E2D);
+  static const listTileBackground = Color(0xFF060212);
+  static const subtitle = Color(0xFF484B7B);
+  static const hint = Color(0xFF828282);
+  static const cardColor = Color(0xFF272841);
 
   static LinearGradient linearGradient = const LinearGradient(
-      begin: Alignment.topCenter,
-      end: Alignment.bottomCenter,
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
       colors: [
         lightBorder,
         Color(0xFFE85EFF),
-        Color(0xFF6E1B93),
+        Color(0xFF561976),
       ]);
 }
 

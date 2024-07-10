@@ -5,6 +5,22 @@ class Assets {
   /// assets/gifs/dj.gif
   static const String assetsGifsDj = "assets/gifs/dj.gif";
 
+  /// Assets for assetsImagesFlag
+  /// assets/images/flag.png
+  static const String assetsImagesFlag = "assets/images/flag.png";
+
+  /// Assets for assetsImagesLogoShopeePay
+  /// assets/images/Logo_ShopeePay.png
+  static const String assetsImagesLogoShopeePay = "assets/images/Logo_ShopeePay.png";
+
+  /// Assets for assetsImagesVisaIncLogo
+  /// assets/images/Visa_Inc._logo.png
+  static const String assetsImagesVisaIncLogo = "assets/images/Visa_Inc._logo.png";
+
+  /// Assets for assetsImagesWallet
+  /// assets/images/wallet.png
+  static const String assetsImagesWallet = "assets/images/wallet.png";
+
   /// Assets for assetsSvgArrowLeft
   /// assets/svg/arrow_left.svg
   static const String assetsSvgArrowLeft = "assets/svg/arrow_left.svg";
@@ -21,6 +37,22 @@ class Assets {
   /// assets/svg/call.svg
   static const String assetsSvgCall = "assets/svg/call.svg";
 
+  /// Assets for assetsSvgChat
+  /// assets/svg/chat.svg
+  static const String assetsSvgChat = "assets/svg/chat.svg";
+
+  /// Assets for assetsSvgCog
+  /// assets/svg/cog.svg
+  static const String assetsSvgCog = "assets/svg/cog.svg";
+
+  /// Assets for assetsSvgEllipse
+  /// assets/svg/Ellipse.svg
+  static const String assetsSvgEllipse = "assets/svg/Ellipse.svg";
+
+  /// Assets for assetsSvgFavorites
+  /// assets/svg/favorites.svg
+  static const String assetsSvgFavorites = "assets/svg/favorites.svg";
+
   /// Assets for assetsSvgHeart
   /// assets/svg/heart.svg
   static const String assetsSvgHeart = "assets/svg/heart.svg";
@@ -32,6 +64,10 @@ class Assets {
   /// Assets for assetsSvgHome
   /// assets/svg/home.svg
   static const String assetsSvgHome = "assets/svg/home.svg";
+
+  /// Assets for assetsSvgInformationCircle
+  /// assets/svg/information-circle.svg
+  static const String assetsSvgInformationCircle = "assets/svg/information-circle.svg";
 
   /// Assets for assetsSvgLocationOutlined
   /// assets/svg/location_outlined.svg
@@ -61,6 +97,10 @@ class Assets {
   /// assets/svg/search-normal.svg
   static const String assetsSvgSearchNormal = "assets/svg/search-normal.svg";
 
+  /// Assets for assetsSvgShieldCheck
+  /// assets/svg/shield-check.svg
+  static const String assetsSvgShieldCheck = "assets/svg/shield-check.svg";
+
   /// Assets for assetsSvgTicket
   /// assets/svg/Ticket.svg
   static const String assetsSvgTicket = "assets/svg/Ticket.svg";
@@ -69,8 +109,28 @@ class Assets {
   /// assets/svg/ticket-expired.svg
   static const String assetsSvgTicketExpired = "assets/svg/ticket-expired.svg";
 
+  /// Assets for assetsSvgTicketHorizantly
+  /// assets/svg/ticket_horizantly.svg
+  static const String assetsSvgTicketHorizantly = "assets/svg/ticket_horizantly.svg";
+
+  /// Assets for assetsSvgUserCircle
+  /// assets/svg/user-circle.svg
+  static const String assetsSvgUserCircle = "assets/svg/user-circle.svg";
+
+  /// Assets for assetsSvgUsers
+  /// assets/svg/users.svg
+  static const String assetsSvgUsers = "assets/svg/users.svg";
+
+  /// Assets for assetsSvgWallet
+  /// assets/svg/wallet.svg
+  static const String assetsSvgWallet = "assets/svg/wallet.svg";
+
   /// Assets for assetsSvgWave
   /// assets/svg/wave.svg
   static const String assetsSvgWave = "assets/svg/wave.svg";
+
+  /// Assets for assetsThemesDarkMapTheme
+  /// assets/themes/dark_map_theme.json
+  static const String assetsThemesDarkMapTheme = "assets/themes/dark_map_theme.json";
 }
 

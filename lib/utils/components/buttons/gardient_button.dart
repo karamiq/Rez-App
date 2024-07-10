@@ -9,11 +9,11 @@ class GradientAppBarButton extends StatelessWidget {
   final VoidCallback? onPressed;
 
   const GradientAppBarButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.icon,
     this.backGroundOpacity = 1,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

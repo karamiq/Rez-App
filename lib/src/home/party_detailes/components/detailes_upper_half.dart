@@ -24,20 +24,9 @@ class DetailesUpperHalf extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height / 1.5,
           width: double.infinity,
-          child: Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              colors: [
-                Colors.black,
-                Colors.transparent,
-              ],
-            )),
-            child: Image.network(
-              imageUrl,
-              fit: BoxFit.cover,
-            ),
+          child: Image.network(
+            imageUrl,
+            fit: BoxFit.cover,
           ),
         ),
         SafeArea(

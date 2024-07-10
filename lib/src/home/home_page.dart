@@ -63,33 +63,36 @@ class _HomePageState extends State<HomePage>
               ),
               Expanded(
                   flex: 20,
-                  child: Container(
-                    height: 45,
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: Insets.small),
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderSize.extraLargeRadius,
-                        color: Color.fromARGB(30, 214, 125, 255)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SvgPicture.asset(Assets.assetsSvgSearchNormal),
-                        const Gap(4),
-                        const Text(
-                          'Search',
-                          style: TextStyle(
-                              color: Color(0xFF472456),
-                              fontSize: FontsTheme.mediumSize),
-                        )
-                      ],
+                  child: GestureDetector(
+                    onTap: () => context.pushNamed(RoutesDocument.googleMaps),
+                    child: Container(
+                      height: 45,
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: Insets.small),
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderSize.extraLargeRadius,
+                          color: Color.fromARGB(30, 214, 125, 255)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SvgPicture.asset(Assets.assetsSvgSearchNormal),
+                          const Gap(4),
+                          const Text(
+                            'Search',
+                            style: TextStyle(
+                                color: Color(0xFF472456),
+                                fontSize: FontsTheme.mediumSize),
+                          )
+                        ],
+                      ),
                     ),
                   )),
               Expanded(
                 flex: 3,
                 child: IconButton(
                   onPressed: () => context.goNamed(RoutesDocument.calender),
-                  icon: GradientSvg(
-                    svgAsset: Assets.assetsSvgCalendarOutlined,
+                  icon: GradientIcon(
+                    icon: Assets.assetsSvgCalendarOutlined,
                   ),
                 ),
               ),
