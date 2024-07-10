@@ -1,5 +1,6 @@
 import 'package:app/common_lib.dart';
 import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
+import 'package:app/utils/components/buttons/gardient_button.dart';
 import 'package:app/utils/components/custom_app_bar.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,12 @@ class AccountDetailesPage extends StatelessWidget {
     return CustomScaffold(
       padding: Insets.mediumAll,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomAppBar(title: 'ffff'),
+          const GradientBackButton(
+            gradientColor: GradientColor.pink,
+          ),
+          const Gap(Insets.extraLarge),
           const UserCard(
             cardNumber: '**** **** **** 9831',
             cardHolder: 'Haider Sadoon',
@@ -41,8 +46,9 @@ class AccountDetailesPage extends StatelessWidget {
             imagePath: Assets.assetsImagesLogoShopeePay,
             onTap: () {},
           ),
+          const Gap(Insets.medium),
           OutlinedButton(
-            onPressed: () {},
+            onPressed: () => context.pushNamed(RoutesDocument.addCard),
             style: OutlinedButton.styleFrom(
                 side: const BorderSide(color: ColorsTheme.hint), //
                 foregroundColor: ColorsTheme.hint,

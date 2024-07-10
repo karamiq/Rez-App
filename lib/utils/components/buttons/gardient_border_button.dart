@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../constants/sizes.dart';
 
 class GradientBorderButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String text;
   final List<Color> borderColors;
   final List<Color> colors;

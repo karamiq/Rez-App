@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage>
               Expanded(
                 flex: 3,
                 child: IconButton(
-                  onPressed: () => context.goNamed(RoutesDocument.calender),
+                  onPressed: () => context.pushNamed(RoutesDocument.calender),
                   icon: GradientIcon(
                     icon: Assets.assetsSvgCalendarOutlined,
                   ),
@@ -148,6 +148,8 @@ class AllTab extends StatelessWidget {
               title: partyData[index]['title']!,
               genre: partyData[index]['genre']!,
               ticketInfo: partyData[index]['ticketInfo']!,
+              expiredDate: DateTime.now(),
+              isExpired: true,
             ),
         separatorBuilder: (context, index) => const Gap(Insets.medium),
         itemCount: partyData.length);

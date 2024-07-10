@@ -48,6 +48,18 @@ class CustomScaffold extends StatelessWidget {
                 ),
               ),
             ),
+            Positioned(
+              bottom: MediaQuery.of(context).size.height / 9,
+              left: -20,
+              child: Container(
+                height: 250,
+                width: 250,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF0b1443),
+                ),
+              ),
+            ),
             Positioned.fill(
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 70.0, sigmaY: 70.0),

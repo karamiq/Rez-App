@@ -1,6 +1,8 @@
 import 'package:app/src/home/google_maps/google_maps.dart';
 import 'package:app/src/home/party_detailes/party_detailes.dart';
 import 'package:app/src/profile/account_detailes/account_detailes.dart';
+import 'package:app/src/profile/add_card/add_card.dart';
+import 'package:app/src/profile/ticket_history/ticket_history.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -25,7 +27,8 @@ final router = GoRouter(
   routes: [
     GoRoute(
       path: RoutesDocument.home,
-      builder: (context, state) => const TabsPage(),
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const TabsPage()),
     ),
     GoRoute(
       path: RoutesDocument.intro1,
@@ -38,7 +41,8 @@ final router = GoRouter(
     GoRoute(
       path: RoutesDocument.tabs,
       name: RoutesDocument.tabs,
-      builder: (context, state) => const TabsPage(),
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const TabsPage()),
     ),
     GoRoute(
       path: RoutesDocument.calender,
@@ -64,11 +68,25 @@ final router = GoRouter(
       pageBuilder: (context, state) =>
           CustomTransition(state, const AccountDetailesPage()),
     ),
+    GoRoute(
+      path: RoutesDocument.addCard,
+      name: RoutesDocument.addCard,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const AddCardPage()),
+    ),
+    GoRoute(
+      path: RoutesDocument.ticketHistory,
+      name: RoutesDocument.ticketHistory,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const TicketHistoryPage()),
+    ),
   ],
 );
 
 class RoutesDocument {
   const RoutesDocument._();
+  static const ticketHistory = '/ticketHistory';
+  static const addCard = '/add_card';
   static const accountDetailes = '/accountDetailes';
   static const googleMaps = '/google_maps';
   static const String home = '/';

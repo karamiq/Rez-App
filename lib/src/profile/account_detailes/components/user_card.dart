@@ -1,4 +1,7 @@
+import 'package:app/src/profile/account_detailes/components/user_card_detailes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../common_lib.dart';
@@ -98,68 +101,55 @@ class UserCard extends StatelessWidget {
         ),
         Positioned(
           right: 0,
-          child: Material(
-            child: InkWell(
-              borderRadius: BorderRadius.circular(500),
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      backgroundColor: ColorsTheme.cardColor,
-                      content: Container(
-                        height: 250,
-                        width: 400,
-                        child: const Column(
-                          children: [],
-                        ),
-                      ),
-                    );
-                  },
-                );
-              },
-              child: Container(
-                height: 40,
-                width: 100,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderSize.mediumRadius,
-                  gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: [Color(0xFFE85EFF), Color(0xFF561976)],
+          child: InkWell(
+            borderRadius: BorderRadius.circular(500),
+            onTap: () => userCardDetailes(
+              context,
+              '1234 - 5678 - 1234 - 5678', // Card number
+              'Prince', // Cardholder name
+              '07 / 2027', // Expiry date
+            ),
+            child: Container(
+              height: 40,
+              width: 100,
+              decoration: const BoxDecoration(
+                borderRadius: BorderSize.mediumRadius,
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [Color(0xFFE85EFF), Color(0xFF561976)],
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 10,
+                    width: 10,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                    ),
                   ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 10,
-                      width: 10,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                      ),
+                  const Gap(Insets.small),
+                  Container(
+                    height: 10,
+                    width: 10,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
                     ),
-                    const Gap(Insets.small),
-                    Container(
-                      height: 10,
-                      width: 10,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                      ),
+                  ),
+                  const Gap(Insets.small),
+                  Container(
+                    height: 10,
+                    width: 10,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
                     ),
-                    const Gap(Insets.small),
-                    Container(
-                      height: 10,
-                      width: 10,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

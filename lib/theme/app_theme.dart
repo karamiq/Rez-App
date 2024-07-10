@@ -48,7 +48,7 @@ class AppTheme {
     OutlineInputBorder buildBorder(Color color, {double width = 0}) {
       return OutlineInputBorder(
         borderRadius: BorderRadius.circular(500),
-        borderSide: BorderSide(color: color, width: width),
+        borderSide: BorderSide.none,
       );
     }
 

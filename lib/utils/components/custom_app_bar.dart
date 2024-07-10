@@ -1,20 +1,20 @@
 import 'package:app/common_lib.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../constants/assets.dart';
-import '../constants/sizes.dart';
 import 'buttons/gardient_button.dart';
 
+// ignore: must_be_immutable
 class CustomAppBar extends StatelessWidget {
   CustomAppBar(
       {super.key,
       required this.title,
       this.showCalender = true,
+      this.gradientColor = GradientColor.green,
       this.onLeftIconPressed,
       this.onRightIconPressed});
   void Function()? onRightIconPressed;
   void Function()? onLeftIconPressed;
+  GradientColor gradientColor;
   final String title;
   final bool showCalender;
 
@@ -26,8 +26,8 @@ class CustomAppBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            GradientAppBarButton(
-                icon: Assets.assetsSvgArrowLeft,
+            GradientBackButton(
+                gradientColor: gradientColor,
                 onPressed: onLeftIconPressed ?? () => context.pop()),
             Text(
               title,
@@ -39,7 +39,7 @@ class CustomAppBar extends StatelessWidget {
               ),
             ),
             if (showCalender)
-              GradientAppBarButton(
+              GradientBackButton(
                   icon: Assets.assetsSvgCalendarOutlined,
                   onPressed: () => context.pushNamed(RoutesDocument.calender)),
             if (!showCalender)

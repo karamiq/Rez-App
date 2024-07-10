@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class IconSize {
   const IconSize._();
@@ -39,14 +40,24 @@ class ColorsTheme {
   static const subtitle = Color(0xFF484B7B);
   static const hint = Color(0xFF828282);
   static const cardColor = Color(0xFF272841);
-
-  static LinearGradient linearGradient = const LinearGradient(
+  static const cyan = Color(0xFFC8EFF8);
+  static const onCard = Color(0xFF63658D);
+  static LinearGradient primaryLinearGradient = const LinearGradient(
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
       colors: [
         lightBorder,
         Color(0xFFE85EFF),
         Color(0xFF561976),
+      ]);
+
+  static SweepGradient dark = const SweepGradient(
+      center: Alignment.center,
+      tileMode: TileMode.mirror,
+      colors: [
+        lightBorder,
+        Color.fromARGB(255, 72, 72, 72),
+        Color.fromARGB(255, 72, 72, 72),
       ]);
 }
 

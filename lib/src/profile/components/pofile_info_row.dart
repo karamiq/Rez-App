@@ -31,7 +31,7 @@ class ProfileInfoRow extends StatelessWidget {
                 children: [
                   GradientText(
                     followedArtists.toString(),
-                    gradient: ColorsTheme.linearGradient,
+                    gradient: ColorsTheme.primaryLinearGradient,
                     style: const TextStyle(
                       fontSize: FontsTheme.mediumBigSize,
                       fontWeight: FontWeight.bold,
@@ -60,7 +60,7 @@ class ProfileInfoRow extends StatelessWidget {
                 children: [
                   GradientText(
                     bookmarkedConcerts.toString(),
-                    gradient: ColorsTheme.linearGradient,
+                    gradient: ColorsTheme.primaryLinearGradient,
                     style: const TextStyle(
                       fontSize: FontsTheme.mediumBigSize,
                       fontWeight: FontWeight.bold,
@@ -89,7 +89,7 @@ class ProfileInfoRow extends StatelessWidget {
                 children: [
                   GradientText(
                     purchasedTickets.toString(),
-                    gradient: ColorsTheme.linearGradient,
+                    gradient: ColorsTheme.primaryLinearGradient,
                     style: const TextStyle(
                       fontSize: FontsTheme.mediumBigSize,
                       fontWeight: FontWeight.bold,

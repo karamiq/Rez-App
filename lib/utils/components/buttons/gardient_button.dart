@@ -1,18 +1,23 @@
-import 'dart:ui';
-
+import 'package:app/common_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
-class GradientAppBarButton extends StatelessWidget {
+enum GradientColor {
+  green,
+  pink,
+}
+
+class GradientBackButton extends StatelessWidget {
   final String icon;
   final double backGroundOpacity;
   final VoidCallback? onPressed;
+  final GradientColor gradientColor;
 
-  const GradientAppBarButton({
+  const GradientBackButton({
     super.key,
-    required this.onPressed,
-    required this.icon,
+    this.onPressed,
+    this.icon = Assets.assetsSvgArrowLeft,
     this.backGroundOpacity = 1,
+    this.gradientColor = GradientColor.green,
   });
 
   @override
@@ -20,16 +25,22 @@ class GradientAppBarButton extends StatelessWidget {
     return Container(
       height: 40,
       width: 40,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         shape: BoxShape.circle,
         gradient: LinearGradient(
           begin: Alignment.centerLeft,
           end: Alignment.bottomRight,
-          colors: [
-            Color(0xFF09FBD3),
-            Color(0xFF09FBD3),
-            Colors.transparent,
-          ],
+          colors: gradientColor == GradientColor.green
+              ? const [
+                  Color(0xFF09FBD3),
+                  Color(0xFF09FBD3),
+                  Colors.transparent,
+                ]
+              : const [
+                  Color(0xFFE85EFF),
+                  Color(0xFFE85EFF),
+                  Colors.transparent,
+                ],
         ),
       ),
       child: Center(
@@ -46,7 +57,7 @@ class GradientAppBarButton extends StatelessWidget {
               height: 20,
             ),
             color: Colors.white,
-            onPressed: onPressed,
+            onPressed: onPressed ?? () => context.pop(),
           ),
         ),
       ),

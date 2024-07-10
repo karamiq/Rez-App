@@ -18,7 +18,7 @@ class ProfilePage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(2),
             decoration: BoxDecoration(
-              gradient: ColorsTheme.linearGradient,
+              gradient: ColorsTheme.primaryLinearGradient,
               shape: BoxShape.circle,
             ),
             child: Container(
@@ -42,6 +42,7 @@ class ProfilePage extends StatelessWidget {
               color: ColorsTheme.primaryContainer,
               child: Column(
                 children: [
+                  const Gap(Insets.extraSmall),
                   CustomProfileOption(
                       title: 'Settings',
                       icon: Assets.assetsSvgCog,
@@ -52,16 +53,19 @@ class ProfilePage extends StatelessWidget {
                       icon: Assets.assetsSvgUserCircle,
                       onPressed: () =>
                           context.pushNamed(RoutesDocument.accountDetailes)),
+                  const Gap(Insets.extraSmall),
                 ],
               )),
           Card(
               color: ColorsTheme.primaryContainer,
               child: Column(
                 children: [
+                  const Gap(Insets.extraSmall),
                   CustomProfileOption(
                       title: 'Ticket History',
                       icon: Assets.assetsSvgTicketExpired,
-                      onPressed: () {}),
+                      onPressed: () =>
+                          context.pushNamed(RoutesDocument.ticketHistory)),
                   const Divider(color: ColorsTheme.divider),
                   CustomProfileOption(
                       title: 'Privacy and safety',
@@ -71,12 +75,14 @@ class ProfilePage extends StatelessWidget {
                       title: 'Notifications',
                       icon: Assets.assetsSvgNotification,
                       onPressed: () {}),
+                  const Gap(Insets.extraSmall),
                 ],
               )),
           Card(
               color: ColorsTheme.primaryContainer,
               child: Column(
                 children: [
+                  const Gap(Insets.extraSmall),
                   CustomProfileOption(
                       title: 'Help and Services',
                       icon: Assets.assetsSvgChat,
@@ -86,6 +92,7 @@ class ProfilePage extends StatelessWidget {
                       title: 'About',
                       icon: Assets.assetsSvgInformationCircle,
                       onPressed: () {}),
+                  const Gap(Insets.extraSmall),
                 ],
               )),
         ],

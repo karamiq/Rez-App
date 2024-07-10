@@ -34,6 +34,7 @@ class CustomListTile extends StatelessWidget {
           title: Text(
             title,
             style: const TextStyle(
+              color: ColorsTheme.cyan,
               fontSize: FontsTheme.mediumSize,
               fontWeight: FontsTheme.mediumBigWeight,
             ),
@@ -45,7 +46,10 @@ class CustomListTile extends StatelessWidget {
               fontWeight: FontsTheme.mediumBigWeight,
             ),
           ),
-          trailing: const GradientIcon(icon: Icons.chevron_right),
+          trailing: GradientIcon(
+            icon: Icons.chevron_right,
+            size: IconSize.large,
+          ),
         ),
       ),
     );
