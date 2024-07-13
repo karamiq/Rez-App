@@ -81,6 +81,10 @@ class Assets {
   /// assets/svg/information-circle.svg
   static const String assetsSvgInformationCircle = "assets/svg/information-circle.svg";
 
+  /// Assets for assetsSvgIntroGroup
+  /// assets/svg/intro-group.svg
+  static const String assetsSvgIntroGroup = "assets/svg/intro-group.svg";
+
   /// Assets for assetsSvgLocationOutlined
   /// assets/svg/location_outlined.svg
   static const String assetsSvgLocationOutlined = "assets/svg/location_outlined.svg";
@@ -108,6 +112,10 @@ class Assets {
   /// Assets for assetsSvgSearchNormal
   /// assets/svg/search-normal.svg
   static const String assetsSvgSearchNormal = "assets/svg/search-normal.svg";
+
+  /// Assets for assetsSvgSeat
+  /// assets/svg/Seat.svg
+  static const String assetsSvgSeat = "assets/svg/Seat.svg";
 
   /// Assets for assetsSvgShieldCheck
   /// assets/svg/shield-check.svg

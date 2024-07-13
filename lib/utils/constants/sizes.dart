@@ -38,11 +38,15 @@ class ColorsTheme {
   static const divider = Color(0xFF1D1E2D);
   static const listTileBackground = Color(0xFF060212);
   static const indego = Color(0xFF484B7B);
+  static const darkIndego = Color(0xFF171954);
   static const hint = Color(0xFF828282);
   static const cardColor = Color(0xFF272841);
   static const cyan = Color(0xFFC8EFF8);
   static const onCard = Color(0xFF63658D);
   static const subtitle = Color(0xFFB3B8B8);
+  static const soldSeat = Color(0xFFB6116B);
+  static const idkSeat = Color(0xFF09FBD3);
+  static const bookingSeat = Color(0xFF00E525);
   static LinearGradient primaryLinearGradient = const LinearGradient(
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,

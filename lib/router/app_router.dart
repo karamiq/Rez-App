@@ -1,16 +1,21 @@
 import 'package:app/src/auth/auth.dart';
 import 'package:app/src/auth/sign_in.dart';
-import 'package:app/src/home/google_maps/google_maps.dart';
-import 'package:app/src/home/party_detailes/party_detailes.dart';
-import 'package:app/src/profile/account_detailes/account_detailes.dart';
-import 'package:app/src/profile/add_card/add_card.dart';
-import 'package:app/src/profile/ticket_history/ticket_history.dart';
+import 'package:app/src/buying/buying1/buying1.dart';
+import 'package:app/src/tabs/search/google_maps.dart';
+import 'package:app/src/ticketing_&_detailes/party_detailes.dart';
+import 'package:app/src/ticketing_&_detailes/party_detailes_2nd.dart';
+import 'package:app/src/intro/fourth.dart';
+import 'package:app/src/intro/second.dart';
+import 'package:app/src/tabs/profile/account_detailes/account_detailes.dart';
+import 'package:app/src/tabs/profile/add_card/add_card.dart';
+import 'package:app/src/tabs/profile/ticket_history/ticket_history.dart';
+import 'package:app/src/tabs/ticket/components/avalilable_tickets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../src/calender/calender.dart';
+import '../src/tabs/home/calender/calender.dart';
 import '../src/intro/first.dart';
-import '../src/intro/second.dart';
+import '../src/intro/third.dart';
 import '../src/tabs/tabs.dart';
 import 'routing_animation.dart';
 
@@ -22,21 +27,30 @@ final GlobalKey<NavigatorState> _shellNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'shell');
 
 final router = GoRouter(
-  initialLocation: '/',
+  initialLocation: RoutesDocument.intro1,
   navigatorKey: _rootNavigatorKey,
   routes: [
     GoRoute(
-      path: RoutesDocument.home,
+      path: RoutesDocument.intro1,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const TabsPage()),
+    ),
+    GoRoute(
+      path: RoutesDocument.intro2,
       pageBuilder: (context, state) =>
           CustomTransition(state, const SecondIntroPage()),
     ),
     GoRoute(
-      path: RoutesDocument.intro1,
-      builder: (context, state) => const FirstIntroPage(),
+      path: RoutesDocument.intro3,
+      name: RoutesDocument.intro3,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const ThirdIntroPage()),
     ),
     GoRoute(
-      path: RoutesDocument.intro2,
-      builder: (context, state) => const SecondIntroPage(),
+      path: RoutesDocument.intro4,
+      name: RoutesDocument.intro4,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const FourthIntroPage()),
     ),
     GoRoute(
       path: RoutesDocument.tabs,
@@ -80,11 +94,31 @@ final router = GoRouter(
       pageBuilder: (context, state) =>
           CustomTransition(state, const TicketHistoryPage()),
     ),
+    GoRoute(
+      path: RoutesDocument.availableTickets,
+      name: RoutesDocument.availableTickets,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const AvalilableTicketsPage()),
+    ),
+    GoRoute(
+      path: RoutesDocument.partyDetailes2nd,
+      name: RoutesDocument.partyDetailes2nd,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const PartyDetailes2ndPage()),
+    ),
+    GoRoute(
+      path: RoutesDocument.buying1,
+      name: RoutesDocument.buying1,
+      pageBuilder: (context, state) =>
+          CustomTransition(state, const Buying1stPage()),
+    ),
   ],
 );
 
 class RoutesDocument {
   const RoutesDocument._();
+  static const buying1 = '/buying1';
+  static const partyDetailes2nd = '/partyDetailes2nd';
   static const ticketHistory = '/ticketHistory';
   static const addCard = '/add_card';
   static const accountDetailes = '/accountDetailes';
@@ -93,9 +127,12 @@ class RoutesDocument {
   static const String login = '/login';
   static const String intro1 = '/intro1';
   static const String intro2 = '/intro2';
+  static const intro4 = '/intro4';
+  static const intro3 = '/intro3';
   static const String tabs = '/tabs';
   static const String calender = '/calender';
   static const partyDetailes = '/partyDetailes';
+  static const availableTickets = '/availableTickets';
 }
 
 // Example usage:

@@ -4,8 +4,8 @@ import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SecondIntroPage extends StatelessWidget {
-  const SecondIntroPage({super.key});
+class FourthIntroPage extends StatelessWidget {
+  const FourthIntroPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,22 +15,15 @@ class SecondIntroPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Row(),
-            const Gap(75),
             const Spacer(),
-            const Gap(Insets.extraLarge),
-            const Gap(Insets.extraLarge),
-            Stack(
-              children: [
-                SvgPicture.asset(Assets.assetsSvgIntroGroup),
-              ],
-            ),
+            //SvgPicture.asset(Assets.assetsSvgWave),
             const Spacer(),
             const Gap(Insets.extraLarge),
             Text(
               'Let The Music go Into your Ears',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontFamily: GoogleFonts.exo().fontFamily,
+                  fontFamily: GoogleFonts.bebasNeue().fontFamily,
                   fontWeight: FontsTheme.mediumBigWeight,
                   fontSize: FontsTheme.veryBigSize),
             ),
@@ -41,7 +34,7 @@ class SecondIntroPage extends StatelessWidget {
                 children: [
                   GradientBorderButton(
                       onPressed: () {
-                        context.go(RoutesDocument.intro3);
+                        context.go(RoutesDocument.tabs);
                       },
                       text: 'Next'),
                 ],

@@ -1,5 +1,5 @@
 import 'package:app/common_lib.dart';
-import 'package:app/src/intro/second.dart';
+import 'package:app/src/intro/third.dart';
 import 'package:app/utils/components/buttons/gardient_border_button.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:app/utils/constants/sizes.dart';

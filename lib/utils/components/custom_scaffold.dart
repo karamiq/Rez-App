@@ -35,8 +35,8 @@ class CustomScaffold extends StatelessWidget {
                   MediaQuery.of(context).size.height / 5,
               right: -40,
               child: Container(
-                height: 200,
-                width: 200,
+                height: 250,
+                width: 250,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Color(0xFF311030),
@@ -44,12 +44,11 @@ class CustomScaffold extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: MediaQuery.of(context).padding.top +
-                  MediaQuery.of(context).size.height / 20,
+              top: 30,
               left: -20,
               child: Container(
-                height: 200,
-                width: 200,
+                height: 250,
+                width: 250,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Color(0xFF0b1443),
@@ -57,11 +56,11 @@ class CustomScaffold extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: MediaQuery.of(context).size.height / 10,
+              bottom: 60,
               left: -20,
               child: Container(
-                height: 200,
-                width: 200,
+                height: 250,
+                width: 250,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Color.fromARGB(151, 11, 20, 67),
@@ -70,7 +69,7 @@ class CustomScaffold extends StatelessWidget {
             ),
             Positioned.fill(
               child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 80.0, sigmaY: 80.0),
+                filter: ImageFilter.blur(sigmaX: 70.0, sigmaY: 70.0),
                 child: Container(
                   color: Colors.transparent,
                 ),
