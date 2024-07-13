@@ -3,7 +3,6 @@ import 'package:app/src/home/components/party_card.dart';
 import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
-import 'package:table_calendar/table_calendar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -149,7 +148,7 @@ class AllTab extends StatelessWidget {
               genre: partyData[index]['genre']!,
               ticketInfo: partyData[index]['ticketInfo']!,
               expiredDate: DateTime.now(),
-              isExpired: true,
+              isExpired: false,
             ),
         separatorBuilder: (context, index) => const Gap(Insets.medium),
         itemCount: partyData.length);

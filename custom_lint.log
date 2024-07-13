@@ -17360,3 +17360,381 @@ at:
 [WrapWithProviderScope] 2024-07-08T14:20:20.878923 #146    ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
 [WrapWithProviderScope] 2024-07-08T14:20:20.878923 <asynchronous suspension>
 [WrapWithProviderScope] 2024-07-08T14:20:20.878923
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.277277
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.282448
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:04:51.283432
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.438585
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440047
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:05:54.440191
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.934619
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935704
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:07:47.935930
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.243662
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244563
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:08:08.244676
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.910012
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911226
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:09:57.911453
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.672243
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.673958
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:14:24.674180
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.702494
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703521
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 Plugin ConvertToStatefulBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/src/intro/second.dart:
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 Null check operator used on a null value
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 #0      ConvertToStatefulBaseWidget._convertStatefulToStatefulWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateful_base_widget.dart:221:41)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 #1      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 #2      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 #3      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 #5      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 #6      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 #7      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652 <asynchronous suspension>
+[ConvertToStatefulBaseWidget] 2024-07-11T16:15:48.703652

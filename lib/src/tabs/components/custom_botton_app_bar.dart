@@ -56,6 +56,7 @@ class CustomBottomAppBar extends StatelessWidget {
     required BuildContext context,
   }) {
     return BottomNavigationBarItem(
+      backgroundColor: Colors.transparent,
       activeIcon: GradientIcon(
         icon: icon,
       ),

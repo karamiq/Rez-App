@@ -163,7 +163,7 @@ class _AddCardPageState extends State<AddCardPage> {
                 Checkbox.adaptive(
                   value: isCheckboxChecked,
                   activeColor: ColorsTheme.secondary,
-                  side: BorderSide(color: ColorsTheme.subtitle),
+                  side: BorderSide(color: ColorsTheme.indego),
                   onChanged: (value) {
                     setState(() {
                       isCheckboxChecked = value!;
@@ -173,7 +173,7 @@ class _AddCardPageState extends State<AddCardPage> {
                 ),
                 const Text(
                   'Agree to terms and conditions',
-                  style: TextStyle(color: ColorsTheme.subtitle),
+                  style: TextStyle(color: ColorsTheme.indego),
                 ),
               ],
             ),

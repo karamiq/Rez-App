@@ -17,7 +17,6 @@ class SecondIntroPage extends StatefulWidget {
 class _SecondIntroPageState extends State<SecondIntroPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -26,11 +25,6 @@ class _SecondIntroPageState extends State<SecondIntroPage>
       duration: const Duration(milliseconds: 300),
       vsync: this,
     );
-
-    _animation = Tween<double>(begin: 0, end: 100).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
-
     _startAnimation();
   }
 
@@ -60,22 +54,38 @@ class _SecondIntroPageState extends State<SecondIntroPage>
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Row(),
               const Gap(75),
-              Container(
+              const SizedBox(
                 height: 400,
                 width: 500,
-                decoration:
-                    BoxDecoration(border: Border.all(color: Colors.green)),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     AnimatedUpDownWidget(
-                      child: SvgPicture.asset(
-                        Assets.assetsSvgMusicColumn,
-                        height: 200,
-                      ),
-                    )
+                      start: 0.0,
+                      end: 300.0,
+                    ),
+                    AnimatedUpDownWidget(
+                      start: 20.0,
+                      end: 120.0,
+                    ),
+                    AnimatedUpDownWidget(
+                      start: 40.0,
+                      end: 300.0,
+                    ),
+                    AnimatedUpDownWidget(
+                      start: 0.0,
+                      end: 80.0,
+                    ),
+                    AnimatedUpDownWidget(
+                      start: 60.0,
+                      end: 200.0,
+                    ),
+                    AnimatedUpDownWidget(
+                      start: 10.0,
+                      end: 140.0,
+                    ),
                   ],
                 ),
               ),
@@ -115,20 +125,21 @@ class _SecondIntroPageState extends State<SecondIntroPage>
 }
 
 class AnimatedUpDownWidget extends StatefulWidget {
-  final Widget child;
   final double start;
   final double end;
   final Duration duration;
+  final Duration initialDelay;
 
   const AnimatedUpDownWidget({
-    required this.child,
+    super.key,
     this.start = 0.0,
     this.end = 100.0,
-    this.duration = const Duration(seconds: 1),
+    this.duration = const Duration(milliseconds: 500),
+    this.initialDelay = Duration.zero,
   });
 
   @override
-  _AnimatedUpDownWidgetState createState() => _AnimatedUpDownWidgetState();
+  createState() => _AnimatedUpDownWidgetState();
 }
 
 class _AnimatedUpDownWidgetState extends State<AnimatedUpDownWidget>
@@ -141,19 +152,34 @@ class _AnimatedUpDownWidgetState extends State<AnimatedUpDownWidget>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: widget.duration,
-    )..repeat(reverse: true);
-
-    _animation = Tween<double>(begin: widget.start, end: widget.end).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: const Interval(
-          0.5,
-          1.0,
-          curve: Curves.easeInOut,
-        ),
-      ),
+      duration: widget.duration * 2 + const Duration(milliseconds: 2000),
     );
+    _animation = TweenSequence<double>([
+      TweenSequenceItem(
+        tween: Tween(begin: widget.start, end: widget.end)
+            .chain(CurveTween(curve: Curves.easeInOut)),
+        weight: 1,
+      ),
+      TweenSequenceItem(
+        tween: ConstantTween<double>(widget.end), // Pause at end
+        weight: 1,
+      ),
+      TweenSequenceItem(
+        tween: Tween(begin: widget.end, end: widget.start)
+            .chain(CurveTween(curve: Curves.easeInOut)),
+        weight: 1,
+      ),
+      TweenSequenceItem(
+        tween: ConstantTween<double>(widget.start), // Pause at start
+        weight: 1,
+      ),
+    ]).animate(_controller);
+
+    Future.delayed(widget.initialDelay, () {
+      if (mounted) {
+        _controller.repeat();
+      }
+    });
   }
 
   @override
@@ -164,14 +190,19 @@ class _AnimatedUpDownWidgetState extends State<AnimatedUpDownWidget>
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _animation,
-      builder: (context, child) {
-        return Transform.translate(
-          offset: Offset(0.0, _animation.value),
-          child: widget.child,
-        );
-      },
+    return ClipRRect(
+      child: AnimatedBuilder(
+        animation: _animation,
+        builder: (context, child) {
+          return Transform.translate(
+            offset: Offset(0, _animation.value),
+            child: SvgPicture.asset(
+              Assets.assetsSvgMusicColumn,
+              height: 200,
+            ),
+          );
+        },
+      ),
     );
   }
 }

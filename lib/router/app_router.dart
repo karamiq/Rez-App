@@ -1,3 +1,5 @@
+import 'package:app/src/auth/auth.dart';
+import 'package:app/src/auth/sign_in.dart';
 import 'package:app/src/home/google_maps/google_maps.dart';
 import 'package:app/src/home/party_detailes/party_detailes.dart';
 import 'package:app/src/profile/account_detailes/account_detailes.dart';
@@ -6,8 +8,6 @@ import 'package:app/src/profile/ticket_history/ticket_history.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-
-import '../src/auth/auth.dart';
 import '../src/calender/calender.dart';
 import '../src/intro/first.dart';
 import '../src/intro/second.dart';
@@ -28,7 +28,7 @@ final router = GoRouter(
     GoRoute(
       path: RoutesDocument.home,
       pageBuilder: (context, state) =>
-          CustomTransition(state, const TabsPage()),
+          CustomTransition(state, const SecondIntroPage()),
     ),
     GoRoute(
       path: RoutesDocument.intro1,

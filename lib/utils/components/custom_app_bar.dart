@@ -8,6 +8,7 @@ class CustomAppBar extends StatelessWidget {
   CustomAppBar(
       {super.key,
       required this.title,
+      this.showBackButton = true,
       this.showCalender = true,
       this.gradientColor = GradientColor.green,
       this.onLeftIconPressed,
@@ -17,18 +18,24 @@ class CustomAppBar extends StatelessWidget {
   GradientColor gradientColor;
   final String title;
   final bool showCalender;
-
+  final bool showBackButton;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            GradientBackButton(
-                gradientColor: gradientColor,
-                onPressed: onLeftIconPressed ?? () => context.pop()),
+            if (showBackButton)
+              GradientBackButton(
+                  gradientColor: gradientColor,
+                  onPressed: onLeftIconPressed ?? () => context.pop()),
+            if (!showBackButton)
+              const SizedBox(
+                height: 40,
+                width: 40,
+              ),
             Text(
               title,
               style: TextStyle(

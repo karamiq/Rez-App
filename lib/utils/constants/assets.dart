@@ -13,6 +13,14 @@ class Assets {
   /// assets/images/Logo_ShopeePay.png
   static const String assetsImagesLogoShopeePay = "assets/images/Logo_ShopeePay.png";
 
+  /// Assets for assetsImagesNoTickets
+  /// assets/images/no_tickets.png
+  static const String assetsImagesNoTickets = "assets/images/no_tickets.png";
+
+  /// Assets for assetsImagesTicketTimerBackground
+  /// assets/images/ticket_timer_background.png
+  static const String assetsImagesTicketTimerBackground = "assets/images/ticket_timer_background.png";
+
   /// Assets for assetsImagesVisaIncLogo
   /// assets/images/Visa_Inc._logo.png
   static const String assetsImagesVisaIncLogo = "assets/images/Visa_Inc._logo.png";
@@ -60,6 +68,10 @@ class Assets {
   /// Assets for assetsSvgHeartFilled
   /// assets/svg/heart_filled.svg
   static const String assetsSvgHeartFilled = "assets/svg/heart_filled.svg";
+
+  /// Assets for assetsSvgHeartSlash
+  /// assets/svg/heart-slash.svg
+  static const String assetsSvgHeartSlash = "assets/svg/heart-slash.svg";
 
   /// Assets for assetsSvgHome
   /// assets/svg/home.svg

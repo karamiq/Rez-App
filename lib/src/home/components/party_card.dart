@@ -12,44 +12,42 @@ class PartyCard extends StatelessWidget {
   final DateTime expiredDate;
 
   const PartyCard({
-    Key? key,
+    super.key,
     required this.imageUrl,
     required this.title,
     required this.genre,
     required this.ticketInfo,
     required this.isExpired,
     required this.expiredDate,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      // Wrap InkWell with Material
-      type: MaterialType.card, // Ensure the material is transparent
+      type: MaterialType.card,
       child: InkWell(
-        borderRadius: BorderRadius.circular(8.0), // example radius
+        borderRadius: BorderRadius.circular(8.0),
         onTap: isExpired
             ? null
             : () => context.pushNamed(RoutesDocument.partyDetailes),
         child: Stack(
           children: [
-            ColorFiltered(
-              colorFilter: isExpired
-                  ? ColorFilter.mode(
-                      Colors.black.withOpacity(0.7), BlendMode.srcOver)
-                  : const ColorFilter.mode(
-                      Colors.transparent, BlendMode.srcOver),
-              child: Container(
-                height: 200,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0), // example radius
-                ),
-                child: Stack(
-                  children: [
-                    ClipRRect(
-                      borderRadius:
-                          BorderRadius.circular(8.0), // example radius
+            Container(
+              height: 200,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                borderRadius: BorderSize.mediumRadius,
+              ),
+              child: Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderSize.mediumRadius,
+                    child: ColorFiltered(
+                      colorFilter: isExpired
+                          ? ColorFilter.mode(
+                              Colors.black.withOpacity(0.7), BlendMode.srcOver)
+                          : const ColorFilter.mode(
+                              Colors.transparent, BlendMode.color),
                       child: Image.network(
                         imageUrl,
                         fit: BoxFit.cover,
@@ -57,58 +55,58 @@ class PartyCard extends StatelessWidget {
                         width: double.infinity,
                       ),
                     ),
-                    const Align(
-                      alignment: Alignment.topRight,
-                      child: LikeButton(),
-                    ),
-                    Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 12.0,
-                          vertical: 8.0,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Text(
-                              title,
-                              style: const TextStyle(
-                                fontSize: 18, // example size
-                                color: Colors.white,
+                  ),
+                  const Align(
+                    alignment: Alignment.topRight,
+                    child: LikeButton(),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12.0,
+                        vertical: 8.0,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            title,
+                            style: const TextStyle(
+                              fontSize: 18, // example size
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            children: [
+                              const Icon(Icons.music_note,
+                                  color: Colors.white, size: 16),
+                              const SizedBox(width: 4.0),
+                              Text(
+                                genre,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 4.0),
-                            Row(
-                              children: [
-                                const Icon(Icons.music_note,
-                                    color: Colors.white, size: 16),
-                                const SizedBox(width: 4.0),
-                                Text(
-                                  genre,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                  ),
+                              const SizedBox(width: 12.0),
+                              const Icon(Icons.confirmation_number,
+                                  color: Colors.white, size: 16),
+                              const SizedBox(width: 4.0),
+                              Text(
+                                ticketInfo,
+                                style: const TextStyle(
+                                  color: Colors.white,
                                 ),
-                                const SizedBox(width: 12.0),
-                                const Icon(Icons.confirmation_number,
-                                    color: Colors.white, size: 16),
-                                const SizedBox(width: 4.0),
-                                Text(
-                                  ticketInfo,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             if (isExpired)
@@ -119,7 +117,10 @@ class PartyCard extends StatelessWidget {
                 right: 0,
                 child: Center(
                   child: Text(
-                    expiredDate.formatDate(),
+                    'Expired at ${expiredDate.formatDate()}',
+                    style: const TextStyle(
+                        fontSize: FontsTheme.bigSize,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               )

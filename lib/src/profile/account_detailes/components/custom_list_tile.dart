@@ -42,7 +42,7 @@ class CustomListTile extends StatelessWidget {
           subtitle: Text(
             subtitle,
             style: const TextStyle(
-              color: ColorsTheme.subtitle,
+              color: ColorsTheme.indego,
               fontWeight: FontsTheme.mediumBigWeight,
             ),
           ),

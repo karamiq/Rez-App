@@ -1,10 +1,8 @@
 import 'dart:ui';
 
 import 'package:app/common_lib.dart';
-import 'package:app/src/auth/components/otp.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
 

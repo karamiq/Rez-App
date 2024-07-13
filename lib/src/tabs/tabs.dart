@@ -16,7 +16,6 @@ class _TabsPageState extends State<TabsPage> {
   int pageIndex = 0;
   void _selectedPage(int index) {
     setState(() {
-      // selectedPageIndex = index;
       pageIndex = index;
     });
   }
@@ -24,12 +23,16 @@ class _TabsPageState extends State<TabsPage> {
   @override
   void initState() {
     super.initState();
-    _pages = const [HomePage(), TicketPage(), LikesPage(), ProfilePage()];
+    _pages = [
+      const HomePage(),
+      const TicketPage(),
+      const LikesPage(),
+      const ProfilePage(),
+    ];
   }
 
-  // int selectedPageIndex = 0;
-  double slideSize = 0;
   List<Widget> _pages = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +42,15 @@ class _TabsPageState extends State<TabsPage> {
         selectedPage: _selectedPage,
         selectedPageIndex: pageIndex,
       ),
-      body: SafeArea(child: _pages[pageIndex]),
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 300),
+        transitionBuilder: (Widget child, Animation<double> animation) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+        switchInCurve: Curves.decelerate,
+        switchOutCurve: Curves.decelerate,
+        child: _pages[pageIndex],
+      ),
     );
   }
 }

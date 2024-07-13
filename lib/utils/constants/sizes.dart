@@ -37,11 +37,12 @@ class ColorsTheme {
   static const primaryContainer = Color(0xFF14161F);
   static const divider = Color(0xFF1D1E2D);
   static const listTileBackground = Color(0xFF060212);
-  static const subtitle = Color(0xFF484B7B);
+  static const indego = Color(0xFF484B7B);
   static const hint = Color(0xFF828282);
   static const cardColor = Color(0xFF272841);
   static const cyan = Color(0xFFC8EFF8);
   static const onCard = Color(0xFF63658D);
+  static const subtitle = Color(0xFFB3B8B8);
   static LinearGradient primaryLinearGradient = const LinearGradient(
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
