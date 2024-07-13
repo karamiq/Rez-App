@@ -140,7 +140,7 @@ class AllTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
+    return ListView.builder(
         padding: const EdgeInsets.only(top: Insets.medium),
         itemBuilder: (context, index) => PartyCard(
               imageUrl: partyData[index]['imageUrl']!,
@@ -150,7 +150,6 @@ class AllTab extends StatelessWidget {
               expiredDate: DateTime.now(),
               isExpired: false,
             ),
-        separatorBuilder: (context, index) => const Gap(Insets.medium),
         itemCount: partyData.length);
   }
 }

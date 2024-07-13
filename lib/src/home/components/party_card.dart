@@ -20,111 +20,128 @@ class PartyCard extends StatelessWidget {
     required this.isExpired,
     required this.expiredDate,
   });
-
   @override
   Widget build(BuildContext context) {
-    return Material(
-      type: MaterialType.card,
-      child: InkWell(
-        borderRadius: BorderRadius.circular(8.0),
-        onTap: isExpired
-            ? null
-            : () => context.pushNamed(RoutesDocument.partyDetailes),
-        child: Stack(
-          children: [
-            Container(
-              height: 200,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                borderRadius: BorderSize.mediumRadius,
-              ),
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderSize.mediumRadius,
-                    child: ColorFiltered(
-                      colorFilter: isExpired
-                          ? ColorFilter.mode(
-                              Colors.black.withOpacity(0.7), BlendMode.srcOver)
-                          : const ColorFilter.mode(
-                              Colors.transparent, BlendMode.color),
-                      child: Image.network(
-                        imageUrl,
-                        fit: BoxFit.cover,
-                        height: double.infinity,
-                        width: double.infinity,
-                      ),
-                    ),
-                  ),
-                  const Align(
-                    alignment: Alignment.topRight,
-                    child: LikeButton(),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12.0,
-                        vertical: 8.0,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            title,
-                            style: const TextStyle(
-                              fontSize: 18, // example size
-                              color: Colors.white,
-                            ),
-                          ),
-                          const SizedBox(height: 4.0),
-                          Row(
-                            children: [
-                              const Icon(Icons.music_note,
-                                  color: Colors.white, size: 16),
-                              const SizedBox(width: 4.0),
-                              Text(
-                                genre,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                              const SizedBox(width: 12.0),
-                              const Icon(Icons.confirmation_number,
-                                  color: Colors.white, size: 16),
-                              const SizedBox(width: 4.0),
-                              Text(
-                                ticketInfo,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            if (isExpired)
-              Positioned(
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: Center(
-                  child: Text(
-                    'Expired at ${expiredDate.formatDate()}',
-                    style: const TextStyle(
-                        fontSize: FontsTheme.bigSize,
-                        fontWeight: FontWeight.bold),
-                  ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: Insets.small),
+      child: Material(
+        type: MaterialType.card,
+        child: InkWell(
+          borderRadius: BorderSize.mediumRadius,
+          onTap: isExpired
+              ? null
+              : () {
+                  try {
+                    context.pushNamed(RoutesDocument.partyDetailes);
+                  } catch (e) {
+                    debugPrint('Navigation error: $e');
+                  }
+                },
+          child: Stack(
+            children: [
+              Container(
+                height: 200,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderSize.mediumRadius,
                 ),
-              )
-          ],
+                child: Stack(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderSize.mediumRadius,
+                      child: ColorFiltered(
+                        colorFilter: isExpired
+                            ? ColorFilter.mode(Colors.black.withOpacity(0.7),
+                                BlendMode.srcOver)
+                            : const ColorFilter.mode(
+                                Colors.transparent, BlendMode.color),
+                        child: Image.network(
+                          imageUrl,
+                          fit: BoxFit.cover,
+                          height: double.infinity,
+                          width: double.infinity,
+                          errorBuilder: (context, error, stackTrace) {
+                            return const Center(
+                              child: Text(
+                                'Image failed to load',
+                                style: TextStyle(color: Colors.red),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    const Align(
+                      alignment: Alignment.topRight,
+                      child: LikeButton(),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Padding(
+                        padding: Insets.mediumAll,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              title,
+                              style: const TextStyle(
+                                fontSize: FontsTheme.bigSize,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: Insets.small,
+                            ),
+                            Row(
+                              children: [
+                                const Icon(Icons.music_note,
+                                    color: Colors.white,
+                                    size: FontsTheme.mediumSize),
+                                const SizedBox(width: Insets.small),
+                                Text(
+                                  genre,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const SizedBox(width: Insets.small),
+                                const Icon(Icons.confirmation_number,
+                                    color: Colors.white,
+                                    size: FontsTheme.mediumSize),
+                                const SizedBox(width: Insets.small),
+                                Text(
+                                  ticketInfo,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              if (isExpired)
+                Positioned(
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Center(
+                    child: Text(
+                      'Expired at ${expiredDate.formatDate()}',
+                      style: const TextStyle(
+                          fontSize: FontsTheme.bigSize,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                )
+            ],
+          ),
         ),
       ),
     );
