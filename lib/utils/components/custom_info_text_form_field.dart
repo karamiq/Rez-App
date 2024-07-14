@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants/sizes.dart';
+import 'input_decoration/add_card_decoration.dart';
 
 class CustomInfoTextFormField extends StatelessWidget {
   const CustomInfoTextFormField({
@@ -21,32 +22,7 @@ class CustomInfoTextFormField extends StatelessWidget {
     return TextFormField(
       validator: validator,
       controller: controller,
-      decoration: InputDecoration(
-        contentPadding: Insets.mediumAll,
-        helperText: '',
-        hintText: labelText,
-        label: label,
-        hintStyle: const TextStyle(color: ColorsTheme.onCard),
-        filled: true,
-        fillColor: const Color(0xFF151723),
-        enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: BorderSize.mediumRadius,
-        ),
-        border: const OutlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: BorderSize.mediumRadius,
-        ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: BorderSize.mediumRadius,
-        ),
-        errorBorder: const OutlineInputBorder(
-          borderSide:
-              BorderSide(color: Color.fromARGB(135, 244, 67, 54), width: 2),
-          borderRadius: BorderSize.mediumRadius,
-        ),
-      ),
+      decoration: addCardDecoration(labelText, label),
     );
   }
 }

@@ -1,12 +1,8 @@
 // ignore_for_file: avoid_print
-
-import 'dart:convert';
-
 import 'package:app/common_lib.dart';
 import 'package:app/src/ticketing_&_detailes/components/detailes_upper_half_2nd.dart';
 import 'package:app/utils/components/buttons/gardient_border_button.dart';
 import 'package:flutter/material.dart';
-import 'components/fading_divider.dart';
 import 'components/seat_row.dart';
 
 class PartyDetailes2ndPage extends StatelessWidget {
@@ -14,7 +10,7 @@ class PartyDetailes2ndPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int bookedSeats = 0;
+    int bookedSeats = 2;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -101,110 +97,107 @@ class PartyDetailes2ndPage extends StatelessWidget {
                       borderRadius: BorderSize.mediumRadius,
                       border:
                           Border.all(color: ColorsTheme.darkIndego, width: .5)),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          SeatRow(
-                              seatsNumber: (value) => bookedSeats += value,
-                              seatsStyle: MainAxisAlignment.center,
-                              colors: const [
-                                ColorsTheme.soldSeat,
-                                ColorsTheme.soldSeat,
-                                ColorsTheme.subtitle,
-                              ]),
-                          SeatRow(
-                              seatsNumber: (value) => bookedSeats += value,
-                              seatsStyle: MainAxisAlignment.center,
-                              colors: const [
-                                ColorsTheme.soldSeat,
-                                ColorsTheme.soldSeat,
-                                ColorsTheme.subtitle,
-                              ]),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          SeatRow(
-                              seatsNumber: (value) => bookedSeats += value,
-                              seatsStyle: MainAxisAlignment.spaceAround,
-                              colors: const [
-                                ColorsTheme.soldSeat,
-                                ColorsTheme.soldSeat,
-                                ColorsTheme.idkSeat,
-                                ColorsTheme.idkSeat,
-                              ]),
-                          SeatRow(
-                              seatsNumber: (value) => bookedSeats += value,
-                              seatsStyle: MainAxisAlignment.center,
-                              colors: const [
-                                ColorsTheme.soldSeat,
-                                ColorsTheme.soldSeat,
-                                ColorsTheme.soldSeat,
-                                ColorsTheme.soldSeat,
-                              ]),
-                        ],
-                      ),
-                      SeatRow(
-                          seatsNumber: (value) => bookedSeats += value,
-                          seatsStyle: MainAxisAlignment.center,
-                          colors: const [
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.subtitle,
-                          ]),
-                      SeatRow(
-                          seatsNumber: (value) => bookedSeats += value,
-                          seatsStyle: MainAxisAlignment.spaceAround,
-                          colors: const [
-                            ColorsTheme.subtitle,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.subtitle,
-                          ]),
-                      SeatRow(
-                          seatsNumber: (value) => bookedSeats += value,
-                          seatsStyle: MainAxisAlignment.spaceAround,
-                          colors: const [
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                          ]),
-                      SeatRow(
-                          seatsNumber: (value) => bookedSeats += value,
-                          seatsStyle: MainAxisAlignment.spaceAround,
-                          colors: const [
-                            ColorsTheme.subtitle,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.subtitle,
-                            ColorsTheme.soldSeat,
-                            ColorsTheme.soldSeat,
-                          ]),
-                    ],
-                  ),
+                  child: SeatsLayout(seats: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        SeatRow(
+                            seatsNumber: (value) => bookedSeats += value,
+                            seatsStyle: MainAxisAlignment.center,
+                            colors: const [
+                              ColorsTheme.soldSeat,
+                              ColorsTheme.soldSeat,
+                              ColorsTheme.subtitle,
+                            ]),
+                        SeatRow(
+                            seatsNumber: (value) => bookedSeats += value,
+                            seatsStyle: MainAxisAlignment.center,
+                            colors: const [
+                              ColorsTheme.soldSeat,
+                              ColorsTheme.soldSeat,
+                              ColorsTheme.subtitle,
+                            ]),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        SeatRow(
+                            seatsNumber: (value) => bookedSeats += value,
+                            seatsStyle: MainAxisAlignment.spaceAround,
+                            colors: const [
+                              ColorsTheme.soldSeat,
+                              ColorsTheme.soldSeat,
+                              ColorsTheme.idkSeat,
+                              ColorsTheme.idkSeat,
+                            ]),
+                        SeatRow(
+                            seatsNumber: (value) => bookedSeats += value,
+                            seatsStyle: MainAxisAlignment.center,
+                            colors: const [
+                              ColorsTheme.soldSeat,
+                              ColorsTheme.soldSeat,
+                              ColorsTheme.soldSeat,
+                              ColorsTheme.soldSeat,
+                            ]),
+                      ],
+                    ),
+                    SeatRow(
+                        seatsNumber: (value) => bookedSeats += value,
+                        seatsStyle: MainAxisAlignment.center,
+                        colors: const [
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.subtitle,
+                        ]),
+                    SeatRow(
+                        seatsNumber: (value) => bookedSeats += value,
+                        seatsStyle: MainAxisAlignment.spaceAround,
+                        colors: const [
+                          ColorsTheme.subtitle,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.subtitle,
+                        ]),
+                    SeatRow(
+                        seatsNumber: (value) => bookedSeats += value,
+                        seatsStyle: MainAxisAlignment.spaceAround,
+                        colors: const [
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                        ]),
+                    SeatRow(
+                        seatsNumber: (value) => bookedSeats += value,
+                        seatsStyle: MainAxisAlignment.spaceAround,
+                        colors: const [
+                          ColorsTheme.subtitle,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.subtitle,
+                          ColorsTheme.soldSeat,
+                          ColorsTheme.soldSeat,
+                        ]),
+                  ]),
                 ),
               ],
             ),
@@ -212,8 +205,10 @@ class PartyDetailes2ndPage extends StatelessWidget {
               padding: Insets.mediumAll,
               child: GradientBorderButton(
                   onPressed: () {
-                    context.pushNamed(RoutesDocument.buying1);
                     print('booked Seats: $bookedSeats');
+                    context.pushNamed(RoutesDocument.buying1, queryParameters: {
+                      'bookedSeats': bookedSeats.toString(),
+                    });
                   },
                   text: 'Buy Ticket'),
             ),
@@ -221,6 +216,23 @@ class PartyDetailes2ndPage extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class SeatsLayout extends StatelessWidget {
+  const SeatsLayout({
+    super.key,
+    required this.seats,
+  });
+
+  final List<Widget> seats;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: seats,
     );
   }
 }

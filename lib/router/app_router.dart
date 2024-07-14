@@ -107,11 +107,13 @@ final router = GoRouter(
           CustomTransition(state, const PartyDetailes2ndPage()),
     ),
     GoRoute(
-      path: RoutesDocument.buying1,
-      name: RoutesDocument.buying1,
-      pageBuilder: (context, state) =>
-          CustomTransition(state, const Buying1stPage()),
-    ),
+        path: RoutesDocument.buying1,
+        name: RoutesDocument.buying1,
+        pageBuilder: (context, state) {
+          final bookedSeats = state.uri.queryParameters['bookedSeats'];
+          return CustomTransition(
+              state, Buying1stPage(bookedSeats: int.parse(bookedSeats!)));
+        }),
   ],
 );
 

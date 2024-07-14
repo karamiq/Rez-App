@@ -29,6 +29,14 @@ class BuyingHead1 extends StatelessWidget {
             child: Image.network(
               imageUrl,
               fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) {
+                return const Center(
+                  child: Text(
+                    'Image failed to load',
+                    style: TextStyle(color: Colors.red),
+                  ),
+                );
+              },
             ),
           ),
           Padding(

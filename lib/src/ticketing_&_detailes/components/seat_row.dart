@@ -17,7 +17,6 @@ class SeatRow extends StatefulWidget {
 
 class _SeatRowState extends State<SeatRow> {
   late List<Color> seatColors;
-
   @override
   void initState() {
     super.initState();

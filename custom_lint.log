@@ -20745,3 +20745,63 @@ at:
 [WrapWithProviderScope] 2024-07-14T00:18:52.070250 #269    ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
 [WrapWithProviderScope] 2024-07-14T00:18:52.070250 <asynchronous suspension>
 [WrapWithProviderScope] 2024-07-14T00:18:52.070250
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 Plugin ConvertToStatelessBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/utils/components/custom_item_select.dart:
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 RangeError (end): Invalid value: Not in inclusive range 5255..8344: 1782
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #0      RangeError.checkValidRange (dart:core/errors.dart:365:9)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #1      _StringBase.substring (dart:core-patch/string_patch.dart:418:27)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #2      ConvertToStatelessBaseWidget._convertStatefulToStatelessWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateless_base_widget.dart:228:49)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #5      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #6      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #7      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #8      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 #9      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.177934
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 Plugin ConvertToStatelessBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/utils/components/custom_item_select.dart:
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 RangeError (end): Invalid value: Not in inclusive range 5255..8344: 1782
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #0      RangeError.checkValidRange (dart:core/errors.dart:365:9)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #1      _StringBase.substring (dart:core-patch/string_patch.dart:418:27)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #2      ConvertToStatelessBaseWidget._convertStatefulToStatelessWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateless_base_widget.dart:228:49)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #5      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #6      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #7      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #8      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 #9      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178832
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 Plugin ConvertToStatelessBaseWidget threw while analyzing /Users/karam/Documents/GitHub/Rez-App/lib/utils/components/custom_item_select.dart:
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 RangeError (end): Invalid value: Not in inclusive range 5255..8344: 1782
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #0      RangeError.checkValidRange (dart:core/errors.dart:365:9)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #1      _StringBase.substring (dart:core-patch/string_patch.dart:418:27)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #2      ConvertToStatelessBaseWidget._convertStatefulToStatelessWidget.<anonymous closure> (package:riverpod_lint/src/assists/convert_to_stateless_base_widget.dart:228:49)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:151:26)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #4      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #5      _ChangeBuilderImpl._waitForCompletion (package:custom_lint_core/src/change_reporter.dart:167:5)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #6      Future.wait.<anonymous closure> (dart:async/future.dart:524:21)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #7      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:513:7)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #8      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 #9      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949 <asynchronous suspension>
+[ConvertToStatelessBaseWidget] 2024-07-14T11:07:31.178949
