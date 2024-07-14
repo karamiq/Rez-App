@@ -3,31 +3,30 @@ import 'package:flutter/material.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../components/custom_botton_app_bar.dart';
 
-class CustomListTile extends StatelessWidget {
+class ProfileListTile extends StatelessWidget {
   final String title;
   final String subtitle;
   final String imagePath;
   final VoidCallback onTap;
 
-  const CustomListTile({
-    Key? key,
+  const ProfileListTile({
+    super.key,
     required this.title,
     required this.subtitle,
     required this.imagePath,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: ColorsTheme.listTileBackground,
+      color: ColorsTheme.profileListTileBackground,
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderSize.smallRadius,
         child: ListTile(
           leading: Image.asset(
             imagePath,
-            // Assuming the image size needs to be adjusted, you can specify width and height here
             width: 40,
             height: 40,
           ),

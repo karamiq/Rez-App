@@ -2,8 +2,8 @@ import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 
-import '../../common_lib.dart';
-import '../tabs/home/components/party_card.dart';
+import '../../../common_lib.dart';
+import '../home/components/party_card.dart';
 
 List<Party> partyList = [
   Party(

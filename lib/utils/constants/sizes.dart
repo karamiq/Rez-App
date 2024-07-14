@@ -36,7 +36,7 @@ class ColorsTheme {
   static const secondary = Color(0xFF6E1B93);
   static const primaryContainer = Color(0xFF14161F);
   static const divider = Color(0xFF1D1E2D);
-  static const listTileBackground = Color(0xFF060212);
+  static const profileListTileBackground = Color(0xFF060212);
   static const indego = Color(0xFF484B7B);
   static const darkIndego = Color(0xFF171954);
   static const hint = Color(0xFF828282);
@@ -49,6 +49,10 @@ class ColorsTheme {
   static const bookingSeat = Color(0xFF00E525);
   static const tickitingTextField = Color(0xFF111122);
   static const ticketingLabel = Color(0xFFBEBEBE);
+  static const ticketingListTileBackground = Color(0xFF161617);
+  static const ticketingListTileTitle = Color(0xFF777777);
+  static const ticketingListTileSubtitle = Color(0xFFBDC0C4);
+  static const lightPrimary = Color(0xFF110D17);
   static LinearGradient primaryLinearGradient = const LinearGradient(
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,

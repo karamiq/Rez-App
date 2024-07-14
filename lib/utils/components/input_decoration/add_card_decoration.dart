@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
 
-InputDecoration addCardDecoration(String labelText, Widget? label) {
+InputDecoration addCardDecoration({required String labelText, Widget? label}) {
   return InputDecoration(
     contentPadding: Insets.mediumAll,
     helperText: '',

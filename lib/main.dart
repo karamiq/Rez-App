@@ -9,10 +9,9 @@ const String appName = 'App';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   final sharedPreferences = await SharedPreferences.getInstance();
 
-  timeago.setLocaleMessages('en', timeago.ArMessages()); // Add french messages
+  timeago.setLocaleMessages('en', timeago.ArMessages());////// Add frnch messages
 
   runApp(
     ProviderScope(

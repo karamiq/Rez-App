@@ -5,10 +5,12 @@ class CustomISvgStyle extends StatelessWidget {
   CustomISvgStyle({
     super.key,
     required this.icon,
+    this.size = 22,
     this.color,
   });
 
   final String icon;
+  final double size;
   Color? color;
 
   @override
@@ -18,12 +20,13 @@ class CustomISvgStyle extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderSize.mediumRadius,
         color: color != null
-            ? color!.withOpacity(0.2)
+            ? color!.withOpacity(0.3)
             : ColorsTheme.primary.withOpacity(.07),
       ),
       child: SvgPicture.asset(
+        height: size,
         icon,
-        color: color != null ? color : ColorsTheme.primary,
+        color: color ?? ColorsTheme.primary,
       ),
     );
   }

@@ -12,7 +12,7 @@ class Buying1stPage extends StatefulWidget {
   final int bookedSeats;
 
   @override
-  _Buying1stPageState createState() => _Buying1stPageState();
+  createState() => _Buying1stPageState();
 }
 
 class _Buying1stPageState extends State<Buying1stPage> {
@@ -31,7 +31,7 @@ class _Buying1stPageState extends State<Buying1stPage> {
         List.generate(widget.bookedSeats, (_) => TextEditingController());
     countryCodeControllers = List.generate(
         widget.bookedSeats, (_) => TextEditingController(text: '+964'));
-  } 
+  }
 
   void next() {
     if (formKey.currentState!.validate()) {
@@ -44,7 +44,8 @@ class _Buying1stPageState extends State<Buying1stPage> {
           'countryCode': countryCodeControllers[i].text,
         });
       }
-      context.pushNamed();
+      print(ticketsData);
+      context.pushNamed(RoutesDocument.buying2);
     }
   }
 
@@ -57,7 +58,7 @@ class _Buying1stPageState extends State<Buying1stPage> {
           child: Column(
             children: [
               const BuyingHead1(
-                appBarTitle: 'name',
+                appBarTitle: 'ne',
                 imageUrl:
                     'https://media.istockphoto.com/id/501387734/photo/dancing-friends.jpg?s=1024x1024&w=is&k=20&c=qneEFMVnKvFkagvbMmZqYU1rLRweq9889MXbu6f8mO4=',
                 title: 'Jazz Night',

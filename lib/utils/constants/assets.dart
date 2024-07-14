@@ -17,6 +17,14 @@ class Assets {
   /// assets/images/no_tickets.png
   static const String assetsImagesNoTickets = "assets/images/no_tickets.png";
 
+  /// Assets for assetsImagesPaypal
+  /// assets/images/paypal.png
+  static const String assetsImagesPaypal = "assets/images/paypal.png";
+
+  /// Assets for assetsImagesQi
+  /// assets/images/qi.png
+  static const String assetsImagesQi = "assets/images/qi.png";
+
   /// Assets for assetsImagesTicketTimerBackground
   /// assets/images/ticket_timer_background.png
   static const String assetsImagesTicketTimerBackground = "assets/images/ticket_timer_background.png";
@@ -113,9 +121,17 @@ class Assets {
   /// assets/svg/notification.svg
   static const String assetsSvgNotification = "assets/svg/notification.svg";
 
+  /// Assets for assetsSvgPaypal
+  /// assets/svg/paypal.svg
+  static const String assetsSvgPaypal = "assets/svg/paypal.svg";
+
   /// Assets for assetsSvgProfile
   /// assets/svg/profile.svg
   static const String assetsSvgProfile = "assets/svg/profile.svg";
+
+  /// Assets for assetsSvgQi
+  /// assets/svg/qi.svg
+  static const String assetsSvgQi = "assets/svg/qi.svg";
 
   /// Assets for assetsSvgSearchNormal
   /// assets/svg/search-normal.svg

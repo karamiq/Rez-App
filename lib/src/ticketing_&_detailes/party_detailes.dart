@@ -3,7 +3,7 @@ import 'package:app/utils/components/buttons/gardient_border_button.dart';
 import 'package:flutter/material.dart';
 
 import 'components/detailes_upper_half.dart';
-import 'components/fading_divider.dart';
+import '../../utils/components/gardient/fading_divider.dart';
 
 class PartyDetailesPage extends StatelessWidget {
   const PartyDetailesPage({super.key});
@@ -58,7 +58,7 @@ class PartyDetailesPage extends StatelessWidget {
                 const Gap(Insets.small),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: Insets.medium),
-                  child: FadingDivider(),
+                  child: FadingGardientDivider(),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

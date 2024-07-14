@@ -1,21 +1,16 @@
 import 'package:app/common_lib.dart';
-import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
-import 'package:app/utils/components/custom_app_bar.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
-import 'package:app/utils/components/gardient/gardient_text.dart';
-import 'package:app/utils/constants/sizes.dart';
+import 'package:app/utils/components/input_decoration/add_card_decoration.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../utils/components/buttons/gardient_border_button.dart';
 import '../../../../utils/components/buttons/gardient_button.dart';
-import '../../../../utils/components/custom_info_text_form_field.dart';
 import 'components/card_added_dialog.dart';
 
 class AddCardPage extends StatefulWidget {
   const AddCardPage({super.key});
 
   @override
-  _AddCardPageState createState() => _AddCardPageState();
+  createState() => _AddCardPageState();
 }
 
 class _AddCardPageState extends State<AddCardPage> {
@@ -74,10 +69,11 @@ class _AddCardPageState extends State<AddCardPage> {
               ),
             ),
             const Gap(Insets.small),
-            CustomInfoTextFormField(
+            TextFormField(
               controller: cardNumberController,
               validator: validator,
-              labelText: '1234 - 5678 - 1234 - 5678',
+              decoration:
+                  addCardDecoration(labelText: '1234 - 5678 - 1234 - 5678'),
             ),
             const Gap(Insets.small),
             const Text(
@@ -89,10 +85,10 @@ class _AddCardPageState extends State<AddCardPage> {
               ),
             ),
             const Gap(Insets.small),
-            CustomInfoTextFormField(
+            TextFormField(
               controller: cardholderNameController,
               validator: validator,
-              labelText: 'Prince',
+              decoration: addCardDecoration(labelText: 'Prince'),
             ),
             const Gap(Insets.small),
             Row(
@@ -110,10 +106,10 @@ class _AddCardPageState extends State<AddCardPage> {
                         ),
                       ),
                       const Gap(Insets.small),
-                      CustomInfoTextFormField(
+                      TextFormField(
                         controller: expiryDateController,
                         validator: validator,
-                        labelText: '07 / 2027',
+                        decoration: addCardDecoration(labelText: '07 / 2027'),
                       ),
                     ],
                   ),
@@ -132,21 +128,24 @@ class _AddCardPageState extends State<AddCardPage> {
                         ),
                       ),
                       const Gap(Insets.small),
-                      CustomInfoTextFormField(
+                      TextFormField(
                         controller: cvvController,
                         validator: validator,
-                        labelText: '',
-                        label: Row(
-                          children: List.generate(
-                            3,
-                            (index) => Padding(
-                              padding: const EdgeInsets.all(Insets.extraSmall),
-                              child: Container(
-                                height: 10,
-                                width: 10,
-                                decoration: const BoxDecoration(
-                                  color: ColorsTheme.onCard,
-                                  shape: BoxShape.circle,
+                        decoration: addCardDecoration(
+                          labelText: '',
+                          label: Row(
+                            children: List.generate(
+                              3,
+                              (index) => Padding(
+                                padding:
+                                    const EdgeInsets.all(Insets.extraSmall),
+                                child: Container(
+                                  height: 10,
+                                  width: 10,
+                                  decoration: const BoxDecoration(
+                                    color: ColorsTheme.onCard,
+                                    shape: BoxShape.circle,
+                                  ),
                                 ),
                               ),
                             ),

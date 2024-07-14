@@ -1,6 +1,10 @@
 import 'package:app/src/auth/auth.dart';
 import 'package:app/src/auth/sign_in.dart';
 import 'package:app/src/buying/buying1/buying1.dart';
+import 'package:app/src/buying/buying2/buying2.dart';
+import 'package:app/src/online_payment/payment1/payment1.dart';
+import 'package:app/src/online_payment/payment2/payment2.dart';
+import 'package:app/src/online_payment/payment3/payment3.dart';
 import 'package:app/src/tabs/search/google_maps.dart';
 import 'package:app/src/ticketing_&_detailes/party_detailes.dart';
 import 'package:app/src/ticketing_&_detailes/party_detailes_2nd.dart';
@@ -13,6 +17,7 @@ import 'package:app/src/tabs/ticket/components/avalilable_tickets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../src/buying/buying3/buying3.dart';
 import '../src/tabs/home/calender/calender.dart';
 import '../src/intro/first.dart';
 import '../src/intro/third.dart';
@@ -33,7 +38,7 @@ final router = GoRouter(
     GoRoute(
       path: RoutesDocument.intro1,
       pageBuilder: (context, state) =>
-          CustomTransition(state, const TabsPage()),
+          CustomTransition(state, const Payment1Page()),
     ),
     GoRoute(
       path: RoutesDocument.intro2,
@@ -114,11 +119,41 @@ final router = GoRouter(
           return CustomTransition(
               state, Buying1stPage(bookedSeats: int.parse(bookedSeats!)));
         }),
+    GoRoute(
+        path: RoutesDocument.buying2,
+        name: RoutesDocument.buying2,
+        pageBuilder: (context, state) =>
+            CustomTransition(state, const Buying2ndPage())),
+    GoRoute(
+        path: RoutesDocument.buying3,
+        name: RoutesDocument.buying3,
+        pageBuilder: (context, state) =>
+            CustomTransition(state, const Buying3ndPage())),
+    GoRoute(
+        path: RoutesDocument.payment1,
+        name: RoutesDocument.payment1,
+        pageBuilder: (context, state) =>
+            CustomTransition(state, const Payment1Page())),
+    GoRoute(
+        path: RoutesDocument.payment2,
+        name: RoutesDocument.payment2,
+        pageBuilder: (context, state) =>
+            CustomTransition(state, const Payment2Page())),
+    GoRoute(
+        path: RoutesDocument.payment3,
+        name: RoutesDocument.payment3,
+        pageBuilder: (context, state) =>
+            CustomTransition(state, const Payment3Page())),
   ],
 );
 
 class RoutesDocument {
   const RoutesDocument._();
+  static const payment3 = '/payment3';
+  static const payment2 = '/payment2';
+  static const payment1 = '/payment1';
+  static const buying3 = '/buying3';
+  static const buying2 = '/buying2';
   static const buying1 = '/buying1';
   static const partyDetailes2nd = '/partyDetailes2nd';
   static const ticketHistory = '/ticketHistory';

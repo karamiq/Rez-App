@@ -28,19 +28,19 @@ class AccountDetailesPage extends StatelessWidget {
             expiryDate: '03/27',
           ),
           const Gap(Insets.medium),
-          CustomListTile(
+          ProfileListTile(
             title: 'GoPAY',
             subtitle: '0854 5632 1752',
             imagePath: Assets.assetsImagesWallet,
             onTap: () {},
           ),
-          CustomListTile(
+          ProfileListTile(
             title: 'DANA',
             subtitle: '0854 5632 1752',
             imagePath: Assets.assetsImagesFlag,
             onTap: () {},
           ),
-          CustomListTile(
+          ProfileListTile(
             title: 'DANA',
             subtitle: '0854 5632 1752',
             imagePath: Assets.assetsImagesLogoShopeePay,

@@ -1,5 +1,5 @@
 import 'package:app/src/tabs/home/home_page.dart';
-import 'package:app/src/likes/likes.dart';
+import 'package:app/src/tabs/likes/likes.dart';
 import 'package:app/src/tabs/profile/profile.dart';
 import 'package:app/src/tabs/ticket/ticket.dart';
 import 'package:flutter/material.dart';

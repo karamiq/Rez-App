@@ -43,7 +43,7 @@ dependencies:
   # Routing
   go_router: ^14.1.4
   responsive_framework: ^1.0.0
-  dio: ^5.0.1
+  #dio: ^5.0.1
 
   # UI
   flutter_svg: ^2.0.2
@@ -109,7 +109,6 @@ flutter:
     - assets/svg/
     - assets/images/
    # - assets/fonts/
-    - assets/icons/
     - assets/gifs/
     - assets/themes/
    # - assets/lottie/
