@@ -41,7 +41,7 @@ class OtpPage extends StatelessWidget {
         child: Column(
           children: [
             CustomAppBar(
-                onLeftIconPressed: () => pageController.previousPage(
+                onBackPressed: () => pageController.previousPage(
                       duration: const Duration(milliseconds: 300),
                       curve: Curves.easeInOut,
                     ),

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import '../../common_lib.dart';
@@ -19,17 +21,20 @@ class OnlinePaymentHead extends StatelessWidget {
       children: [
         SizedBox(
           width: double.infinity,
-          child: Image.network(
-            imageUrl,
-            fit: BoxFit.cover,
-            errorBuilder: (context, error, stackTrace) {
-              return const Center(
-                child: Text(
-                  'Image failed to load',
-                  style: TextStyle(color: Colors.red),
-                ),
-              );
-            },
+          child: Opacity(
+            opacity: .7,
+            child: Image.network(
+              imageUrl,
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) {
+                return const Center(
+                  child: Text(
+                    'Image failed to load',
+                    style: TextStyle(color: Colors.red),
+                  ),
+                );
+              },
+            ),
           ),
         ),
         Padding(
@@ -37,7 +42,10 @@ class OnlinePaymentHead extends StatelessWidget {
           child: SafeArea(
             child: Align(
               alignment: Alignment.center,
-              child: CustomAppBar(title: 'Payment', showCalender: true),
+              child: CustomAppBar(
+                title: 'Payment',
+                showCalender: true,
+              ),
             ),
           ),
         ),

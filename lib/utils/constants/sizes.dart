@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+class DefaultVars {
+  static const defaultLocation = LatLng(33.3152, 44.3661);
+}
 
 class IconSize {
   const IconSize._();
@@ -53,6 +58,7 @@ class ColorsTheme {
   static const ticketingListTileTitle = Color(0xFF777777);
   static const ticketingListTileSubtitle = Color(0xFFBDC0C4);
   static const lightPrimary = Color(0xFF110D17);
+  static const lightGreen = Color(0xFF92FF9D);
   static LinearGradient primaryLinearGradient = const LinearGradient(
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,

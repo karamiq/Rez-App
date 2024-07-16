@@ -24,11 +24,14 @@ class Payment1Page extends StatelessWidget {
             child: Column(
               children: [
                 PaymentOption(
+                  raduisBottom: true,
                   image: Assets.assetsImagesPaypal,
                   text: 'Haider Saddon',
                   onTap: () {},
                 ),
+                const Gap(Insets.small),
                 PaymentOption(
+                  raduisBottom: true,
                   image: Assets.assetsImagesQi,
                   text: 'Abbass',
                   onTap: () {},

@@ -28,5 +28,9 @@ InputDecoration ticketingInfoDecoration(
       borderSide: BorderSide(color: Color.fromARGB(135, 244, 67, 54), width: 2),
       borderRadius: BorderSize.smallRadius,
     ),
+    focusedErrorBorder: const OutlineInputBorder(
+      borderSide: BorderSide(color: Color.fromARGB(135, 244, 67, 54), width: 1),
+      borderRadius: BorderSize.smallRadius,
+    ),
   );
 }

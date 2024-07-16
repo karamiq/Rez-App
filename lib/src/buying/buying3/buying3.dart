@@ -23,16 +23,21 @@ class Buying3ndPage extends StatelessWidget {
           ),
           const Gap(Insets.extraLarge),
           PaymentOption(
+            raduisBottom: true,
             icon: Assets.assetsSvgTruckTick,
             text: 'Delivery on Cash',
             onTap: () {},
           ),
+          const Gap(Insets.small),
           PaymentOption(
+            raduisBottom: true,
             icon: Assets.assetsSvgBuildings,
             text: 'Nears Cash Point',
             onTap: () {},
           ),
+          const Gap(Insets.small),
           PaymentOption(
+              raduisBottom: true,
               icon: Assets.assetsSvgCards,
               text: 'Credit Card',
               onTap: () => context.pushNamed(RoutesDocument.payment1)),

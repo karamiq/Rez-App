@@ -11,10 +11,10 @@ class CustomAppBar extends StatelessWidget {
       this.showBackButton = true,
       this.showCalender = true,
       this.gradientColor = GradientColor.green,
-      this.onLeftIconPressed,
+      this.onBackPressed,
       this.onRightIconPressed});
   void Function()? onRightIconPressed;
-  void Function()? onLeftIconPressed;
+  void Function()? onBackPressed;
   GradientColor gradientColor;
   final String title;
   final bool showCalender;
@@ -30,7 +30,7 @@ class CustomAppBar extends StatelessWidget {
             if (showBackButton)
               GradientBackButton(
                   gradientColor: gradientColor,
-                  onPressed: onLeftIconPressed ?? () => context.pop()),
+                  onPressed: onBackPressed ?? () => context.pop()),
             if (!showBackButton)
               const SizedBox(
                 height: 40,

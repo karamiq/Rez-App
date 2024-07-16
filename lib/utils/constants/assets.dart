@@ -157,6 +157,10 @@ class Assets {
   /// assets/svg/ticket_horizantly.svg
   static const String assetsSvgTicketHorizantly = "assets/svg/ticket_horizantly.svg";
 
+  /// Assets for assetsSvgTicketStar
+  /// assets/svg/ticket-star.svg
+  static const String assetsSvgTicketStar = "assets/svg/ticket-star.svg";
+
   /// Assets for assetsSvgTruckTick
   /// assets/svg/truck-tick.svg
   static const String assetsSvgTruckTick = "assets/svg/truck-tick.svg";

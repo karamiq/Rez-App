@@ -2,7 +2,6 @@ import 'package:app/common_lib.dart';
 import 'package:app/src/buying/buying3/components/payment_option.dart';
 import 'package:app/utils/components/payment_head.dart';
 import 'package:flutter/material.dart';
-
 import '../../../utils/components/buttons/gardient_border_button.dart';
 
 class Payment2Page extends StatelessWidget {
@@ -24,11 +23,14 @@ class Payment2Page extends StatelessWidget {
             child: Column(
               children: [
                 PaymentOption(
+                  raduisBottom: true,
                   image: Assets.assetsImagesPaypal,
                   text: 'Paypal',
                   onTap: () {},
                 ),
+                const Gap(Insets.small),
                 PaymentOption(
+                  raduisBottom: true,
                   image: Assets.assetsImagesQi,
                   text: 'Qi Card',
                   onTap: () => context.pushNamed(RoutesDocument.payment3),
@@ -42,7 +44,7 @@ class Payment2Page extends StatelessWidget {
             child: Column(
               children: [
                 const Gap(Insets.extraLarge),
-                GradientBorderButton(onPressed: () {}, text: 'Confirm payment'),
+                GradientBorderButton(onPressed: () {}, text: 'Next'),
                 const Gap(Insets.extraLarge),
               ],
             ),
