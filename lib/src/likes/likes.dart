@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../common_lib.dart';
 import '../home/components/party_card.dart';
 
-List<Party> partyList = [
+List<Party> list = [
   Party(
     imageUrl:
         'https://images.pexels.com/photos/4194850/pexels-photo-4194850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -77,7 +77,7 @@ class LikesPage extends StatelessWidget {
       body: likedParties.isNotEmpty
           ? ListView.separated(
               itemBuilder: (context, index) {
-                final party = partyList[index];
+                final party = list[index];
                 return PartyCard(
                   imageUrl: party.imageUrl,
                   title: party.title,
@@ -88,7 +88,7 @@ class LikesPage extends StatelessWidget {
                 );
               },
               separatorBuilder: (context, index) => const Gap(Insets.medium),
-              itemCount: partyList.length,
+              itemCount: list.length,
             )
           : Center(
               child: Column(

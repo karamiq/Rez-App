@@ -73,6 +73,14 @@ class ColorsTheme {
       end: Alignment.bottomRight,
       colors: [primary, secondary]);
 
+  static const LinearGradient backButtonGardient = const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Color(0xFF09FBD3),
+        Color.fromARGB(255, 6, 112, 94),
+      ]);
+
   static SweepGradient dark = const SweepGradient(
       center: Alignment.center,
       tileMode: TileMode.mirror,

@@ -7,10 +7,10 @@ import 'dart:ui';
 class CustomCalendar extends StatefulWidget {
   final Function(DateTime) onDaySelected;
 
-  CustomCalendar({required this.onDaySelected});
+  const CustomCalendar({super.key, required this.onDaySelected});
 
   @override
-  _CustomCalendarState createState() => _CustomCalendarState();
+  createState() => _CustomCalendarState();
 }
 
 class _CustomCalendarState extends State<CustomCalendar> {
@@ -24,12 +24,23 @@ class _CustomCalendarState extends State<CustomCalendar> {
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
           padding: Insets.mediumAll,
-          color: Colors.grey.withOpacity(0.1),
+          decoration: BoxDecoration(
+            color: Colors.transparent.withOpacity(0.25),
+            gradient: const LinearGradient(
+              colors: [
+                Color(0xFFD390FF),
+                Color(0xFF6E1B93),
+              ],
+              stops: [0.2, 0.8],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
           child: TableCalendar(
             calendarStyle: CalendarStyle(
               holidayTextStyle: const TextStyle(color: Colors.red),
               todayDecoration: const BoxDecoration(
-                color: Colors.blueAccent,
+                gradient: ColorsTheme.backButtonGardient,
                 shape: BoxShape.circle,
               ),
               rangeEndDecoration: const BoxDecoration(
@@ -39,19 +50,53 @@ class _CustomCalendarState extends State<CustomCalendar> {
                 gradient: ColorsTheme.selectedDateGradient,
                 shape: BoxShape.circle,
               ),
+              disabledTextStyle: TextStyle(
+                  color: Colors.white.withOpacity(0.5),
+                  fontWeight: FontsTheme.bigWeight,
+                  fontSize: FontsTheme.mediumSize),
+              defaultTextStyle: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontsTheme.bigWeight,
+                  fontSize: FontsTheme.mediumSize),
+              weekendTextStyle: const TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontsTheme.bigWeight,
+                  fontSize: FontsTheme.mediumSize),
+              outsideTextStyle: TextStyle(
+                color: Colors.white.withOpacity(0),
+                fontWeight: FontsTheme.bigWeight,
+                fontSize: FontsTheme.mediumSize,
+              ),
             ),
-            daysOfWeekStyle: const DaysOfWeekStyle(
-              weekdayStyle: TextStyle(
+            startingDayOfWeek: StartingDayOfWeek.monday,
+            daysOfWeekStyle: DaysOfWeekStyle(
+              dowTextFormatter: (date, locale) {
+                return date.weekday == DateTime.monday
+                    ? 'M'
+                    : date.weekday == DateTime.tuesday
+                        ? 'T'
+                        : date.weekday == DateTime.wednesday
+                            ? 'W'
+                            : date.weekday == DateTime.thursday
+                                ? 'T'
+                                : date.weekday == DateTime.friday
+                                    ? 'F'
+                                    : date.weekday == DateTime.saturday
+                                        ? 'S'
+                                        : 'S';
+              },
+              weekdayStyle: const TextStyle(
                 fontFamily: 'Inter',
                 color: Colors.white,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontsTheme.bigWeight,
+                fontSize: FontsTheme.mediumSize,
               ),
-              weekendStyle: TextStyle(
-                fontFamily: 'Inter',
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
-              ),
-              decoration: BoxDecoration(
+              weekendStyle: const TextStyle(
+                  fontFamily: 'Inter',
+                  color: Colors.red,
+                  fontWeight: FontsTheme.bigWeight,
+                  fontSize: FontsTheme.mediumSize),
+              decoration: const BoxDecoration(
                 border: Border(
                   bottom: BorderSide(
                     color: Colors.grey,

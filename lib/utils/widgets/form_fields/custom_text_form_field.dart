@@ -1,3 +1,4 @@
+import 'package:app/common_lib.dart';
 import 'package:app/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,7 @@ class CustomTextFormField extends StatelessWidget {
           fontWeight: FontWeight.w400,
         ),
         prefixIcon: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: Insets.smallAll,
           child: prefixIcon,
         ),
         suffixIcon: suffixIcon,

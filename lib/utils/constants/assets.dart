@@ -113,6 +113,10 @@ class Assets {
   /// assets/svg/music_column.svg
   static const String assetsSvgMusicColumn = "assets/svg/music_column.svg";
 
+  /// Assets for assetsSvgMusicMapPin
+  /// assets/svg/musicMapPin.svg
+  static const String assetsSvgMusicMapPin = "assets/svg/musicMapPin.svg";
+
   /// Assets for assetsSvgMusicOultlineded
   /// assets/svg/music_oultlineded.svg
   static const String assetsSvgMusicOultlineded = "assets/svg/music_oultlineded.svg";

@@ -1,19 +1,20 @@
 import 'package:app/common_lib.dart';
-import 'package:app/src/home/components/party_card.dart';
-import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
+import 'package:app/data/providers/location.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+import 'party_detailes/home_page_head.dart';
+import 'party_detailes/tabs_screens.dart';
+
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  ConsumerState<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>
+class _HomePageState extends ConsumerState<HomePage>
     with SingleTickerProviderStateMixin {
-  final searchController = TextEditingController();
   late TabController _tabController;
   final List<Map<String, String>> partyData = [
     {
@@ -32,6 +33,13 @@ class _HomePageState extends State<HomePage>
     }
   ];
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    ref.watch(locationProvider.notifier).getCurrentLocation();
+    print(ref.watch(locationProvider));
+  }
+
+  @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 5, vsync: this);
@@ -49,56 +57,8 @@ class _HomePageState extends State<HomePage>
       padding: Insets.mediumAll,
       body: Column(
         children: [
-          Row(
-            children: [
-              Expanded(
-                flex: 3,
-                child: IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(
-                    Assets.assetsSvgNotification,
-                  ),
-                ),
-              ),
-              Expanded(
-                  flex: 20,
-                  child: GestureDetector(
-                    onTap: () => context.pushNamed(RoutesDocument.googleMaps),
-                    child: Container(
-                      height: 45,
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: Insets.small),
-                      decoration: const BoxDecoration(
-                          borderRadius: BorderSize.extraLargeRadius,
-                          color: Color.fromARGB(30, 214, 125, 255)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          SvgPicture.asset(Assets.assetsSvgSearchNormal),
-                          const Gap(4),
-                          const Text(
-                            'Search',
-                            style: TextStyle(
-                                color: Color(0xFF472456),
-                                fontSize: FontsTheme.mediumSize),
-                          )
-                        ],
-                      ),
-                    ),
-                  )),
-              Expanded(
-                flex: 3,
-                child: IconButton(
-                  onPressed: () => context.pushNamed(RoutesDocument.calender),
-                  icon: GradientIcon(
-                    icon: Assets.assetsSvgCalendarOutlined,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-              height: 16.0), // Add some spacing between the Row and TabBar
+          const HomePageHead(),
+          const SizedBox(height: Insets.medium),
           TabBar(
             labelColor: ColorsTheme.primary,
             indicatorSize: TabBarIndicatorSize.tab,
@@ -127,29 +87,5 @@ class _HomePageState extends State<HomePage>
         ],
       ),
     );
-  }
-}
-
-class AllTab extends StatelessWidget {
-  const AllTab({
-    super.key,
-    required this.partyData,
-  });
-
-  final List<Map<String, String>> partyData;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-        padding: const EdgeInsets.only(top: Insets.medium),
-        itemBuilder: (context, index) => PartyCard(
-              imageUrl: partyData[index]['imageUrl']!,
-              title: partyData[index]['title']!,
-              genre: partyData[index]['genre']!,
-              ticketInfo: partyData[index]['ticketInfo']!,
-              expiredDate: DateTime.now(),
-              isExpired: false,
-            ),
-        itemCount: partyData.length);
   }
 }

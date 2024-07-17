@@ -37,7 +37,7 @@ final router = GoRouter(
     GoRoute(
       path: RoutesDocument.intro1,
       pageBuilder: (context, state) =>
-          customTransition(state, const CalenderPage()),
+          customTransition(state, const SearchPage()),
     ),
     GoRoute(
       path: RoutesDocument.intro2,
@@ -78,7 +78,7 @@ final router = GoRouter(
       path: RoutesDocument.googleMaps,
       name: RoutesDocument.googleMaps,
       pageBuilder: (context, state) =>
-          customTransition(state, const GoogleMapsPage()),
+          customTransition(state, const SearchPage()),
     ),
     GoRoute(
       path: RoutesDocument.accountDetailes,
