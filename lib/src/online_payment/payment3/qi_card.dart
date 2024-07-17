@@ -1,15 +1,11 @@
 import 'package:app/common_lib.dart';
 import 'package:app/src/buying/buying3/components/payment_option.dart';
 import 'package:app/src/online_payment/components/add_card_form.dart';
-import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
-import 'package:app/utils/components/gardient/custom_svg_style.dart';
 import 'package:app/utils/components/payment_head.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/components/buttons/gardient_border_button.dart';
-import '../../../utils/components/input_decoration/add_card_decoration.dart';
 import '../../../utils/components/methodes/ticket_payment_done.dart';
-import '../../../utils/components/text_field_head_line.dart';
 import '../components/card_form_animation.dart';
 
 class QiCardPaymentPage extends StatelessWidget {

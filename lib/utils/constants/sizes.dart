@@ -68,6 +68,11 @@ class ColorsTheme {
         Color(0xFF561976),
       ]);
 
+  static LinearGradient selectedDateGradient = const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [primary, secondary]);
+
   static SweepGradient dark = const SweepGradient(
       center: Alignment.center,
       tileMode: TileMode.mirror,

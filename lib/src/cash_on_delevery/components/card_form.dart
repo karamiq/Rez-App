@@ -1,3 +1,4 @@
+import 'package:app/utils/components/methodes/validations.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
@@ -36,12 +37,12 @@ class OnCashDeleveryCardForm extends StatelessWidget {
           TextFormField(
             keyboardType: TextInputType.number,
             controller: cityController,
-            validator: validator,
+            validator: validateGeneralInfo,
             decoration: ticketingInfoDecoration(labelText: 'City'),
           ),
           TextFormField(
             controller: addressController,
-            validator: validator,
+            validator: validateGeneralInfo,
             decoration: ticketingInfoDecoration(labelText: 'Address'),
           ),
           Row(
@@ -56,14 +57,14 @@ class OnCashDeleveryCardForm extends StatelessWidget {
                       'Kuwait': '+965',
                       'Saudi Arabia': '+966',
                     },
-                    validator: validator),
+                    validator: validateGeneralInfo),
               ),
               const Gap(Insets.medium),
               Expanded(
                 flex: 7,
                 child: TextFormField(
                   controller: phoneNumberController,
-                  validator: validator,
+                  validator: validatePhoneNumber,
                   decoration:
                       ticketingInfoDecoration(labelText: 'Phone number'),
                 ),
@@ -74,7 +75,7 @@ class OnCashDeleveryCardForm extends StatelessWidget {
             maxLines: 7,
             keyboardType: TextInputType.datetime,
             controller: detailesController,
-            validator: validator,
+            validator: validateGeneralInfo,
             decoration: ticketingInfoDecoration(labelText: 'Detailes'),
           ),
         ],

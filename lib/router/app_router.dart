@@ -1,5 +1,3 @@
-import 'package:app/src/auth/auth.dart';
-import 'package:app/src/auth/sign_in.dart';
 import 'package:app/src/buying/buying1/buying1.dart';
 import 'package:app/src/buying/buying2/buying2.dart';
 import 'package:app/src/cash_on_delevery/cash_on_delevery.dart';
@@ -21,7 +19,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../src/buying/buying3/buying3.dart';
 import '../src/home/calender/calender.dart';
-import '../src/intro/first.dart';
 import '../src/intro/third.dart';
 import '../src/tabs/tabs.dart';
 import 'routing_animation.dart';
@@ -40,7 +37,7 @@ final router = GoRouter(
     GoRoute(
       path: RoutesDocument.intro1,
       pageBuilder: (context, state) =>
-          customTransition(state, const CashOnDeliveryPage()),
+          customTransition(state, const CalenderPage()),
     ),
     GoRoute(
       path: RoutesDocument.intro2,
