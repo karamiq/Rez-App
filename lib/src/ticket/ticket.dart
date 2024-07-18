@@ -21,7 +21,13 @@ class TicketPage extends StatelessWidget {
         padding: tickets.isEmpty ? null : Insets.mediumAll,
         safeArea: tickets.isEmpty ? false : true,
         body: tickets.isEmpty
-            ? TicketsEmptyState(titles: titles)
+            ? TicketsEmptyState(
+                populers: titles,
+                title: 'No Tickets Bought',
+                subtitle:
+                    'It appears you haven’t bought any tickets yet. Maybe try these?',
+                appearPopuler: true,
+              )
             : ListView.builder(
                 itemCount: 6,
                 itemBuilder: (context, index) => const Card(

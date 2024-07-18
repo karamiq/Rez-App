@@ -1,70 +1,13 @@
+import 'package:app/src/maps/search/searching_map.dart/searching_map.dart';
 import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
+import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 
 import '../../common_lib.dart';
 import '../home/components/party_card.dart';
-
-List<Party> list = [
-  Party(
-    imageUrl:
-        'https://images.pexels.com/photos/4194850/pexels-photo-4194850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    title: 'Party 1',
-    genre: 'Electronic',
-    ticketInfo: 'VIP Ticket',
-    isExpired: false,
-    expiredDate: DateTime(2024, 8, 1),
-  ),
-  Party(
-    imageUrl:
-        'https://images.pexels.com/photos/735423/pexels-photo-735423.jpeg',
-    title: 'Party 2',
-    genre: 'Rock',
-    ticketInfo: 'General Admission',
-    isExpired: false,
-    expiredDate: DateTime(2024, 7, 1),
-  ),
-  Party(
-    imageUrl: 'https://via.placeholder.com/150',
-    title: 'Party 3',
-    genre: 'Jazz',
-    ticketInfo: 'VIP Ticket',
-    isExpired: false,
-    expiredDate: DateTime(2024, 9, 1),
-  ),
-  Party(
-    imageUrl: 'https://via.placeholder.com/150',
-    title: 'Party 4',
-    genre: 'Hip-Hop',
-    ticketInfo: 'Early Bird',
-    isExpired: false,
-    expiredDate: DateTime(2024, 6, 1),
-  ),
-  Party(
-    imageUrl: 'https://via.placeholder.com/150',
-    title: 'Party 5',
-    genre: 'Classical',
-    ticketInfo: 'General Admission',
-    isExpired: false,
-    expiredDate: DateTime(2024, 10, 1),
-  ),
-  Party(
-    imageUrl: 'https://via.placeholder.com/150',
-    title: 'Party 6',
-    genre: 'Pop',
-    ticketInfo: 'VIP Ticket',
-    isExpired: false,
-    expiredDate: DateTime(2024, 5, 1),
-  ),
-  Party(
-    imageUrl: 'https://via.placeholder.com/150',
-    title: 'Party 7',
-    genre: 'Reggae',
-    ticketInfo: 'Early Bird',
-    isExpired: false,
-    expiredDate: DateTime(2024, 11, 1),
-  ),
-];
+import '../maps/search/components/data_.dart';
+import '../maps/search/components/search_head.dart';
 
 class LikesPage extends StatelessWidget {
   const LikesPage({super.key});
@@ -77,7 +20,7 @@ class LikesPage extends StatelessWidget {
       body: likedParties.isNotEmpty
           ? ListView.separated(
               itemBuilder: (context, index) {
-                final party = list[index];
+                final party = searchparties[index];
                 return PartyCard(
                   type: 'ticket',
                   imageUrl: party.imageUrl,
@@ -89,7 +32,7 @@ class LikesPage extends StatelessWidget {
                 );
               },
               separatorBuilder: (context, index) => const Gap(Insets.medium),
-              itemCount: list.length,
+              itemCount: searchparties.length,
             )
           : Center(
               child: Column(
@@ -120,22 +63,4 @@ class LikesPage extends StatelessWidget {
             ),
     );
   }
-}
-
-class Party {
-  final String imageUrl;
-  final String title;
-  final String genre;
-  final String ticketInfo;
-  final bool isExpired;
-  final DateTime expiredDate;
-
-  Party({
-    required this.imageUrl,
-    required this.title,
-    required this.genre,
-    required this.ticketInfo,
-    required this.isExpired,
-    required this.expiredDate,
-  });
 }

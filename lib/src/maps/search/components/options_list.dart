@@ -34,7 +34,7 @@ class OptionsLIst extends StatelessWidget {
           itemBuilder: (context, index) {
             final storage = options.elementAt(index);
             return ListTile(
-              title: Text(storage.name),
+              title: Text(storage.title),
               onTap: () {
                 onSelected(storage);
               },

@@ -12,7 +12,7 @@ class CustomMarker extends StatelessWidget {
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       Assets.assetsSvgMusicMapPin,
-      height: 100,
+      height: 50,
     );
   }
 }

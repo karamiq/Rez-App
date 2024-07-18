@@ -76,6 +76,7 @@ dependencies:
   geocoding: ^3.0.0
   location: ^6.0.2
   qr_flutter: ^4.1.0
+  faker: ^2.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

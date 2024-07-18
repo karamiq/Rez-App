@@ -1,5 +1,6 @@
 import 'package:app/common_lib.dart';
 import 'package:app/data/providers/location.dart';
+import 'package:app/src/maps/search/components/search_head.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -78,11 +79,11 @@ class _HomePageState extends ConsumerState<HomePage>
             child: TabBarView(
               controller: _tabController,
               children: [
-                AllTab(partyData: partyData),
-                AllTab(partyData: partyData),
-                AllTab(partyData: partyData),
-                AllTab(partyData: partyData),
-                AllTab(partyData: partyData),
+                AllTab(partyData: searchparties.toList()),
+                AllTab(partyData: searchparties.toList()),
+                AllTab(partyData: searchparties.toList()),
+                AllTab(partyData: searchparties.toList()),
+                AllTab(partyData: searchparties.toList()),
               ],
             ),
           ),

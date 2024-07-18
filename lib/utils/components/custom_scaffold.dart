@@ -3,24 +3,28 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class CustomScaffold extends StatelessWidget {
-  const CustomScaffold({
-    super.key,
-    required this.body,
-    this.mainAxisAlignment = MainAxisAlignment.start,
-    this.crossAxisAlignment = CrossAxisAlignment.start,
-    this.padding,
-    this.safeArea = true,
-  });
-
+  const CustomScaffold(
+      {super.key,
+      required this.body,
+      this.mainAxisAlignment = MainAxisAlignment.start,
+      this.crossAxisAlignment = CrossAxisAlignment.start,
+      this.padding,
+      this.safeArea = true,
+      this.floatingActionButton,
+      this.floatingActionButtonLocation});
   final EdgeInsetsGeometry? padding;
   final Widget body;
   final MainAxisAlignment mainAxisAlignment;
   final CrossAxisAlignment crossAxisAlignment;
   final bool safeArea;
+  final Widget? floatingActionButton;
+  final FloatingActionButtonLocation? floatingActionButtonLocation;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: floatingActionButton,
+      floatingActionButtonLocation: floatingActionButtonLocation,
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         top: safeArea,

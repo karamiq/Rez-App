@@ -3,10 +3,11 @@ import 'package:app/src/buying/buying2/buying2.dart';
 import 'package:app/src/cash_on_delevery/cash_on_delevery.dart';
 import 'package:app/src/choosing_seat/choosing_seat.dart';
 import 'package:app/src/maps/relocate/relocate.dart';
+import 'package:app/src/maps/search/searching_of_map_page.dart/searching_of_map_page.dart.dart';
 import 'package:app/src/online_payment/payment1/payment1.dart';
 import 'package:app/src/online_payment/payment2/payment2.dart';
 import 'package:app/src/online_payment/payment3/qi_card.dart';
-import 'package:app/src/maps/search/search.dart';
+import 'package:app/src/maps/search/searching_map.dart/searching_map.dart';
 import 'package:app/src/ticketing_&_detailes/party_detailes.dart';
 import 'package:app/src/ticketing_&_detailes/party_detailes_2nd.dart';
 import 'package:app/src/intro/fourth.dart';
@@ -25,7 +26,6 @@ import '../src/tabs/tabs.dart';
 import 'routing_animation.dart';
 
 final Provider<GoRouter> routerProvider = Provider((ref) => router);
-
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');
 final GlobalKey<NavigatorState> _shellNavigatorKey =
@@ -79,7 +79,7 @@ final router = GoRouter(
       path: RoutesDocument.googleMaps,
       name: RoutesDocument.googleMaps,
       pageBuilder: (context, state) =>
-          customTransition(state, const SearchPage()),
+          customTransition(state, const SearchMapPage()),
     ),
     GoRoute(
       path: RoutesDocument.accountDetailes,
@@ -162,11 +162,17 @@ final router = GoRouter(
         name: RoutesDocument.choosingSeat,
         pageBuilder: (context, state) =>
             customTransition(state, const ChoosingSeatPage())),
+    GoRoute(
+        path: RoutesDocument.searchingOfMap,
+        name: RoutesDocument.searchingOfMap,
+        pageBuilder: (context, state) =>
+            customTransition(state, const searchingOfMapPage())),
   ],
 );
 
 class RoutesDocument {
   const RoutesDocument._();
+  static const searchingOfMap = '/searchingOfMap';
   static const choosingSeat = '/choosingSeat';
   static const reLocate = '/reLocate';
   static const cashOnDelevery = '/CashOnDelevery';

@@ -43,11 +43,11 @@ class _AvalilableTicketsPageState extends State<AvalilableTicketsPage> {
                 description:
                     'please pay at the cash point and it\nwill be activated',
                 imageUrl:
-                    'https://staticg.sportskeeda.com/editor/2022/03/d975d-16474074573617-1920.jpg',
+                    'https://s3-alpha-sig.figma.com/img/1543/3cb8/cd926f18468d7804e7dda333397c6d39?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GL3B2JewZCAuSfNd5-4sqP-INvTINa2BlPT-PQZ~tW7VI7H2AnzrLB9XMQFmjkQCoQNzil2v8h59njuSMYLO8ERd96HysZx9ujT4VQpVfz6z8rpz9YXMcBl0HCNyEMlybNo4uCOlj1zeB5F6NiRTxnpPZYLuhBuliea5W8~cJLB7r8ClJEIHBCEplDmY78mDXfUMR7iT7~jXlu9~WGN9ylUnW5jLwRwHQ69ZGsXL4A4w--dgbshnDpI5j8GIG~mok7FafvKabWeeV3oTNtKp~Y~D1IPt93qvLJEzZTS7s-uNMB035WFVq2XqJ1UrDIHRfC~JKDmzb-aj5hudo-40hg__',
               ),
               const TicketClipShape(
                 imageUrl:
-                    'https://staticg.sportskeeda.com/editor/2022/03/d975d-16474074573617-1920.jpg',
+                    'https://s3-alpha-sig.figma.com/img/1543/3cb8/cd926f18468d7804e7dda333397c6d39?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GL3B2JewZCAuSfNd5-4sqP-INvTINa2BlPT-PQZ~tW7VI7H2AnzrLB9XMQFmjkQCoQNzil2v8h59njuSMYLO8ERd96HysZx9ujT4VQpVfz6z8rpz9YXMcBl0HCNyEMlybNo4uCOlj1zeB5F6NiRTxnpPZYLuhBuliea5W8~cJLB7r8ClJEIHBCEplDmY78mDXfUMR7iT7~jXlu9~WGN9ylUnW5jLwRwHQ69ZGsXL4A4w--dgbshnDpI5j8GIG~mok7FafvKabWeeV3oTNtKp~Y~D1IPt93qvLJEzZTS7s-uNMB035WFVq2XqJ1UrDIHRfC~JKDmzb-aj5hudo-40hg__',
                 child: Text(
                   'Wait For the Driver',
                   style: TextStyle(
@@ -59,7 +59,7 @@ class _AvalilableTicketsPageState extends State<AvalilableTicketsPage> {
               QrcodeAndDate(
                   qrData: 'I want to die but its haram',
                   imageUrl:
-                      'https://staticg.sportskeeda.com/editor/2022/03/d975d-16474074573617-1920.jpg',
+                      'https://s3-alpha-sig.figma.com/img/1543/3cb8/cd926f18468d7804e7dda333397c6d39?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GL3B2JewZCAuSfNd5-4sqP-INvTINa2BlPT-PQZ~tW7VI7H2AnzrLB9XMQFmjkQCoQNzil2v8h59njuSMYLO8ERd96HysZx9ujT4VQpVfz6z8rpz9YXMcBl0HCNyEMlybNo4uCOlj1zeB5F6NiRTxnpPZYLuhBuliea5W8~cJLB7r8ClJEIHBCEplDmY78mDXfUMR7iT7~jXlu9~WGN9ylUnW5jLwRwHQ69ZGsXL4A4w--dgbshnDpI5j8GIG~mok7FafvKabWeeV3oTNtKp~Y~D1IPt93qvLJEzZTS7s-uNMB035WFVq2XqJ1UrDIHRfC~JKDmzb-aj5hudo-40hg__',
                   startDate: startDate,
                   endDate: endDate),
             ],

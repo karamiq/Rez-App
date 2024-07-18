@@ -5,6 +5,8 @@ import 'package:app/utils/components/custom_app_bar.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 
+import '../../maps/search/components/data_.dart';
+
 class TicketHistoryPage extends StatelessWidget {
   const TicketHistoryPage({super.key});
 
@@ -106,22 +108,4 @@ class TicketHistoryPage extends StatelessWidget {
       ),
     );
   }
-}
-
-class Party {
-  final String imageUrl;
-  final String title;
-  final String genre;
-  final String ticketInfo;
-  final bool isExpired;
-  final DateTime expiredDate;
-
-  Party({
-    required this.imageUrl,
-    required this.title,
-    required this.genre,
-    required this.ticketInfo,
-    required this.isExpired,
-    required this.expiredDate,
-  });
 }
