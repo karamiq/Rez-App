@@ -21,6 +21,7 @@ class CustomGoogleMap extends StatelessWidget {
       myLocationButtonEnabled: false,
       markers: markers.values.toSet(),
       zoomControlsEnabled: false,
+      onTap: (pos) => print('Taped pos: $pos'),
       onMapCreated: (controller) {
         mapControllerCallback(controller);
       },

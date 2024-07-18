@@ -90,6 +90,7 @@ class TicketHistoryPage extends StatelessWidget {
             itemBuilder: (context, index) {
               final party = partyList[index];
               return PartyCard(
+                type: 'stadium',
                 imageUrl: party.imageUrl,
                 title: party.title,
                 genre: party.genre,

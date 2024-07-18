@@ -23,6 +23,7 @@ class _HomePageState extends ConsumerState<HomePage>
       'title': 'Brightlight Music Festival',
       'genre': 'Indie Rock',
       'ticketInfo': '€40 - €90',
+      'type': 'ticket'
     },
     {
       'imageUrl':
@@ -30,6 +31,7 @@ class _HomePageState extends ConsumerState<HomePage>
       'title': 'Summer Beach Party',
       'genre': 'Pop',
       'ticketInfo': '€20 - €60',
+      'type': 'stadium'
     }
   ];
   @override

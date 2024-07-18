@@ -59,6 +59,8 @@ class ColorsTheme {
   static const ticketingListTileSubtitle = Color(0xFFBDC0C4);
   static const lightPrimary = Color(0xFF110D17);
   static const lightGreen = Color(0xFF92FF9D);
+  static const currentDay = Color(0xFF424242);
+  static const selectedDay = Color(0xFF4355FA);
   static LinearGradient primaryLinearGradient = const LinearGradient(
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,

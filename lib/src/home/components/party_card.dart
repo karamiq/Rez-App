@@ -10,6 +10,7 @@ class PartyCard extends StatelessWidget {
   final String ticketInfo;
   final bool isExpired;
   final DateTime expiredDate;
+  final String type;
 
   const PartyCard({
     super.key,
@@ -19,6 +20,7 @@ class PartyCard extends StatelessWidget {
     required this.ticketInfo,
     required this.isExpired,
     required this.expiredDate,
+    required this.type,
   });
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,11 @@ class PartyCard extends StatelessWidget {
               ? null
               : () {
                   try {
-                    context.pushNamed(RoutesDocument.partyDetailes);
+                    if (type == 'ticket') {
+                      context.pushNamed(RoutesDocument.partyDetailes);
+                    } else {
+                      context.pushNamed(RoutesDocument.choosingSeat);
+                    }
                   } catch (e) {
                     debugPrint('Navigation error: $e');
                   }

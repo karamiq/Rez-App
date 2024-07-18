@@ -14,11 +14,12 @@ class CalenderPage extends StatefulWidget {
 }
 
 class _CalenderPageState extends State<CalenderPage> {
-  DateTime? _selectedDay;
+  DateTime? startRange;
+  DateTime? endRange;
 
   @override
   Widget build(BuildContext context) {
-    print(_selectedDay?.format());
+    print('start ${startRange.formatDate()} end: ${endRange.formatDate()}}');
     return CustomScaffold(
       padding: Insets.mediumAll,
       body: SingleChildScrollView(
@@ -29,7 +30,12 @@ class _CalenderPageState extends State<CalenderPage> {
               showCalender: false,
             ),
             CustomCalendar(
-              onDaySelected: (p0) => setState(() => _selectedDay = p0),
+              onRangeSelect: (start, end) {
+                setState(() {
+                  startRange = start;
+                  endRange = end;
+                });
+              },
             ),
             const Gap(Insets.extraLarge * 2),
             Row(

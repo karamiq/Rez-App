@@ -10,12 +10,8 @@ String? validateCreditCard(String? value) {
 }
 
 String? validatePhoneNumber(String? value) {
-  RegExp phoneNumberRegex = RegExp(r'^\(\d{3}\) \d{3}\-\d{4}$');
   if (value == null || value.isEmpty) {
     return 'Please enter a phone number';
-  }
-  if (!phoneNumberRegex.hasMatch(value)) {
-    return 'Enter a valid phone number (e.g., (123) 456-7890)';
   }
   return null;
 }

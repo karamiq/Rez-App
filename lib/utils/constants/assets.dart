@@ -25,6 +25,10 @@ class Assets {
   /// assets/images/qi.png
   static const String assetsImagesQi = "assets/images/qi.png";
 
+  /// Assets for assetsImagesSinger
+  /// assets/images/singer.png
+  static const String assetsImagesSinger = "assets/images/singer.png";
+
   /// Assets for assetsImagesTicketTimerBackground
   /// assets/images/ticket_timer_background.png
   static const String assetsImagesTicketTimerBackground = "assets/images/ticket_timer_background.png";

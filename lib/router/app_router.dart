@@ -1,6 +1,7 @@
 import 'package:app/src/buying/buying1/buying1.dart';
 import 'package:app/src/buying/buying2/buying2.dart';
 import 'package:app/src/cash_on_delevery/cash_on_delevery.dart';
+import 'package:app/src/choosing_seat/choosing_seat.dart';
 import 'package:app/src/maps/relocate/relocate.dart';
 import 'package:app/src/online_payment/payment1/payment1.dart';
 import 'package:app/src/online_payment/payment2/payment2.dart';
@@ -37,7 +38,7 @@ final router = GoRouter(
     GoRoute(
       path: RoutesDocument.intro1,
       pageBuilder: (context, state) =>
-          customTransition(state, const SearchPage()),
+          customTransition(state, const TabsPage()),
     ),
     GoRoute(
       path: RoutesDocument.intro2,
@@ -156,11 +157,17 @@ final router = GoRouter(
         name: RoutesDocument.reLocate,
         pageBuilder: (context, state) =>
             customTransition(state, const RelocationPage())),
+    GoRoute(
+        path: RoutesDocument.choosingSeat,
+        name: RoutesDocument.choosingSeat,
+        pageBuilder: (context, state) =>
+            customTransition(state, const ChoosingSeatPage())),
   ],
 );
 
 class RoutesDocument {
   const RoutesDocument._();
+  static const choosingSeat = '/choosingSeat';
   static const reLocate = '/reLocate';
   static const cashOnDelevery = '/CashOnDelevery';
   static const payment3 = '/payment3';

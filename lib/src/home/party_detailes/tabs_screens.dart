@@ -20,6 +20,7 @@ class AllTab extends StatelessWidget {
               title: partyData[index]['title']!,
               genre: partyData[index]['genre']!,
               ticketInfo: partyData[index]['ticketInfo']!,
+              type: partyData[index]['type']!,
               expiredDate: DateTime.now(),
               isExpired: false,
             ),

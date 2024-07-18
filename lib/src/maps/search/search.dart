@@ -63,10 +63,10 @@ class _SearchPageState extends ConsumerState<SearchPage> {
 
   Future<void> addMarker(String id, LatLng location) async {
     final marker = Marker(
-      onTap: () {},
+      onTap: () => print('the marker pos: $location'),
       markerId: MarkerId(id),
       position: location,
-      icon: await const CustomMarker()
+      icon: await CustomMarker(location: location)
           .toBitmapDescriptor(logicalSize: const Size(450, 450)),
     );
 
@@ -132,7 +132,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                   const Gap(Insets.small),
                   Expanded(
                     child: CustomSearchBar(
-                      allParties: const [],
+                      allParties: [],
                       onSelected: onSelected,
                     ),
                   ),

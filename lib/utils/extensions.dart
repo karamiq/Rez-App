@@ -96,3 +96,17 @@ extension AdditionalColors on ColorScheme {
   Color get successText => const Color(0xff198754);
   Color get dangerColor => const Color(0xffDC3747);
 }
+
+//Chat GPT provided this so yeahh :]
+//it basicly takes range of datetime and convert it to form
+//like this one 'March 2-9, 2024'
+String formatDateRange(DateTime startDate, DateTime endDate) {
+  final DateFormat monthDayFormat = DateFormat('MMMM d');
+  final DateFormat yearFormat = DateFormat('y');
+
+  String startMonthDay = monthDayFormat.format(startDate);
+  String endDay = DateFormat('d').format(endDate);
+  String year = yearFormat.format(startDate);
+
+  return '$startMonthDay-$endDay, $year';
+}

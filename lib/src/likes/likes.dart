@@ -79,6 +79,7 @@ class LikesPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 final party = list[index];
                 return PartyCard(
+                  type: 'ticket',
                   imageUrl: party.imageUrl,
                   title: party.title,
                   genre: party.genre,

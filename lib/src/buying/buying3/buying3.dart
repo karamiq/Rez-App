@@ -26,7 +26,7 @@ class Buying3ndPage extends StatelessWidget {
             raduisBottom: true,
             icon: Assets.assetsSvgTruckTick,
             text: 'Delivery on Cash',
-            onTap: () {},
+            onTap: () => context.pushNamed(RoutesDocument.cashOnDelevery),
           ),
           const Gap(Insets.small),
           PaymentOption(

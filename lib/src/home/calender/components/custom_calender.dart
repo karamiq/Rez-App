@@ -4,20 +4,31 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'dart:ui';
 
-class CustomCalendar extends StatefulWidget {
-  final Function(DateTime) onDaySelected;
+import 'package:timeago/timeago.dart';
 
-  const CustomCalendar({super.key, required this.onDaySelected});
+class CustomCalendar extends StatefulWidget {
+  final Function(DateTime? start, DateTime? end) onRangeSelect;
+
+  const CustomCalendar({super.key, required this.onRangeSelect});
 
   @override
   createState() => _CustomCalendarState();
 }
 
 class _CustomCalendarState extends State<CustomCalendar> {
-  DateTime? _selectedDay;
+  DateTime? _rangeStart;
+  DateTime? _rangeEnd;
 
   @override
   Widget build(BuildContext context) {
+    void _onRangeSelected(DateTime? start, DateTime? end, DateTime focusedDay) {
+      setState(() {
+        _rangeStart = start;
+        _rangeEnd = end;
+        widget.onRangeSelect(start, end);
+      });
+    }
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(15.0),
       child: BackdropFilter(
@@ -38,36 +49,39 @@ class _CustomCalendarState extends State<CustomCalendar> {
           ),
           child: TableCalendar(
             calendarStyle: CalendarStyle(
-              holidayTextStyle: const TextStyle(color: Colors.red),
-              todayDecoration: const BoxDecoration(
-                gradient: ColorsTheme.backButtonGardient,
-                shape: BoxShape.circle,
-              ),
-              rangeEndDecoration: const BoxDecoration(
-                shape: BoxShape.circle,
-              ),
-              selectedDecoration: BoxDecoration(
-                gradient: ColorsTheme.selectedDateGradient,
-                shape: BoxShape.circle,
-              ),
-              disabledTextStyle: TextStyle(
-                  color: Colors.white.withOpacity(0.5),
-                  fontWeight: FontsTheme.bigWeight,
-                  fontSize: FontsTheme.mediumSize),
-              defaultTextStyle: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontsTheme.bigWeight,
-                  fontSize: FontsTheme.mediumSize),
-              weekendTextStyle: const TextStyle(
-                  color: Colors.red,
-                  fontWeight: FontsTheme.bigWeight,
-                  fontSize: FontsTheme.mediumSize),
-              outsideTextStyle: TextStyle(
-                color: Colors.white.withOpacity(0),
-                fontWeight: FontsTheme.bigWeight,
-                fontSize: FontsTheme.mediumSize,
-              ),
-            ),
+                holidayTextStyle: const TextStyle(color: Colors.red),
+                todayDecoration: const BoxDecoration(
+                  color: ColorsTheme.currentDay,
+                  shape: BoxShape.circle,
+                ),
+                rangeStartDecoration: const BoxDecoration(
+                    shape: BoxShape.circle, color: ColorsTheme.selectedDay),
+                rangeEndDecoration: const BoxDecoration(
+                    shape: BoxShape.circle, color: ColorsTheme.selectedDay),
+                selectedDecoration: const BoxDecoration(
+                  color: ColorsTheme.selectedDay,
+                  shape: BoxShape.circle,
+                ),
+                disabledTextStyle: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                    fontSize: FontsTheme.mediumBigSize),
+                defaultTextStyle: const TextStyle(
+                    color: Colors.white, fontSize: FontsTheme.mediumBigSize),
+                weekendTextStyle: const TextStyle(
+                    color: Colors.red, fontSize: FontsTheme.mediumBigSize),
+                outsideTextStyle: TextStyle(
+                  color: Colors.white.withOpacity(0),
+                  fontSize: FontsTheme.mediumBigSize,
+                ),
+                rangeEndTextStyle: const TextStyle(
+                    color: Colors.white, fontSize: FontsTheme.mediumBigSize),
+                rangeStartTextStyle: const TextStyle(
+                    color: Colors.white, fontSize: FontsTheme.mediumBigSize),
+                withinRangeTextStyle: const TextStyle(
+                    color: Colors.white, fontSize: FontsTheme.mediumBigSize),
+                selectedTextStyle: const TextStyle(
+                    color: Colors.white, fontSize: FontsTheme.mediumBigSize),
+                rangeHighlightColor: ColorsTheme.selectedDay),
             startingDayOfWeek: StartingDayOfWeek.monday,
             daysOfWeekStyle: DaysOfWeekStyle(
               dowTextFormatter: (date, locale) {
@@ -88,14 +102,14 @@ class _CustomCalendarState extends State<CustomCalendar> {
               weekdayStyle: const TextStyle(
                 fontFamily: 'Inter',
                 color: Colors.white,
-                fontWeight: FontsTheme.bigWeight,
-                fontSize: FontsTheme.mediumSize,
+                fontWeight: FontsTheme.mediumBigWeight,
+                fontSize: FontsTheme.mediumBigSize,
               ),
               weekendStyle: const TextStyle(
                   fontFamily: 'Inter',
                   color: Colors.red,
-                  fontWeight: FontsTheme.bigWeight,
-                  fontSize: FontsTheme.mediumSize),
+                  fontWeight: FontsTheme.mediumBigWeight,
+                  fontSize: FontsTheme.mediumBigSize),
               decoration: const BoxDecoration(
                 border: Border(
                   bottom: BorderSide(
@@ -121,18 +135,12 @@ class _CustomCalendarState extends State<CustomCalendar> {
             pageJumpingEnabled: true,
             rangeSelectionMode: RangeSelectionMode.toggledOn,
             daysOfWeekHeight: 50,
+            rangeStartDay: _rangeStart,
+            rangeEndDay: _rangeEnd,
             focusedDay: DateTime.now(),
             firstDay: DateTime.now(),
             lastDay: DateTime(2070, 1, 1),
-            selectedDayPredicate: (day) {
-              return isSameDay(_selectedDay, day);
-            },
-            onDaySelected: (selectedDay, focusedDay) {
-              setState(() {
-                _selectedDay = selectedDay;
-              });
-              widget.onDaySelected(selectedDay);
-            },
+            onRangeSelected: _onRangeSelected,
           ),
         ),
       ),

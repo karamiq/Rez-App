@@ -140,6 +140,7 @@ class _CustomTimeLineState extends State<CustomTimeLine> {
               key: _widgetKey,
               children: [
                 PartyCard(
+                    type: 'ticket',
                     imageUrl:
                         'https://www.shutterstock.com/shutterstock/photos/310965713/display_1500/stock-photo-the-rocky-shore-or-beach-andaman-sea-thailand-310965713.jpg',
                     title: 'title',
