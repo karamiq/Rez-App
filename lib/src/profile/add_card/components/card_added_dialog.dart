@@ -8,6 +8,7 @@ Future<dynamic> CardAdded(BuildContext context) {
   return showDialog(
     context: context,
     builder: (context) => AlertDialog(
+      backgroundColor: Colors.transparent,
       content: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,

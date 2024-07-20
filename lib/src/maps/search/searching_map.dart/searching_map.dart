@@ -1,13 +1,9 @@
 import 'package:app/src/maps/search/components/custom_marker.dart';
-import 'package:faker/faker.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:widget_to_marker/widget_to_marker.dart';
 import '../../../../common_lib.dart';
 import '../../../../data/providers/location.dart';
-import '../../../../utils/components/input_decoration/search_map_decoration.dart';
 import '../components/data_.dart';
 import '../components/search_head.dart';
 import '../components/show_party_bottom_sheet.dart';

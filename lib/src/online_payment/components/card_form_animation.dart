@@ -7,11 +7,9 @@ class CardFormAnimation extends StatefulWidget {
     super.key,
     required this.title,
     required this.content,
-    required this.contenetHeight,
   });
   final Widget title;
   final Widget content;
-  final double contenetHeight;
 
   @override
   createState() => _CardFormAnimationState();
@@ -22,6 +20,9 @@ class _CardFormAnimationState extends State<CardFormAnimation>
   late AnimationController _controller;
   late Animation<double> _animation;
   bool isExpanded = false;
+  double height = 0;
+
+  final GlobalKey _containerKey = GlobalKey();
 
   @override
   void initState() {
@@ -31,15 +32,17 @@ class _CardFormAnimationState extends State<CardFormAnimation>
       duration: const Duration(milliseconds: 600),
     );
     _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
-    setState(() {
-      isExpanded = !isExpanded;
-      _controller.forward();
-    });
+    _controller.forward();
   }
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getContainerHeight();
+    });
+
     return AnimatedBuilder(
+      key: _containerKey,
       animation: _animation,
       builder: (context, child) {
         return Padding(
@@ -52,19 +55,20 @@ class _CardFormAnimationState extends State<CardFormAnimation>
                 children: [
                   widget.title,
                   Container(
-                      decoration: const BoxDecoration(
-                        color: ColorsTheme.lightPrimary,
-                        borderRadius: BorderRadius.vertical(
-                            bottom: Radius.circular(BorderSize.small)),
-                      ),
-                      height: (_animation.value * widget.contenetHeight),
-                      child: FadeTransition(
-                        alwaysIncludeSemantics: true,
-                        opacity: _animation,
-                        child: SingleChildScrollView(
-                            physics: const NeverScrollableScrollPhysics(),
-                            child: widget.content),
-                      )),
+                    decoration: const BoxDecoration(
+                      color: ColorsTheme.lightPrimary,
+                      borderRadius: BorderRadius.vertical(
+                          bottom: Radius.circular(BorderSize.small)),
+                    ),
+                    height: (_animation.value * height * 2),
+                    child: FadeTransition(
+                      alwaysIncludeSemantics: true,
+                      opacity: _animation,
+                      child: SingleChildScrollView(
+                          physics: const NeverScrollableScrollPhysics(),
+                          child: widget.content),
+                    ),
+                  ),
                 ],
               ),
             ],
@@ -78,5 +82,12 @@ class _CardFormAnimationState extends State<CardFormAnimation>
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  void _getContainerHeight() {
+    final RenderBox renderBox =
+        _containerKey.currentContext?.findRenderObject() as RenderBox;
+    height = renderBox.size.height;
+    print('Container height: $height');
   }
 }

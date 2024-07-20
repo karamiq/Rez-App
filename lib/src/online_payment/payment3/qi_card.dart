@@ -52,7 +52,6 @@ class QiCardPaymentPage extends StatelessWidget {
                   ],
                 ),
                 content: const AddCardForm(),
-                contenetHeight: 370,
               ),
               Padding(
                 padding: const EdgeInsets.all(Insets.medium),

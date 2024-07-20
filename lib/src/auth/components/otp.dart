@@ -29,9 +29,9 @@ class OtpPage extends StatelessWidget {
     }
 
     void next() {
+      print(formKey.currentState!.validate());
       if (formKey.currentState!.validate()) {
-        context.goNamed(RoutesDocument.tabs);
-        // context.go(RoutesDocument.intro);
+        context.go(RoutesDocument.intro1);
       }
     }
 

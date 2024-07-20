@@ -1,13 +1,17 @@
+import 'package:app/src/auth/auth.dart';
 import 'package:app/src/buying/buying1/buying1.dart';
 import 'package:app/src/buying/buying2/buying2.dart';
 import 'package:app/src/cash_on_delevery/cash_on_delevery.dart';
 import 'package:app/src/choosing_seat/choosing_seat.dart';
+import 'package:app/src/home/home_page/home_page.dart';
+import 'package:app/src/intro/first.dart';
 import 'package:app/src/maps/relocate/relocate.dart';
 import 'package:app/src/maps/search/searching_of_map_page.dart/searching_of_map_page.dart.dart';
 import 'package:app/src/online_payment/payment1/payment1.dart';
 import 'package:app/src/online_payment/payment2/payment2.dart';
 import 'package:app/src/online_payment/payment3/qi_card.dart';
 import 'package:app/src/maps/search/searching_map.dart/searching_map.dart';
+import 'package:app/utils/components/seats/models.dart';
 import 'package:app/src/ticketing_&_detailes/party_detailes.dart';
 import 'package:app/src/ticketing_&_detailes/party_detailes_2nd.dart';
 import 'package:app/src/intro/fourth.dart';
@@ -20,6 +24,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../src/buying/buying3/buying3.dart';
+import '../src/choosing_seat/choosing_seat_2nd.dart';
 import '../src/home/calender/calender.dart';
 import '../src/intro/third.dart';
 import '../src/tabs/tabs.dart';
@@ -32,13 +37,18 @@ final GlobalKey<NavigatorState> _shellNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'shell');
 
 final router = GoRouter(
-  initialLocation: RoutesDocument.intro1,
+  initialLocation: RoutesDocument.auth,
   navigatorKey: _rootNavigatorKey,
   routes: [
     GoRoute(
+      path: RoutesDocument.auth,
+      pageBuilder: (context, state) =>
+          customTransition(state, const AuthPage()),
+    ),
+    GoRoute(
       path: RoutesDocument.intro1,
       pageBuilder: (context, state) =>
-          customTransition(state, const TabsPage()),
+          customTransition(state, const FirstIntroPage()),
     ),
     GoRoute(
       path: RoutesDocument.intro2,
@@ -76,8 +86,8 @@ final router = GoRouter(
           customTransition(state, const PartyDetailesPage()),
     ),
     GoRoute(
-      path: RoutesDocument.googleMaps,
-      name: RoutesDocument.googleMaps,
+      path: RoutesDocument.searchMaps,
+      name: RoutesDocument.searchMaps,
       pageBuilder: (context, state) =>
           customTransition(state, const SearchMapPage()),
     ),
@@ -114,11 +124,8 @@ final router = GoRouter(
     GoRoute(
         path: RoutesDocument.buying1,
         name: RoutesDocument.buying1,
-        pageBuilder: (context, state) {
-          final bookedSeats = state.uri.queryParameters['bookedSeats'];
-          return customTransition(
-              state, Buying1stPage(bookedSeats: int.parse(bookedSeats!)));
-        }),
+        pageBuilder: (context, state) => customTransition(
+            state, Buying1stPage(bookedSeats: state.extra! as List<Seat>))),
     GoRoute(
         path: RoutesDocument.buying2,
         name: RoutesDocument.buying2,
@@ -163,6 +170,11 @@ final router = GoRouter(
         pageBuilder: (context, state) =>
             customTransition(state, const ChoosingSeatPage())),
     GoRoute(
+        path: RoutesDocument.choosingSeat2,
+        name: RoutesDocument.choosingSeat2,
+        pageBuilder: (context, state) => customTransition(state,
+            ChoosingSeat2ndPage(bookedSeats: state.extra! as List<Seat>))),
+    GoRoute(
         path: RoutesDocument.searchingOfMap,
         name: RoutesDocument.searchingOfMap,
         pageBuilder: (context, state) =>
@@ -173,6 +185,7 @@ final router = GoRouter(
 class RoutesDocument {
   const RoutesDocument._();
   static const searchingOfMap = '/searchingOfMap';
+  static const choosingSeat2 = '/choosingSeat2';
   static const choosingSeat = '/choosingSeat';
   static const reLocate = '/reLocate';
   static const cashOnDelevery = '/CashOnDelevery';
@@ -186,7 +199,7 @@ class RoutesDocument {
   static const ticketHistory = '/ticketHistory';
   static const addCard = '/add_card';
   static const accountDetailes = '/accountDetailes';
-  static const googleMaps = '/google_maps';
+  static const searchMaps = '/google_maps';
   static const home = '/';
   static const login = '/login';
   static const intro1 = '/intro1';
@@ -197,6 +210,7 @@ class RoutesDocument {
   static const calender = '/calender';
   static const partyDetailes = '/partyDetailes';
   static const availableTickets = '/availableTickets';
+  static const auth = '/auth';
 }
 
 // Example usage:

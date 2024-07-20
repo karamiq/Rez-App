@@ -89,9 +89,11 @@ class PartyCard extends StatelessWidget {
                         children: [
                           Text(
                             title,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: FontsTheme.bigSize,
-                              color: Colors.white,
+                              color: isExpired
+                                  ? Colors.white.withOpacity(.3)
+                                  : Colors.white,
                             ),
                           ),
                           const SizedBox(
@@ -99,25 +101,33 @@ class PartyCard extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              const Icon(Icons.music_note,
-                                  color: Colors.white,
+                              Icon(Icons.music_note,
+                                  color: isExpired
+                                      ? Colors.white.withOpacity(.3)
+                                      : Colors.white,
                                   size: FontsTheme.mediumSize),
                               const SizedBox(width: Insets.small),
                               Text(
                                 genre,
-                                style: const TextStyle(
-                                  color: Colors.white,
+                                style: TextStyle(
+                                  color: isExpired
+                                      ? Colors.white.withOpacity(.3)
+                                      : Colors.white,
                                 ),
                               ),
                               const SizedBox(width: Insets.small),
-                              const Icon(Icons.confirmation_number,
-                                  color: Colors.white,
+                              Icon(Icons.confirmation_number,
+                                  color: isExpired
+                                      ? Colors.white.withOpacity(.3)
+                                      : Colors.white,
                                   size: FontsTheme.mediumSize),
                               const SizedBox(width: Insets.small),
                               Text(
                                 ticketInfo,
-                                style: const TextStyle(
-                                  color: Colors.white,
+                                style: TextStyle(
+                                  color: isExpired
+                                      ? Colors.white.withOpacity(.3)
+                                      : Colors.white,
                                 ),
                               ),
                             ],

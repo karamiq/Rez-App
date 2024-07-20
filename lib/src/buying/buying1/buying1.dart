@@ -1,4 +1,5 @@
 import 'package:app/common_lib.dart';
+import 'package:app/utils/components/seats/models.dart';
 import 'package:app/utils/components/buttons/gardient_border_button.dart';
 import 'package:app/utils/components/custom_item_select.dart';
 import 'package:app/utils/components/gardient/custom_svg_style.dart';
@@ -9,7 +10,7 @@ import 'components/buying_head_1.dart';
 
 class Buying1stPage extends StatefulWidget {
   const Buying1stPage({super.key, required this.bookedSeats});
-  final int bookedSeats;
+  final List<Seat> bookedSeats;
 
   @override
   createState() => _Buying1stPageState();
@@ -25,19 +26,19 @@ class _Buying1stPageState extends State<Buying1stPage> {
   @override
   void initState() {
     super.initState();
-    nameControllers =
-        List.generate(widget.bookedSeats, (_) => TextEditingController());
-    phoneControllers =
-        List.generate(widget.bookedSeats, (_) => TextEditingController());
+    nameControllers = List.generate(
+        widget.bookedSeats.length, (_) => TextEditingController());
+    phoneControllers = List.generate(
+        widget.bookedSeats.length, (_) => TextEditingController());
     countryCodeControllers = List.generate(
-        widget.bookedSeats, (_) => TextEditingController(text: '+964'));
+        widget.bookedSeats.length, (_) => TextEditingController(text: '+964'));
   }
 
   void next() {
     if (formKey.currentState!.validate()) {
       // Collect data and send to API
       List<Map<String, String>> ticketsData = [];
-      for (int i = 0; i < widget.bookedSeats; i++) {
+      for (int i = 0; i < widget.bookedSeats.length; i++) {
         ticketsData.add({
           'name': nameControllers[i].text,
           'phone': phoneControllers[i].text,
@@ -95,7 +96,7 @@ class _Buying1stPageState extends State<Buying1stPage> {
                       ],
                     ),
                     const Gap(Insets.medium),
-                    ...List.generate(widget.bookedSeats, (index) {
+                    ...List.generate(widget.bookedSeats.length, (index) {
                       return TicketForm(
                         ticketNumber: index,
                         nameController: nameControllers[index],

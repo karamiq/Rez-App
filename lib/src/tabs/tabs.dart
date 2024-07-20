@@ -1,4 +1,4 @@
-import 'package:app/src/home/home_page.dart';
+import 'package:app/src/home/home_page/home_page.dart';
 import 'package:app/src/likes/likes.dart';
 import 'package:app/src/profile/profile.dart';
 import 'package:app/src/ticket/ticket.dart';

@@ -51,6 +51,7 @@ class ColorsTheme {
   static const subtitle = Color(0xFFB3B8B8);
   static const soldSeat = Color(0xFFB6116B);
   static const idkSeat = Color(0xFF09FBD3);
+  static const darkEmptySeat = Color(0xFF323030);
   static const bookingSeat = Color(0xFF00E525);
   static const tickitingTextField = Color(0xFF111122);
   static const ticketingLabel = Color(0xFFBEBEBE);
