@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
 import '../../../utils/components/gardient/gardient_text.dart';
-import '../../../utils/constants/sizes.dart';
 import '../../tabs/components/custom_botton_app_bar.dart';
-import '../profile.dart';
 
 class ProfileInfoRow extends StatelessWidget {
   final int followedArtists;

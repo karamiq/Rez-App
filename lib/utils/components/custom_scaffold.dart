@@ -10,8 +10,10 @@ class CustomScaffold extends StatelessWidget {
       this.crossAxisAlignment = CrossAxisAlignment.start,
       this.padding,
       this.safeArea = true,
+      this.resizeToAvoidBottomInset = true,
       this.floatingActionButton,
-      this.floatingActionButtonLocation});
+      this.floatingActionButtonLocation,
+      this.appBar});
   final EdgeInsetsGeometry? padding;
   final Widget body;
   final MainAxisAlignment mainAxisAlignment;
@@ -19,13 +21,16 @@ class CustomScaffold extends StatelessWidget {
   final bool safeArea;
   final Widget? floatingActionButton;
   final FloatingActionButtonLocation? floatingActionButtonLocation;
+  final bool resizeToAvoidBottomInset;
+  final AppBar? appBar;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar,
       floatingActionButton: floatingActionButton,
       floatingActionButtonLocation: floatingActionButtonLocation,
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       body: SafeArea(
         top: safeArea,
         bottom: safeArea,

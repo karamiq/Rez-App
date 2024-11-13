@@ -1,5 +1,4 @@
 import 'package:app/common_lib.dart';
-import 'package:app/data/services/clients/_clients.dart';
 import 'package:app/utils/components/buttons/gardient_border_button.dart';
 import 'package:app/utils/components/payment_head.dart';
 import 'package:flutter/material.dart';
@@ -47,8 +46,7 @@ class CashOnDeliveryPage extends StatelessWidget {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: Insets.medium),
+                        padding: const EdgeInsets.symmetric(horizontal: Insets.medium),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [

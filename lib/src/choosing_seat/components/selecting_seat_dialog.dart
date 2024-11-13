@@ -1,4 +1,3 @@
-import 'package:app/src/maps/search/components/search_head.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../utils/components/buttons/gardient_border_button.dart';

@@ -21,7 +21,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
 
   @override
   Widget build(BuildContext context) {
-    void _onRangeSelected(DateTime? start, DateTime? end, DateTime focusedDay) {
+    void onRangeSelected(DateTime? start, DateTime? end, DateTime focusedDay) {
       setState(() {
         _rangeStart = start;
         _rangeEnd = end;
@@ -140,7 +140,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
             focusedDay: DateTime.now(),
             firstDay: DateTime.now(),
             lastDay: DateTime(2070, 1, 1),
-            onRangeSelected: _onRangeSelected,
+            onRangeSelected: onRangeSelected,
           ),
         ),
       ),

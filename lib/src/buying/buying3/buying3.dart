@@ -1,8 +1,6 @@
 import 'package:app/common_lib.dart';
 import 'package:app/utils/components/buttons/gardient_border_button.dart';
-import 'package:app/utils/components/gardient/custom_svg_style.dart';
 import 'package:flutter/material.dart';
-import '../../../utils/components/custom_app_bar.dart';
 import '../../../utils/components/payment_head.dart';
 import 'components/payment_option.dart';
 

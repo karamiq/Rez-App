@@ -25,7 +25,7 @@ class QrcodeAndDate extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               height: 120,
               child: QrImageView(
                 dataModuleStyle: const QrDataModuleStyle(

@@ -19,7 +19,7 @@ class PartyDetailesPage extends StatelessWidget {
             description:
                 'A pretty night with calm and relax jazz A pretty night with calm and relax jazz A pretty night with calm and relax jazz',
             imageUrl:
-                'https://media.istockphoto.com/id/501387734/photo/dancing-friends.jpg?s=1024x1024&w=is&k=20&c=qneEFMVnKvFkagvbMmZqYU1rLRweq9889MXbu6f8mO4=',
+                'https://media.istockphoto.com/id/1977237765/photo/empty-cinema-theatre-seats.jpg?s=1024x1024&w=is&k=20&c=IInm0dHJYkfSF4kGpyhgZeMsfPIAzXooImBc6I_g-IM=',
           ),
           const Column(
             children: [],
@@ -70,10 +70,10 @@ class PartyDetailesPage extends StatelessWidget {
                           fontSize: FontsTheme.mediumBigSize),
                     ),
                     SizedBox(
-                        width: 160,
+                        width: MediaQuery.of(context).size.width / 2.5,
                         child: GradientBorderButton(
-                            onPressed: () => context
-                                .pushNamed(RoutesDocument.partyDetailes2nd),
+                            onPressed: () =>
+                                context.pushNamed(RoutesDocument.partyDetailes2nd),
                             text: 'Buy Ticket')),
                   ],
                 ),

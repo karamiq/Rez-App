@@ -78,7 +78,7 @@ class _PickYourLocationState extends ConsumerState<RelocationPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Select your place'),
+        title: const Text('Select your place'),
         leading: const Padding(
           padding: Insets.mediumAll,
         ),

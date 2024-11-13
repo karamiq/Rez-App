@@ -51,6 +51,7 @@ class _AddCardPageState extends State<AddCardPage> {
   Widget build(BuildContext context) {
     return CustomScaffold(
       padding: Insets.mediumAll,
+      resizeToAvoidBottomInset: false,
       body: Form(
         key: _formKey,
         child: Column(
@@ -72,8 +73,7 @@ class _AddCardPageState extends State<AddCardPage> {
             TextFormField(
               controller: cardNumberController,
               validator: validator,
-              decoration:
-                  addCardDecoration(labelText: '1234 - 5678 - 1234 - 5678'),
+              decoration: addCardDecoration(labelText: '1234 - 5678 - 1234 - 5678'),
             ),
             const Gap(Insets.small),
             const Text(
@@ -137,8 +137,7 @@ class _AddCardPageState extends State<AddCardPage> {
                             children: List.generate(
                               3,
                               (index) => Padding(
-                                padding:
-                                    const EdgeInsets.all(Insets.extraSmall),
+                                padding: const EdgeInsets.all(Insets.extraSmall),
                                 child: Container(
                                   height: 10,
                                   width: 10,
@@ -162,7 +161,7 @@ class _AddCardPageState extends State<AddCardPage> {
                 Checkbox.adaptive(
                   value: isCheckboxChecked,
                   activeColor: ColorsTheme.secondary,
-                  side: BorderSide(color: ColorsTheme.indego),
+                  side: const BorderSide(color: ColorsTheme.indego),
                   onChanged: (value) {
                     setState(() {
                       isCheckboxChecked = value!;

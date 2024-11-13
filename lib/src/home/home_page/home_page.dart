@@ -1,13 +1,9 @@
 import 'package:app/common_lib.dart';
 import 'package:app/data/providers/location.dart';
-import 'package:app/src/home/components/party_card.dart';
 import 'package:app/src/maps/search/components/search_head.dart';
-import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
-import 'package:app/utils/components/gardient/custom_svg_style.dart';
 import 'package:flutter/material.dart';
 
-import '../../maps/search/components/data_.dart';
 import '../components/all_tabs.dart';
 import '../components/home_page_head.dart';
 

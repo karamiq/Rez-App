@@ -57,9 +57,17 @@ class PartyCard extends StatelessWidget {
                       colorFilter: isExpired
                           ? ColorFilter.mode(
                               Colors.black.withOpacity(0.7), BlendMode.srcOver)
-                          : const ColorFilter.mode(
-                              Colors.transparent, BlendMode.color),
+                          : const ColorFilter.mode(Colors.transparent, BlendMode.color),
                       child: Image.network(
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          } else {
+                            return const Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          }
+                        },
                         imageUrl,
                         fit: BoxFit.cover,
                         height: double.infinity,
@@ -91,9 +99,8 @@ class PartyCard extends StatelessWidget {
                             title,
                             style: TextStyle(
                               fontSize: FontsTheme.bigSize,
-                              color: isExpired
-                                  ? Colors.white.withOpacity(.3)
-                                  : Colors.white,
+                              color:
+                                  isExpired ? Colors.white.withOpacity(.3) : Colors.white,
                             ),
                           ),
                           const SizedBox(
@@ -149,8 +156,7 @@ class PartyCard extends StatelessWidget {
                   child: Text(
                     'Expired at ${expiredDate.formatDate()}',
                     style: const TextStyle(
-                        fontSize: FontsTheme.bigSize,
-                        fontWeight: FontWeight.bold),
+                        fontSize: FontsTheme.bigSize, fontWeight: FontWeight.bold),
                   ),
                 ),
               )

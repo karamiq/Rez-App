@@ -16,8 +16,8 @@ class UserCard extends StatelessWidget {
     required this.cardNumber,
     required this.cardHolder,
     required this.expiryDate,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

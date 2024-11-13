@@ -75,32 +75,36 @@ class _SearchPageState extends ConsumerState<SearchMapPage> {
     }
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Stack(
-        children: [
-          GoogleMap(
-            myLocationButtonEnabled: false,
-            markers: markers.values.toSet(),
-            zoomControlsEnabled: false,
-            onTap: (pos) => print('Taped pos: $pos'),
-            onMapCreated: (controller) {
-              mapController = controller;
-              mapController.setMapStyle(themeForMap);
-              mapController = controller;
+      body: Padding(
+        padding: Insets.noneAll,
+        child: Stack(
+          children: [
+            GoogleMap(
+              mapToolbarEnabled: false,
+              myLocationButtonEnabled: false,
+              markers: markers.values.toSet(),
+              zoomControlsEnabled: false,
+              onTap: (pos) => print('Taped pos: $pos'),
+              onMapCreated: (controller) {
+                mapController = controller;
+                mapController.setMapStyle(themeForMap);
+                mapController = controller;
 
-              for (var party in searchparties) {
-                addMarker(
-                  party.title,
-                  LatLng(party.latitude, party.longitude),
-                );
-              }
-            },
-            initialCameraPosition: CameraPosition(
-              zoom: 11,
-              target: pos,
+                for (var party in searchparties) {
+                  addMarker(
+                    party.title,
+                    LatLng(party.latitude, party.longitude),
+                  );
+                }
+              },
+              initialCameraPosition: CameraPosition(
+                zoom: 11,
+                target: pos,
+              ),
             ),
-          ),
-          SearchMapHead()
-        ],
+            SearchMapHead()
+          ],
+        ),
       ),
     );
   }

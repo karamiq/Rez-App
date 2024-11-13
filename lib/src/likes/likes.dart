@@ -14,7 +14,7 @@ class LikesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List likedParties = [''];
+    List likedParties = [];
     return CustomScaffold(
       padding: Insets.mediumAll,
       body: likedParties.isNotEmpty
@@ -32,7 +32,7 @@ class LikesPage extends StatelessWidget {
                 );
               },
               separatorBuilder: (context, index) => const Gap(Insets.medium),
-              itemCount: searchparties.length,
+              itemCount: 0,
             )
           : Center(
               child: Column(
@@ -42,7 +42,7 @@ class LikesPage extends StatelessWidget {
                     icon: Assets.assetsSvgHeartSlash,
                     size: 250,
                   ),
-                  Gap(Insets.large),
+                  const Gap(Insets.large),
                   const Text(
                     'No tickets bought',
                     textAlign: TextAlign.center,

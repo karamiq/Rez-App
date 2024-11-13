@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
 import '../../../common_lib.dart';
 
 class DrivenToLocation extends StatefulWidget {
@@ -18,14 +17,18 @@ class DrivenToLocation extends StatefulWidget {
 
 class _DrivenToLocationState extends State<DrivenToLocation> {
   LatLng? location;
+  GoogleMapController? mapController;
+  String themeForMap = '';
 
   @override
   void initState() {
     super.initState();
-    // Default location
-    location = DefaultVars.defaultLocation;
-    //Assuming later on i ask the user for his current location
-    setState(() {});
+    DefaultAssetBundle.of(context)
+        .loadString(Assets.assetsThemesDarkMapTheme)
+        .then((value) {
+      themeForMap = value;
+    });
+    location = location ?? DefaultVars.defaultLocation;
   }
 
   @override
@@ -51,6 +54,9 @@ class _DrivenToLocationState extends State<DrivenToLocation> {
                   if (newLocation != null) {
                     location = newLocation;
                     widget.selectedLocation(location);
+                    mapController?.animateCamera(
+                      CameraUpdate.newLatLng(location!),
+                    );
                   } else {
                     location = null;
                     widget.selectedLocation(null);
@@ -83,23 +89,45 @@ class _DrivenToLocationState extends State<DrivenToLocation> {
             ),
           ],
         ),
-        Opacity(
-          opacity: .9,
-          child: Container(
-            height: 230,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              color: ColorsTheme.darkIndego,
-              borderRadius: BorderSize.smallRadius,
-            ),
-            child: Center(
-              child: Text(
-                location != null ? location.toString() : 'No location selected',
-                style: const TextStyle(
-                    color: Colors.white, fontSize: FontsTheme.mediumSize),
-              ),
-            ),
+        Container(
+          height: 230,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            color: ColorsTheme.darkIndego,
           ),
+          child: location != null
+              ? ClipRRect(
+                  borderRadius: BorderSize.smallRadius,
+                  child: GoogleMap(
+                    compassEnabled: false,
+                    zoomControlsEnabled: false,
+                    myLocationButtonEnabled: false,
+                    scrollGesturesEnabled: false,
+                    initialCameraPosition: CameraPosition(
+                      target: location!,
+                      zoom: 13.0,
+                    ),
+                    markers: {
+                      Marker(
+                        markerId: const MarkerId('selectedLocation'),
+                        position: location!,
+                      ),
+                    },
+                    onMapCreated: (controller) {
+                      mapController = controller;
+                      mapController!.setMapStyle(themeForMap);
+                    },
+                  ),
+                )
+              : const Center(
+                  child: Text(
+                    'No location selected',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: FontsTheme.mediumSize,
+                    ),
+                  ),
+                ),
         ),
       ],
     );

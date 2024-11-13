@@ -11,12 +11,9 @@ class OnCashDeleveryCardForm extends StatelessWidget {
   });
 
   static final TextEditingController cityController = TextEditingController();
-  static final TextEditingController addressController =
-      TextEditingController();
-  static final TextEditingController phoneNumberController =
-      TextEditingController();
-  static final TextEditingController detailesController =
-      TextEditingController();
+  static final TextEditingController addressController = TextEditingController();
+  static final TextEditingController phoneNumberController = TextEditingController();
+  static final TextEditingController detailesController = TextEditingController();
   static final TextEditingController countryCodeController =
       TextEditingController(text: '+964');
 
@@ -35,7 +32,6 @@ class OnCashDeleveryCardForm extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
-            keyboardType: TextInputType.number,
             controller: cityController,
             validator: validateGeneralInfo,
             decoration: ticketingInfoDecoration(labelText: 'City'),
@@ -64,9 +60,9 @@ class OnCashDeleveryCardForm extends StatelessWidget {
                 flex: 7,
                 child: TextFormField(
                   controller: phoneNumberController,
+                  keyboardType: TextInputType.phone,
                   validator: validatePhoneNumber,
-                  decoration:
-                      ticketingInfoDecoration(labelText: 'Phone number'),
+                  decoration: ticketingInfoDecoration(labelText: 'Phone number'),
                 ),
               ),
             ],

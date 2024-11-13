@@ -14,7 +14,8 @@ class TicketHistoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Party> partyList = [
       Party(
-        imageUrl: 'https://via.placeholder.com/150',
+        imageUrl:
+            'https://images.unsplash.com/photo-1539481915544-f5cd50562d66?q=80&w=2933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         title: 'Party 1',
         genre: 'Electronic',
         ticketInfo: 'VIP Ticket',
@@ -22,7 +23,8 @@ class TicketHistoryPage extends StatelessWidget {
         expiredDate: DateTime(2024, 8, 1),
       ),
       Party(
-        imageUrl: 'https://via.placeholder.com/150',
+        imageUrl:
+            'https://images.unsplash.com/photo-1539481915544-f5cd50562d66?q=80&w=2933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         title: 'Party 2',
         genre: 'Rock',
         ticketInfo: 'General Admission',
@@ -30,7 +32,8 @@ class TicketHistoryPage extends StatelessWidget {
         expiredDate: DateTime(2024, 7, 1),
       ),
       Party(
-        imageUrl: 'https://via.placeholder.com/150',
+        imageUrl:
+            'https://images.unsplash.com/photo-1539481915544-f5cd50562d66?q=80&w=2933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         title: 'Party 3',
         genre: 'Jazz',
         ticketInfo: 'VIP Ticket',
@@ -38,7 +41,8 @@ class TicketHistoryPage extends StatelessWidget {
         expiredDate: DateTime(2024, 9, 1),
       ),
       Party(
-        imageUrl: 'https://via.placeholder.com/150',
+        imageUrl:
+            'https://images.unsplash.com/photo-1539481915544-f5cd50562d66?q=80&w=2933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         title: 'Party 4',
         genre: 'Hip-Hop',
         ticketInfo: 'Early Bird',
@@ -46,7 +50,8 @@ class TicketHistoryPage extends StatelessWidget {
         expiredDate: DateTime(2024, 6, 1),
       ),
       Party(
-        imageUrl: 'https://via.placeholder.com/150',
+        imageUrl:
+            'https://images.unsplash.com/photo-1539481915544-f5cd50562d66?q=80&w=2933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         title: 'Party 5',
         genre: 'Classical',
         ticketInfo: 'General Admission',
@@ -54,7 +59,8 @@ class TicketHistoryPage extends StatelessWidget {
         expiredDate: DateTime(2024, 10, 1),
       ),
       Party(
-        imageUrl: 'https://via.placeholder.com/150',
+        imageUrl:
+            'https://images.unsplash.com/photo-1539481915544-f5cd50562d66?q=80&w=2933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         title: 'Party 6',
         genre: 'Pop',
         ticketInfo: 'VIP Ticket',
@@ -62,7 +68,8 @@ class TicketHistoryPage extends StatelessWidget {
         expiredDate: DateTime(2024, 5, 1),
       ),
       Party(
-        imageUrl: 'https://via.placeholder.com/150',
+        imageUrl:
+            'https://images.unsplash.com/photo-1539481915544-f5cd50562d66?q=80&w=2933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         title: 'Party 7',
         genre: 'Reggae',
         ticketInfo: 'Early Bird',
@@ -79,10 +86,13 @@ class TicketHistoryPage extends StatelessWidget {
             pinned: true,
             backgroundColor: Colors.transparent,
             toolbarHeight: 72,
-            flexibleSpace: CustomAppBar(
-              gradientColor: GradientColor.pink,
-              title: 'Ticket Archive',
-              showCalender: false,
+            flexibleSpace: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: Insets.medium),
+              child: CustomAppBar(
+                gradientColor: GradientColor.pink,
+                title: 'Ticket Archive',
+                showCalender: false,
+              ),
             ),
           ),
         ],

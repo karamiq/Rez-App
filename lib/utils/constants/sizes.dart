@@ -76,7 +76,7 @@ class ColorsTheme {
       end: Alignment.bottomRight,
       colors: [primary, secondary]);
 
-  static const LinearGradient backButtonGardient = const LinearGradient(
+  static const LinearGradient backButtonGardient = LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
       colors: [

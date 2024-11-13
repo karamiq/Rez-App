@@ -1,13 +1,9 @@
 import 'package:app/common_lib.dart';
-import 'package:app/src/intro/third.dart';
 import 'package:app/utils/components/buttons/gardient_border_button.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
-import 'package:app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../router/routing_animation.dart';
 
 class FirstIntroPage extends StatelessWidget {
   const FirstIntroPage({super.key});

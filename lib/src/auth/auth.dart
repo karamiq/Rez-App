@@ -1,8 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
-import 'package:app/common_lib.dart';
 import 'package:app/src/auth/components/otp.dart';
 import 'package:flutter/material.dart';
-import '../../utils/components/buttons/gardient_border_button.dart';
 import '../../utils/components/custom_scaffold.dart';
 import 'sign_in.dart';
 

@@ -1,11 +1,9 @@
 import 'package:app/common_lib.dart';
 import 'package:app/src/home/components/party_card.dart';
-import 'package:app/src/maps/search/searching_map.dart/searching_map.dart';
 import 'package:app/src/ticket/components/tickets_empty_state.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 
-import '../../../profile/ticket_history/ticket_history.dart';
 import '../components/data_.dart';
 import '../components/search_head.dart';
 
@@ -31,8 +29,7 @@ class _searchingOfMapPageState extends State<searchingOfMapPage> {
     setState(() {
       filteredList = searchparties
           .toList()
-          .where((party) =>
-              party.title.toLowerCase().contains(query.toLowerCase()))
+          .where((party) => party.title.toLowerCase().contains(query.toLowerCase()))
           .toList();
       print(filteredList);
     });
@@ -47,6 +44,7 @@ class _searchingOfMapPageState extends State<searchingOfMapPage> {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
+      resizeToAvoidBottomInset: false,
       safeArea: false,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
       floatingActionButton: SearchMapHead(
@@ -66,11 +64,9 @@ class _searchingOfMapPageState extends State<searchingOfMapPage> {
                             imageUrl: filteredList.elementAt(index).imageUrl,
                             title: filteredList.elementAt(index).title,
                             genre: filteredList.elementAt(index).genre,
-                            ticketInfo:
-                                filteredList.elementAt(index).ticketInfo,
+                            ticketInfo: filteredList.elementAt(index).ticketInfo,
                             isExpired: filteredList.elementAt(index).isExpired,
-                            expiredDate:
-                                filteredList.elementAt(index).expiredDate,
+                            expiredDate: filteredList.elementAt(index).expiredDate,
                             type: filteredList.elementAt(index).title),
                       )))
           : const TicketsEmptyState(

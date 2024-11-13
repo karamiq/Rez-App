@@ -7,7 +7,6 @@ import '../../utils/components/gardient/fading_divider.dart';
 import '../../utils/components/seats/models.dart';
 import '../buying/buying2/components/ticket_card.dart';
 import '../ticketing_&_detailes/components/detailes_upper_half_2nd.dart';
-import 'components/chosing_secton_dialog.dart';
 
 class ChoosingSeat2ndPage extends StatelessWidget {
   const ChoosingSeat2ndPage({super.key, required this.bookedSeats});

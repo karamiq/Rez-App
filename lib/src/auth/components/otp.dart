@@ -8,15 +8,14 @@ import '../../../utils/components/buttons/gardient_border_button.dart';
 import '../../../utils/components/custom_app_bar.dart';
 
 class OtpPage extends StatelessWidget {
-  const OtpPage(
-      {super.key, required this.phoneNumber, required this.pageController});
+  const OtpPage({super.key, required this.phoneNumber, required this.pageController});
   final TextEditingController phoneNumber;
   final PageController pageController;
 
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
-    final code = '11111';
+    const code = '11111';
 
     String? validator(String? query) {
       if (query == null || query.isEmpty) {
@@ -37,7 +36,11 @@ class OtpPage extends StatelessWidget {
 
     return SafeArea(
       child: Padding(
-        padding: Insets.mediumAll,
+        padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom,
+            right: Insets.medium,
+            left: Insets.medium,
+            top: Insets.medium),
         child: Column(
           children: [
             CustomAppBar(
@@ -69,6 +72,7 @@ class OtpPage extends StatelessWidget {
               key: formKey,
               child: Pinput(
                 validator: validator,
+                onCompleted: (s) => next(),
                 length: 5,
                 cursor: Container(
                   height: 25,
@@ -136,7 +140,6 @@ class OtpPage extends StatelessWidget {
                 ),
               ],
             ),
-            const Gap(Insets.extraLarge * 5),
             const Spacer(),
             GradientBorderButton(onPressed: next, text: 'Next'),
             const Gap(Insets.extraLarge),

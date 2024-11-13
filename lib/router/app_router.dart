@@ -3,7 +3,6 @@ import 'package:app/src/buying/buying1/buying1.dart';
 import 'package:app/src/buying/buying2/buying2.dart';
 import 'package:app/src/cash_on_delevery/cash_on_delevery.dart';
 import 'package:app/src/choosing_seat/choosing_seat.dart';
-import 'package:app/src/home/home_page/home_page.dart';
 import 'package:app/src/intro/first.dart';
 import 'package:app/src/maps/relocate/relocate.dart';
 import 'package:app/src/maps/search/searching_of_map_page.dart/searching_of_map_page.dart.dart';

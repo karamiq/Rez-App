@@ -1,17 +1,11 @@
-import 'dart:async';
 import 'package:app/utils/components/buttons/gardient_button.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
-import 'package:app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:qr_flutter/qr_flutter.dart';
 
 import '../../../common_lib.dart';
 import '../../../utils/components/custom_app_bar.dart';
 import 'qr_code_and_date.dart';
 import 'ticket_count_down.dart';
-import 'ticket_painter.dart';
 import 'ticket_shape.dart';
 
 class AvalilableTicketsPage extends StatefulWidget {

@@ -1,9 +1,7 @@
 import 'package:app/common_lib.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-import 'components/avalilable_tickets.dart';
 import 'components/tickets_empty_state.dart';
 
 class TicketPage extends StatelessWidget {

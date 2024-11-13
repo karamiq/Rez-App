@@ -1,7 +1,6 @@
 // ignore_for_file: camel_case_types, library_private_types_in_public_api, prefer_const_constructors
 
 import 'package:app/common_lib.dart';
-import 'package:app/utils/components/gardient/custom_svg_style.dart';
 import 'package:app/utils/components/input_decoration/ticketing_info.dart';
 import 'package:flutter/material.dart';
 

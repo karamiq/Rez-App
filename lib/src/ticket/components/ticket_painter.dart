@@ -1,5 +1,3 @@
-import 'package:app/common_lib.dart';
-import 'package:app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class TicketClipper extends CustomClipper<Path> {

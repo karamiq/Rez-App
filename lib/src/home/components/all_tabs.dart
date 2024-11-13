@@ -18,7 +18,7 @@ class AllTab extends StatelessWidget {
             ticketInfo: partyData[index].ticketInfo,
             isExpired: partyData[index].isExpired,
             expiredDate: partyData[index].expiredDate,
-            type: 'ticket'),
+            type: index % 2 == 0 ? 'ticket' : 'stadium'),
         separatorBuilder: (context, index) => const Gap(Insets.medium),
         itemCount: partyData.length);
   }
