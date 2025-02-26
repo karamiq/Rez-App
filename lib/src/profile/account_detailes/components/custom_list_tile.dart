@@ -45,7 +45,7 @@ class ProfileListTile extends StatelessWidget {
               fontWeight: FontsTheme.mediumBigWeight,
             ),
           ),
-          trailing: GradientIcon(
+          trailing: const GradientIcon(
             icon: Icons.chevron_right,
             size: IconSize.large,
           ),

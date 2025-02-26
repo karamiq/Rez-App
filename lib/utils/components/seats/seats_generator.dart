@@ -86,8 +86,7 @@ class _SeatRowGeneratorState extends State<SeatRowGenerator> {
           onTap: () => handleSeatTapped(seat),
           borderRadius: BorderSize.extraSmallRadius,
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-                vertical: Insets.small, horizontal: Insets.extraSmall),
+            padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 2),
             child: SvgPicture.asset(
               Assets.assetsSvgSeat,
               color: seatColor,

@@ -12,7 +12,8 @@ class HomePageHead extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-            onPressed: () {}, icon: GradientIcon(icon: Assets.assetsSvgNotification)),
+            onPressed: () {},
+            icon: const GradientIcon(icon: Assets.assetsSvgNotification)),
         Expanded(
           child: GestureDetector(
             onTap: () => context.pushNamed(RoutesDocument.searchMaps),
@@ -37,7 +38,7 @@ class HomePageHead extends StatelessWidget {
         ),
         IconButton(
             onPressed: () => context.pushNamed(RoutesDocument.calender),
-            icon: GradientIcon(icon: Assets.assetsSvgCalendarOutlined)),
+            icon: const GradientIcon(icon: Assets.assetsSvgCalendarOutlined)),
       ],
     );
   }

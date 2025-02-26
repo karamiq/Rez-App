@@ -102,7 +102,7 @@ class _SearchPageState extends ConsumerState<SearchMapPage> {
                 target: pos,
               ),
             ),
-            SearchMapHead()
+            const SearchMapHead()
           ],
         ),
       ),

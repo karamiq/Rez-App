@@ -1,7 +1,5 @@
 import 'package:app/src/profile/account_detailes/components/user_card_detailes.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../common_lib.dart';

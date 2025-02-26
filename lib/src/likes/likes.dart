@@ -1,12 +1,9 @@
-import 'package:app/src/maps/search/searching_map.dart/searching_map.dart';
 import 'package:app/src/tabs/components/custom_botton_app_bar.dart';
 import 'package:app/utils/components/custom_scaffold.dart';
-import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 
 import '../../common_lib.dart';
 import '../home/components/party_card.dart';
-import '../maps/search/components/data_.dart';
 import '../maps/search/components/search_head.dart';
 
 class LikesPage extends StatelessWidget {
@@ -34,7 +31,7 @@ class LikesPage extends StatelessWidget {
               separatorBuilder: (context, index) => const Gap(Insets.medium),
               itemCount: 0,
             )
-          : Center(
+          : const Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -42,8 +39,8 @@ class LikesPage extends StatelessWidget {
                     icon: Assets.assetsSvgHeartSlash,
                     size: 250,
                   ),
-                  const Gap(Insets.large),
-                  const Text(
+                  Gap(Insets.large),
+                  Text(
                     'No tickets bought',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -51,7 +48,7 @@ class LikesPage extends StatelessWidget {
                       fontSize: FontsTheme.bigSize,
                     ),
                   ),
-                  const Text(
+                  Text(
                     'Please add some liked ticket to have this feature we hope you will enjoy the app',
                     textAlign: TextAlign.center,
                     style: TextStyle(

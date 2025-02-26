@@ -17,12 +17,11 @@ class ChoosingSeat2ndPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: ColumnPadded(gap: Insets.medium, children: [
           const DetailesUpperHalf2nd(
-            title: '',
-            subtitle: '',
-            description: '',
-            imageUrl:
-                'https://s3-alpha-sig.figma.com/img/5af1/98e3/f270cd486976bd3900e567c283a931e7?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=meUKdEkXHUtvqG-rZTKSHGvFAXhJRJIjqtIBhawq9~NJcDCDbRAAInIycfJ3t-NQagcVTBfMAOHsRFyNMRjni23GVYlgq6LevG8bh~fv4e3j4SY1q3mKwLzQaG6aquiqZ3vvNJKMR5Ssh4LABPXycWHmxCLz4st6yzhGwhcIRreW29litpVre2RR6wHNGr~oTBuGXWNyKt8Ci-DeyVFWGOxFlV7IzDtUANoLYSCuFtN4J5ArSS2R~CxatRAI1czereqKgycDBbiMd85L0ohHg3DCIn5TcaFIeyjiwuiUjzRG9WT1KqC7ZRh9b1nO1k-zqXXvnbCFp2WtndQmVgrOaw__',
-          ),
+              title: '',
+              subtitle: '',
+              description: '',
+              imageUrl:
+                  'https://npr.brightspotcdn.com/dims4/default/ebb6163/2147483647/strip/true/crop/913x653+0+0/resize/1760x1258!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F67%2Fc4%2F9238fb924af49439dba9c9fa40c6%2Fbadluck-180921-pmb-24.jpg'),
           Padding(
             padding: Insets.mediumAll,
             child: ColumnPadded(
@@ -76,8 +75,8 @@ class ChoosingSeat2ndPage extends StatelessWidget {
                 ),
                 const Gap(Insets.extraLarge),
                 GradientBorderButton(
-                    onPressed: () => context.pushNamed(RoutesDocument.buying1,
-                        extra: bookedSeats),
+                    onPressed: () =>
+                        context.pushNamed(RoutesDocument.buying1, extra: bookedSeats),
                     text: 'Buy Ticket')
               ],
             ),

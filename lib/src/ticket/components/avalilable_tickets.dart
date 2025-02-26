@@ -34,14 +34,13 @@ class _AvalilableTicketsPageState extends State<AvalilableTicketsPage> {
               ),
               const TicketCountdown(
                 initialDuration: Duration(hours: 4),
-                description:
-                    'please pay at the cash point and it\nwill be activated',
+                description: 'please pay at the cash point and it\nwill be activated',
                 imageUrl:
-                    'https://s3-alpha-sig.figma.com/img/1543/3cb8/cd926f18468d7804e7dda333397c6d39?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GL3B2JewZCAuSfNd5-4sqP-INvTINa2BlPT-PQZ~tW7VI7H2AnzrLB9XMQFmjkQCoQNzil2v8h59njuSMYLO8ERd96HysZx9ujT4VQpVfz6z8rpz9YXMcBl0HCNyEMlybNo4uCOlj1zeB5F6NiRTxnpPZYLuhBuliea5W8~cJLB7r8ClJEIHBCEplDmY78mDXfUMR7iT7~jXlu9~WGN9ylUnW5jLwRwHQ69ZGsXL4A4w--dgbshnDpI5j8GIG~mok7FafvKabWeeV3oTNtKp~Y~D1IPt93qvLJEzZTS7s-uNMB035WFVq2XqJ1UrDIHRfC~JKDmzb-aj5hudo-40hg__',
+                    'https://npr.brightspotcdn.com/dims4/default/ebb6163/2147483647/strip/true/crop/913x653+0+0/resize/1760x1258!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F67%2Fc4%2F9238fb924af49439dba9c9fa40c6%2Fbadluck-180921-pmb-24.jpg',
               ),
               const TicketClipShape(
                 imageUrl:
-                    'https://s3-alpha-sig.figma.com/img/1543/3cb8/cd926f18468d7804e7dda333397c6d39?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GL3B2JewZCAuSfNd5-4sqP-INvTINa2BlPT-PQZ~tW7VI7H2AnzrLB9XMQFmjkQCoQNzil2v8h59njuSMYLO8ERd96HysZx9ujT4VQpVfz6z8rpz9YXMcBl0HCNyEMlybNo4uCOlj1zeB5F6NiRTxnpPZYLuhBuliea5W8~cJLB7r8ClJEIHBCEplDmY78mDXfUMR7iT7~jXlu9~WGN9ylUnW5jLwRwHQ69ZGsXL4A4w--dgbshnDpI5j8GIG~mok7FafvKabWeeV3oTNtKp~Y~D1IPt93qvLJEzZTS7s-uNMB035WFVq2XqJ1UrDIHRfC~JKDmzb-aj5hudo-40hg__',
+                    'https://npr.brightspotcdn.com/dims4/default/ebb6163/2147483647/strip/true/crop/913x653+0+0/resize/1760x1258!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F67%2Fc4%2F9238fb924af49439dba9c9fa40c6%2Fbadluck-180921-pmb-24.jpg',
                 child: Text(
                   'Wait For the Driver',
                   style: TextStyle(
@@ -52,8 +51,10 @@ class _AvalilableTicketsPageState extends State<AvalilableTicketsPage> {
               ),
               QrcodeAndDate(
                   qrData: 'I want to die but its haram',
+                  // imageUrl:
+                  //     'https://npr.brightspotcdn.com/dims4/default/ebb6163/2147483647/strip/true/crop/913x653+0+0/resize/1760x1258!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F67%2Fc4%2F9238fb924af49439dba9c9fa40c6%2Fbadluck-180921-pmb-24.jpg',
                   imageUrl:
-                      'https://s3-alpha-sig.figma.com/img/1543/3cb8/cd926f18468d7804e7dda333397c6d39?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GL3B2JewZCAuSfNd5-4sqP-INvTINa2BlPT-PQZ~tW7VI7H2AnzrLB9XMQFmjkQCoQNzil2v8h59njuSMYLO8ERd96HysZx9ujT4VQpVfz6z8rpz9YXMcBl0HCNyEMlybNo4uCOlj1zeB5F6NiRTxnpPZYLuhBuliea5W8~cJLB7r8ClJEIHBCEplDmY78mDXfUMR7iT7~jXlu9~WGN9ylUnW5jLwRwHQ69ZGsXL4A4w--dgbshnDpI5j8GIG~mok7FafvKabWeeV3oTNtKp~Y~D1IPt93qvLJEzZTS7s-uNMB035WFVq2XqJ1UrDIHRfC~JKDmzb-aj5hudo-40hg__',
+                      'https://npr.brightspotcdn.com/dims4/default/ebb6163/2147483647/strip/true/crop/913x653+0+0/resize/1760x1258!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F67%2Fc4%2F9238fb924af49439dba9c9fa40c6%2Fbadluck-180921-pmb-24.jpg',
                   startDate: startDate,
                   endDate: endDate),
             ],

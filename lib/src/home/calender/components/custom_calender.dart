@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'dart:ui';
 
-import 'package:timeago/timeago.dart';
-
 class CustomCalendar extends StatefulWidget {
   final Function(DateTime? start, DateTime? end) onRangeSelect;
 

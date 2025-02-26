@@ -24,14 +24,13 @@ Future<dynamic> CardAdded(BuildContext context) {
                   color: ColorsTheme.cyan),
             ),
           ),
-          GradientIcon(
+          const GradientIcon(
             icon: Icons.check_circle_outline,
             size: 280,
           ),
           const Gap(Insets.medium),
           GradientBorderButton(
-              onPressed: () => context.pushNamed(RoutesDocument.tabs),
-              text: 'Go back')
+              onPressed: () => context.pushNamed(RoutesDocument.tabs), text: 'Go back')
         ],
       ),
     ),

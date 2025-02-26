@@ -1,9 +1,7 @@
 import 'package:app/common_lib.dart';
-import 'package:app/src/intro/first.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pinput/pinput.dart';
-import '../../../router/routing_animation.dart';
 import '../../../utils/components/buttons/gardient_border_button.dart';
 import '../../../utils/components/custom_app_bar.dart';
 

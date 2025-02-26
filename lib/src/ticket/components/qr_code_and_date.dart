@@ -28,8 +28,8 @@ class QrcodeAndDate extends StatelessWidget {
             SizedBox(
               height: 120,
               child: QrImageView(
-                dataModuleStyle: const QrDataModuleStyle(
-                    dataModuleShape: QrDataModuleShape.circle),
+                dataModuleStyle:
+                    const QrDataModuleStyle(dataModuleShape: QrDataModuleShape.circle),
                 foregroundColor: Colors.white,
                 data: qrData,
                 version: QrVersions.auto,
@@ -39,32 +39,24 @@ class QrcodeAndDate extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: 150,
-                  height: 35,
                   padding: Insets.smallAll,
                   decoration: const BoxDecoration(
-                      borderRadius: BorderSize.mediumRadius,
-                      color: Color(0x806E1B93)),
+                      borderRadius: BorderSize.mediumRadius, color: Color(0x806E1B93)),
                   child: Row(
                     children: [
-                      SvgPicture.asset(
-                          height: 13, Assets.assetsSvgCalendarOutlined),
+                      SvgPicture.asset(height: 13, Assets.assetsSvgCalendarOutlined),
                       const Gap(Insets.extraSmall),
                       Text(formatDateRange(startDate, endDate))
                     ],
                   ),
                 ),
                 Container(
-                  width: 150,
-                  height: 35,
                   padding: Insets.smallAll,
                   decoration: const BoxDecoration(
-                      borderRadius: BorderSize.mediumRadius,
-                      color: Color(0x806E1B93)),
+                      borderRadius: BorderSize.mediumRadius, color: Color(0x806E1B93)),
                   child: Row(
                     children: [
-                      SvgPicture.asset(
-                          height: 13, Assets.assetsSvgLocationOutlined),
+                      SvgPicture.asset(height: 13, Assets.assetsSvgLocationOutlined),
                       const Gap(Insets.extraSmall),
                       Text(formatDateRange(startDate, endDate))
                     ],

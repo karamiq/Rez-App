@@ -1,7 +1,5 @@
 import 'package:app/utils/components/buttons/gardient_border_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../../common_lib.dart';
@@ -29,8 +27,8 @@ class _PickYourLocationState extends ConsumerState<RelocationPage> {
   }
 
   Future<void> _loadMapTheme() async {
-    themeForMap = await DefaultAssetBundle.of(context)
-        .loadString(Assets.assetsThemesDarkMapTheme);
+    themeForMap =
+        await DefaultAssetBundle.of(context).loadString(Assets.assetsThemesDarkMapTheme);
     if (mounted) {
       setState(() {});
     }
@@ -89,8 +87,8 @@ class _PickYourLocationState extends ConsumerState<RelocationPage> {
             myLocationButtonEnabled: false,
             myLocationEnabled: true,
             zoomControlsEnabled: false,
-            initialCameraPosition: const CameraPosition(
-                target: DefaultVars.defaultLocation, zoom: 10),
+            initialCameraPosition:
+                const CameraPosition(target: DefaultVars.defaultLocation, zoom: 10),
             onMapCreated: (controller) {
               mapController = controller;
               mapController.setMapStyle(themeForMap);
@@ -99,8 +97,7 @@ class _PickYourLocationState extends ConsumerState<RelocationPage> {
               setState(() {
                 locationSelected = true;
                 markers.clear();
-                markers
-                    .add(Marker(markerId: const MarkerId('m1'), position: pos));
+                markers.add(Marker(markerId: const MarkerId('m1'), position: pos));
               });
               selectLocation(pos);
             },

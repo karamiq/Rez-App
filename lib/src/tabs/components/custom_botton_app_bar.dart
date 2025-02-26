@@ -73,16 +73,15 @@ class CustomBottomAppBar extends StatelessWidget {
 
 class GradientIcon extends StatelessWidget {
   final dynamic icon;
-  double? size;
-  GradientIcon({super.key, required this.icon, this.size});
+  final double? size;
+  const GradientIcon({super.key, required this.icon, this.size});
 
   @override
   Widget build(BuildContext context) {
     if (icon is IconData) {
       return ShaderMask(
         blendMode: BlendMode.srcIn,
-        shaderCallback: (bounds) =>
-            ColorsTheme.primaryLinearGradient.createShader(
+        shaderCallback: (bounds) => ColorsTheme.primaryLinearGradient.createShader(
           Rect.fromLTWH(0, 0, bounds.width, bounds.height),
         ),
         child: Icon(
@@ -93,8 +92,7 @@ class GradientIcon extends StatelessWidget {
     }
     return ShaderMask(
       blendMode: BlendMode.srcIn,
-      shaderCallback: (bounds) =>
-          ColorsTheme.primaryLinearGradient.createShader(
+      shaderCallback: (bounds) => ColorsTheme.primaryLinearGradient.createShader(
         Rect.fromLTWH(0, 0, bounds.width, bounds.height),
       ),
       child: SvgPicture.asset(

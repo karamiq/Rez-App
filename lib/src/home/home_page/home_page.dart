@@ -14,8 +14,7 @@ class HomePage extends ConsumerStatefulWidget {
   ConsumerState<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends ConsumerState<HomePage>
-    with SingleTickerProviderStateMixin {
+class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final List<Map<String, String>> partyData = [
     {
@@ -64,8 +63,9 @@ class _HomePageState extends ConsumerState<HomePage>
           const Gap(Insets.small),
           TabBar(
             labelColor: ColorsTheme.primary,
-            indicatorSize: TabBarIndicatorSize.tab,
+            indicatorSize: TabBarIndicatorSize.label,
             indicatorColor: ColorsTheme.primary,
+            labelPadding: const EdgeInsets.symmetric(horizontal: 2),
             controller: _tabController,
             tabs: const [
               Tab(text: 'All'),

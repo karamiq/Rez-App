@@ -30,15 +30,11 @@ class PartyCard extends StatelessWidget {
         borderRadius: BorderSize.mediumRadius,
         onTap: isExpired
             ? null
-            : () {
-                try {
-                  if (type == 'ticket') {
-                    context.pushNamed(RoutesDocument.partyDetailes);
-                  } else {
-                    context.pushNamed(RoutesDocument.choosingSeat);
-                  }
-                } catch (e) {
-                  debugPrint('Navigation error: $e');
+            : () async {
+                if (type == 'ticket') {
+                  await context.pushNamed(RoutesDocument.partyDetailes);
+                } else {
+                  await context.pushNamed(RoutesDocument.choosingSeat);
                 }
               },
         child: Stack(

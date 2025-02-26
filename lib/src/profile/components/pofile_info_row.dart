@@ -36,7 +36,7 @@ class ProfileInfoRow extends StatelessWidget {
                     ),
                   ),
                   const Gap(Insets.extraSmall),
-                  GradientIcon(icon: Assets.assetsSvgUsers)
+                  const GradientIcon(icon: Assets.assetsSvgUsers)
                 ],
               ),
               const Text(
@@ -65,7 +65,7 @@ class ProfileInfoRow extends StatelessWidget {
                     ),
                   ),
                   const Gap(Insets.extraSmall),
-                  GradientIcon(icon: Assets.assetsSvgFavorites)
+                  const GradientIcon(icon: Assets.assetsSvgFavorites)
                 ],
               ),
               const Text(
@@ -94,7 +94,7 @@ class ProfileInfoRow extends StatelessWidget {
                     ),
                   ),
                   const Gap(Insets.extraSmall),
-                  GradientIcon(icon: Assets.assetsSvgTicketHorizantly)
+                  const GradientIcon(icon: Assets.assetsSvgTicketHorizantly)
                 ],
               ),
               const Text(

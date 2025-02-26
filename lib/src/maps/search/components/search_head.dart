@@ -6,7 +6,7 @@ import '../../../../utils/components/input_decoration/search_map_decoration.dart
 import 'data_.dart';
 
 class SearchMapHead extends StatelessWidget {
-  SearchMapHead({
+ const  SearchMapHead({
     super.key,
     this.controller,
     this.onChanged,
@@ -14,7 +14,7 @@ class SearchMapHead extends StatelessWidget {
     this.route = true,
   });
   final TextEditingController? controller;
-  Function(String)? onChanged;
+ final  Function(String)? onChanged;
   final bool readOnly;
   final bool route;
 
@@ -35,8 +35,9 @@ class SearchMapHead extends StatelessWidget {
               ),
               onPressed: () => context.pop(),
               style: IconButton.styleFrom(
-                  foregroundColor: const Color(0xFFA763FD),
-                  backgroundColor: const Color(0x4DD67DFF)),
+                  // foregroundColor: const Color(0xFFA763FD),
+                  // backgroundColor: const Color(0x4DD67DFF)
+                  ),
             ),
             const Gap(Insets.small),
             Expanded(

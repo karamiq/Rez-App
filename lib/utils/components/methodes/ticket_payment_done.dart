@@ -17,7 +17,7 @@ Future<dynamic> ticketPaymentDone(BuildContext context) {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              GradientIcon(
+              const GradientIcon(
                 icon: Assets.assetsSvgTicketStar,
               ),
               const Gap(Insets.extraLarge * 1.5),
